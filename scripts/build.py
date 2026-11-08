@@ -146,7 +146,7 @@ def render(markdown):
 
 
 def page(title, description, main, *, home=False):
-    page_title = SITE_TITLE if home else f"{title} · Tensor"
+    page_title = SITE_TITLE if home else f"{title} · {SITE_TITLE}"
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -161,7 +161,7 @@ def page(title, description, main, *, home=False):
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="shell bar">
-      <a class="brand" href="index.html" aria-label="Tensor home"><img src="assets/mark.svg" width="26" height="26" alt="">Tensor</a>
+      <a class="brand" href="index.html" aria-label="{SITE_TITLE} home"><img src="assets/mark.svg" width="26" height="26" alt="">{SITE_TITLE}</a>
       <nav aria-label="Main navigation">
         <a href="index.html#contents">Contents</a>
         <a href="index.html#reference">Reference</a>
@@ -171,7 +171,7 @@ def page(title, description, main, *, home=False):
 {main}
   <footer class="site-footer">
     <div class="shell bar">
-      <span>Tensor <span aria-hidden="true">/</span> {SITE_TITLE}</span>
+      <span>{SITE_TITLE}</span>
       <a href="{REPO}">View source <span aria-hidden="true">↗</span></a>
     </div>
   </footer>
