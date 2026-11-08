@@ -1,4 +1,4 @@
-# Tensor
+# The Structure of Mathematical Thought
 
 [The Structure of Mathematical Thought](https://anipiso9989-ops.github.io/Tensor/) is a principle-based guide to rigorous, creative, independent mathematical reasoning.
 
