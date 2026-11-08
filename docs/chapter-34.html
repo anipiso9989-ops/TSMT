@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chapter 34 of The Structure of Mathematical Thought. Problem Invention and Original Approaches.">
+  <title>Chapter 34 · Problem Invention and Original Approaches · Tensor</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell bar">
+      <a class="brand" href="index.html" aria-label="Tensor home"><img src="assets/mark.svg" width="26" height="26" alt="">Tensor</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html#contents">Contents</a>
+        <a href="index.html#reference">Reference</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell reader" id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Guide</a><span aria-hidden="true">/</span><a href="part-v.html">Part V</a><span aria-hidden="true">/</span><span aria-current="page">Chapter 34</span>
+    </nav>
+    <header class="reader-header">
+      <p class="eyebrow">Chapter 34 / Part V</p>
+      <h1>Problem Invention and Original Approaches</h1>
+    </header>
+    <div class="reading-layout">
+<nav class="outline" aria-label="On this page"><p class="eyebrow">On this page</p><ul><li><a href="#1-core-idea">1. Core Idea</a></li>
+<li><a href="#2-first-principles">2. First Principles</a></li>
+<li><a href="#3-reasoning-process">3. Reasoning Process</a></li>
+<li><a href="#4-demonstrations">4. Demonstrations</a></li>
+<li><a href="#5-connections">5. Connections</a></li>
+<li><a href="#6-limitations">6. Limitations</a></li>
+<li><a href="#7-applications">7. Applications</a></li>
+<li><a href="#8-mastery-criteria">8. Mastery Criteria</a></li></ul></nav>
+      <div class="reading-column">
+        <article class="prose"><h2 id="1-core-idea">1. Core Idea</h2>
+<p>Originality in mathematics is usually not the invention of a new subject. It is the <strong>transformation of an existing problem</strong> into one that is new, tractable, and interesting. The transformations are systematic:</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
+<thead>
+<tr class="header">
+<th>Operation</th>
+<th>Question</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Generalize</strong></td>
+<td>What if <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math> becomes <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>?</td>
+<td>Adds structure, may reveal the mechanism</td>
+</tr>
+<tr class="even">
+<td><strong>Specialize</strong></td>
+<td>What is the simplest case?</td>
+<td>Reveals the core difficulty</td>
+</tr>
+<tr class="odd">
+<td><strong>Invert</strong></td>
+<td>Swap the given and the sought</td>
+<td>Often converts a hard forward problem into an easy inverse one</td>
+</tr>
+<tr class="even">
+<td><strong>Compose</strong></td>
+<td>What if we combine two problems?</td>
+<td>Produces new structure at the interface</td>
+</tr>
+<tr class="odd">
+<td><strong>Dualize</strong></td>
+<td>What is the dual statement?</td>
+<td>Doubles the problem space</td>
+</tr>
+<tr class="even">
+<td><strong>Weaken</strong></td>
+<td>What if the conclusion is weaker?</td>
+<td>May become provable, and reveals what was hard</td>
+</tr>
+<tr class="odd">
+<td><strong>Strengthen</strong></td>
+<td>What if the conclusion is stronger?</td>
+<td>May become easier (→ Ch. <a href="chapter-10.html">10</a>, <a href="chapter-18.html">18</a>)</td>
+</tr>
+<tr class="even">
+<td><strong>Negate</strong></td>
+<td>What if the claim is false?</td>
+<td>Produces a counterexample hunt (→ Ch. <a href="chapter-32.html">32</a>)</td>
+</tr>
+<tr class="odd">
+<td><strong>Change the question</strong></td>
+<td>What should we be asking instead?</td>
+<td>The highest-value and rarest move</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Principle signature.</strong> You have solved a problem and want to know what it was really about; or you have a problem you cannot solve and want a related one you can; or you are looking for a research direction.</p>
+<h2 id="2-first-principles">2. First Principles</h2>
+<p><strong>A problem is a constraint system plus a goal</strong> (→ Ch. <a href="chapter-07.html">7</a>). Transforming any component produces a new problem. The art is choosing a transformation that preserves the <em>interesting</em> structure and changes the <em>hard</em> structure.</p>
+<p><strong>Inversion is the most underused operation.</strong> "Given the configuration, find the number" becomes "given the number, find the configuration"; "given the input, find the output" becomes "given the output, find an input"; "prove this theorem" becomes "characterize the cases where it fails". Inversions often convert an existence problem into a classification problem, or a computation into a search — and one of the two is usually tractable.</p>
+<p>Hamming's account of his own research is the model: faced with "I need an acre of programmers", he inverted to "make the machine do the programming", which turned a resource constraint into a research program. The inversion did not solve the problem; it <em>changed which problem he had</em>.</p>
+<p><strong>Strengthening is the second most underused operation.</strong> Proving a stronger theorem is often easier because the stronger statement has more structure (→ Ch. <a href="chapter-10.html">10</a>, <a href="chapter-18.html">18</a>). "For all <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>" may be harder than "for all <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>, with an explicit error term", because the error term constrains the proof.</p>
+<p><strong>Problem invention is how research begins.</strong> Most research problems are not found; they are constructed by transforming a known result until a gap appears. The gap is the research problem.</p>
+<p><strong>Taste is the selection criterion.</strong> Among the infinitely many transformed problems, the good ones are:</p>
+<ul>
+<li><strong>Sharp:</strong> the answer is exact, not approximate, and the bound is attained.</li>
+<li><strong>Surprising:</strong> the answer is not what the naive approach predicts.</li>
+<li><strong>Connected:</strong> the problem links two areas, so progress transfers.</li>
+<li><strong>Short to state:</strong> the statement fits in a paragraph, even if the proof does not.</li>
+</ul>
+<h2 id="3-reasoning-process">3. Reasoning Process</h2>
+<ol type="1">
+<li><strong>State the solved problem in its most general form.</strong> What is the actual theorem?</li>
+<li><strong>Apply each transformation</strong> in the table, and write down the resulting problem in one sentence.</li>
+<li><strong>Filter by tractability.</strong> Which transformed problems have a chance? (Known techniques, small cases, existing literature.)</li>
+<li><strong>Filter by interest.</strong> Which have a sharp answer, a surprise, or a connection?</li>
+<li><strong>Attempt the survivors.</strong> Even a failed attempt tells you whether the problem is deep.</li>
+<li><strong>For a written problem, design it backwards from the key step.</strong> Choose the principle you want to test, construct a situation where it is the only way through, and disguise the situation.</li>
+</ol>
+<h2 id="4-demonstrations">4. Demonstrations</h2>
+<h3 id="demonstration-341--nine-problems-from-one">Demonstration 34.1 — Nine problems from one</h3>
+<p><em>Starting point.</em> The identity <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>∞</mi></msubsup><mn>1</mn><mi>/</mi><msup><mi>k</mi><mn>2</mn></msup><mo>=</mo><msup><mi>π</mi><mn>2</mn></msup><mi>/</mi><mn>6</mn></mrow><annotation encoding="application/x-tex">\sum_{k=1}^{\infty} 1/k^2 = \pi^2/6</annotation></semantics></math>.</p>
+<p>Apply the transformations:</p>
+<ol type="1">
+<li><strong>Generalize the exponent:</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mn>1</mn><mi>/</mi><msup><mi>k</mi><mi>s</mi></msup><mo>=</mo><mi>ζ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>s</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\sum 1/k^s = \zeta(s)</annotation></semantics></math> for <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>&gt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">s &gt; 1</annotation></semantics></math>. <em>Result:</em> the Riemann zeta function — a whole subject.</li>
+<li><strong>Specialize to odd terms:</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mrow><mi>k</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> odd</mtext></mrow></mrow></msub><mn>1</mn><mi>/</mi><msup><mi>k</mi><mn>2</mn></msup><mo>=</mo><mfrac><msup><mi>π</mi><mn>2</mn></msup><mn>8</mn></mfrac></mrow><annotation encoding="application/x-tex">\sum_{k \text{ odd}} 1/k^2 = \frac{\pi^2}{8}</annotation></semantics></math>. <em>Result:</em> a tractable variant, provable by subtracting the even terms.</li>
+<li><strong>Alternate the signs:</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>−</mi><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mi>/</mi><msup><mi>k</mi><mn>2</mn></msup><mo>=</mo><mfrac><msup><mi>π</mi><mn>2</mn></msup><mn>12</mn></mfrac></mrow><annotation encoding="application/x-tex">\sum (-1)^{k+1}/k^2 = \frac{\pi^2}{12}</annotation></semantics></math>. <em>Result:</em> the Dirichlet eta function, related to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ζ</mi><annotation encoding="application/x-tex">\zeta</annotation></semantics></math> by a simple factor.</li>
+<li><strong>Restrict the sum:</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></msubsup><mn>1</mn><mi>/</mi><msup><mi>k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\sum_{k=1}^{N} 1/k^2</annotation></semantics></math> — no closed form, but asymptotically <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>π</mi><mn>2</mn></msup><mi>/</mi><mn>6</mn><mo>−</mo><mn>1</mn><mi>/</mi><mi>N</mi></mrow><annotation encoding="application/x-tex">\pi^2/6 - 1/N</annotation></semantics></math>. <em>Result:</em> an asymptotic problem (→ Ch. <a href="chapter-22.html">22</a>).</li>
+<li><strong>Invert:</strong> given a value <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>, for which <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ζ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>s</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>v</mi></mrow><annotation encoding="application/x-tex">\zeta(s) = v</annotation></semantics></math>? <em>Result:</em> the inverse zeta problem, which is hard and interesting.</li>
+<li><strong>Compose with a character:</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mi>χ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>k</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>/</mi><msup><mi>k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\sum \chi(k)/k^2</annotation></semantics></math> for a Dirichlet character <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>χ</mi><annotation encoding="application/x-tex">\chi</annotation></semantics></math>. <em>Result:</em> Dirichlet <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>-functions, and the proof of Dirichlet's theorem on primes in arithmetic progressions.</li>
+<li><strong>Dualize (product form):</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ζ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>s</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mo>∏</mo><mi>p</mi></msub><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><msup><mi>p</mi><mrow><mi>−</mi><mi>s</mi></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mi>−</mi><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\zeta(s) = \prod_p (1-p^{-s})^{-1}</annotation></semantics></math>. <em>Result:</em> the Euler product, which connects the sum to the primes — the single most important structural fact in the subject.</li>
+<li><strong>Weaken:</strong> prove only that the sum converges. <em>Result:</em> an easy exercise (comparison with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∫</mo><mn>1</mn><mi>/</mi><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\int 1/x^2</annotation></semantics></math>).</li>
+<li><strong>Strengthen:</strong> prove the exact value with an explicit error term for the partial sums. <em>Result:</em> the Basel problem with a rate, which requires the Euler–Maclaurin formula.</li>
+</ol>
+<p><strong>What to notice.</strong> One identity generated nine problems of wildly different difficulty and interest. Three are exercises, three are theorems, and three are research programs. <strong>The transformations are mechanical; the selection is the skill.</strong> This is what "finding a research problem" looks like in practice: generate many variants, and choose the one whose difficulty is in the interesting place.</p>
+<h3 id="demonstration-342--inversion">Demonstration 34.2 — Inversion</h3>
+<p><em>Original problem.</em> "Given a graph, determine whether it has a Hamiltonian cycle." This is hard (NP-complete).</p>
+<p><em>Inversion 1.</em> "Given a number <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>, what is the smallest graph on <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> vertices with no Hamiltonian cycle and minimum degree <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>?" This is a construction problem, and it is tractable: the two-triangles-plus-bridge graph (→ Ch. <a href="chapter-32.html">32</a>) answers it for <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">d=2</annotation></semantics></math>.</p>
+<p><em>Inversion 2.</em> "Characterize the graphs that <em>do</em> have a Hamiltonian cycle." This is the classification form, and it is the form in which sufficient conditions (Dirac, Ore) were found.</p>
+<p><em>Inversion 3.</em> "Given a Hamiltonian cycle, what graphs contain it?" This is trivial, and its triviality is informative: it shows that the hard direction is the <em>existence</em> question, not the verification.</p>
+<p><strong>What to notice.</strong> The four versions of "the same problem" have completely different difficulty profiles. The original is NP-complete; the first inversion is a small construction; the second is a research program; the third is trivial. <strong>Inversion does not make the problem easier — it changes which problem you are solving</strong>, and the skill is choosing the version whose difficulty matches the tools you have.</p>
+<h3 id="demonstration-343--designing-a-problem-backwards-from-a-principle">Demonstration 34.3 — Designing a problem backwards from a principle</h3>
+<p><em>Goal.</em> Write a problem whose only clean solution uses the <strong>coloring invariant</strong> (→ Ch. <a href="chapter-08.html">8</a>).</p>
+<p><em>Step 1: choose the invariant.</em> A chessboard coloring, with the property that every tile covers one black and one white square.</p>
+<p><em>Step 2: choose the region so the invariant obstructs.</em> The region must have unequal black and white counts. The simplest such region is a board with two same-colored corners removed.</p>
+<p><em>Step 3: choose the tile so the invariant is sharp.</em> Dominoes (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">1\times2</annotation></semantics></math>) cover one of each. If the tile were a tromino, the invariant would not apply.</p>
+<p><em>Step 4: disguise the setup.</em> Instead of a chessboard, use a <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mo>×</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">6\times6</annotation></semantics></math> board with two opposite corners removed and ask for a tiling by <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">1\times2</annotation></semantics></math> dominoes. The numbers <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>6</mn><annotation encoding="application/x-tex">6</annotation></semantics></math> and "opposite corners" are chosen so the parity computation is not immediate.</p>
+<p><em>Step 5: verify the problem is not solvable by counting.</em> The area is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>34</mn><annotation encoding="application/x-tex">34</annotation></semantics></math>, which is even, so the naive area count does not obstruct. The invariant is the only obstruction, which is exactly the property a good problem has: <strong>the obvious approach fails, and the intended principle succeeds.</strong></p>
+<p><strong>What to notice.</strong> The problem was <em>constructed</em> from the solution, not discovered. This is how olympiad problems are made, and it is how research problems are made too: start from a technique, find the situation where it is the only way through, and then present the situation without the technique. <strong>Writing a problem is a way of understanding a principle at a depth that solving cannot reach</strong>, because you must know exactly which features are load-bearing (→ Ch. <a href="chapter-02.html">2</a>).</p>
+<h3 id="demonstration-344--evaluating-candidate-problems">Demonstration 34.4 — Evaluating candidate problems</h3>
+<p><em>Candidates.</em></p>
+<p><strong>(a)</strong> "Prove that every finite graph has an even number of odd-degree vertices." — Sharp (the statement is exact), not surprising (it is a standard corollary), connected (it links to Eulerian circuits), short. <em>Verdict:</em> a good exercise, a poor research problem.</p>
+<p><strong>(b)</strong> "Determine the maximum number of edges in a graph on <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> vertices with no triangle." — Sharp (Turán's theorem gives the exact answer), surprising (the extremal graph is complete bipartite, not a random sparse graph), connected (extremal graph theory, Ramsey theory), short. <em>Verdict:</em> an excellent problem — and indeed a famous theorem.</p>
+<p><strong>(c)</strong> "Find a formula for the number of primes less than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>." — Sharp (there is no elementary closed form, and the precise asymptotics is the prime number theorem), surprising, connected, short. <em>Verdict:</em> an excellent problem, but the difficulty is at the research level, so it is a poor <em>training</em> problem.</p>
+<p><strong>What to notice.</strong> The four criteria — sharpness, surprise, connection, brevity — do not measure difficulty. They measure <em>quality</em>. A problem can be excellent and easy (a), excellent and hard (b), or excellent and intractable (c). Choosing among them is a matter of the learner's level and the purpose of the problem, and that choice is taste.</p>
+<h2 id="5-connections">5. Connections</h2>
+<ul>
+<li><strong>← Ch. <a href="chapter-07.html">7</a>.</strong> Problem anatomy is the input to transformation: you cannot transform what you have not analyzed.</li>
+<li><strong>← Ch. <a href="chapter-18.html">18</a>, <a href="chapter-19.html">19</a>.</strong> Generalization and duality are two of the transformations in the table.</li>
+<li><strong>← Ch. <a href="chapter-31.html">31</a>.</strong> Conjecture formation is problem invention applied to a claim rather than a question.</li>
+<li><strong>← Ch. <a href="chapter-33.html">33</a>.</strong> Experimentation generates the data that suggest which variant is worth pursuing.</li>
+<li><strong>→ Ch. <a href="chapter-35.html">35</a>.</strong> Choosing which invented problem to pursue is the central act of research judgment.</li>
+</ul>
+<h2 id="6-limitations">6. Limitations</h2>
+<p><strong>Most transformations produce uninteresting problems.</strong> The yield is low, and that is normal. The skill is in generating many and discarding most, not in generating one perfect variant.</p>
+<p><strong>Inversion can produce a problem you cannot recognize.</strong> The inverted problem may be in a different field, with different tools. This is an advantage if you can bridge the fields, and a dead end if you cannot.</p>
+<p><strong>Strengthening can make a problem false.</strong> "Stronger" is not "better" if the stronger statement is not true. Test the strengthened statement on small cases before investing.</p>
+<p><strong>Problem invention can become avoidance.</strong> Generating variants is easier than solving any of them. Set a rule: generate at most five variants, then commit to one.</p>
+<p><strong>Taste is not teachable by rule.</strong> The four criteria (sharpness, surprise, connection, brevity) are descriptive, not algorithmic. Taste improves by exposure to many good and bad problems, and by writing problems and seeing which ones others find interesting.</p>
+<h2 id="7-applications">7. Applications</h2>
+<ul>
+<li><strong>Research.</strong> Most papers begin with a transformation of a known result; the "novelty" is the transformation, not the technique.</li>
+<li><strong>Teaching.</strong> Designing problems backwards from a principle is how good curricula are built (→ the AI Tutor Protocol).</li>
+<li><strong>Engineering.</strong> Design problems are invented by transforming requirements; "what if we relax this constraint?" is the generalization operation.</li>
+<li><strong>Consulting.</strong> Reframing a client's problem ("you asked for a faster algorithm; the real problem is the data model") is the "change the question" operation.</li>
+<li><strong>Writing.</strong> Mathematical exposition is problem invention in reverse: you present the problem so that the solution is inevitable.</li>
+<li><strong>Art and design.</strong> The transformations are the same: generalize, invert, compose, dualize. Originality is systematic, not magical.</li>
+</ul>
+<h2 id="8-mastery-criteria">8. Mastery Criteria</h2>
+<p>You have this chapter when you can:</p>
+<ol type="1">
+<li>Apply all nine transformations to a given problem and state the resulting problems in one sentence each.</li>
+<li>Choose a transformation that preserves the interesting structure and changes the hard structure.</li>
+<li>Invert a problem and identify which version is tractable.</li>
+<li>Design a problem backwards from a chosen principle, with the property that the obvious approach fails.</li>
+<li>Evaluate a candidate problem on sharpness, surprise, connection, and brevity.</li>
+<li>Generate at least three genuinely new problems from a single result.</li>
+</ol>
+<p><strong>Diagnostic question.</strong> "You have solved this. What else have you solved?" A learner who can generate variants has the inventive habit. A learner who stops at the answer does not.</p>
+<h3 id="ai-tutor-brief">AI Tutor Brief</h3>
+<ul>
+<li><strong>Generate:</strong> (i) a result plus a required list of transformed variants; (ii) "design a problem" tasks with a specified principle and a required disguise; (iii) candidate problems to be evaluated on the four criteria; (iv) inversion tasks where the learner must identify the tractable version.</li>
+<li><strong>Probe misconceptions:</strong> novelty as the goal (rather than interest); transformation without a purpose; generating variants as a substitute for solving.</li>
+<li><strong>Transfer distance:</strong> maximal. Every task should require the learner to <em>create</em> something.</li>
+<li><strong>Do not</strong> accept a variant that is merely a relabeling. Require a genuine change of structure.</li>
+</ul>
+</article>
+<nav class="pagination" aria-label="Reading order"><a href="chapter-33.html"><span class="eyebrow">← Chapter 33</span><span>Mathematical Experimentation</span></a><a href="chapter-35.html"><span class="eyebrow">Chapter 35 →</span><span>Research Judgment</span></a></nav>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="shell bar">
+      <span>Tensor <span aria-hidden="true">/</span> The Structure of Mathematical Thought</span>
+      <a href="https://github.com/anipiso9989-ops/Tensor">View source <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
+</body>
+</html>

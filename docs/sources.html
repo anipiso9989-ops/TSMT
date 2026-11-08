@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The source texts and the ideas developed from them.">
+  <title>Sources and Synthesis · Tensor</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell bar">
+      <a class="brand" href="index.html" aria-label="Tensor home"><img src="assets/mark.svg" width="26" height="26" alt="">Tensor</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html#contents">Contents</a>
+        <a href="index.html#reference">Reference</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell reader" id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Guide</a><span aria-hidden="true">/</span><a href="index.html#reference">Reference</a><span aria-hidden="true">/</span><span aria-current="page">Sources and Synthesis</span>
+    </nav>
+    <header class="reader-header">
+      <p class="eyebrow">Reference</p>
+      <h1>Sources and Synthesis</h1>
+    </header>
+    <div class="reading-layout">
+<nav class="outline" aria-label="On this page"><p class="eyebrow">On this page</p><ul><li><a href="#1-the-three-sources">1. The three sources</a></li>
+<li><a href="#2-what-was-extracted-and-where-it-went">2. What was extracted, and where it went</a></li>
+<li><a href="#3-what-is-original-to-this-guide">3. What is original to this guide</a></li>
+<li><a href="#4-verification-notes">4. Verification notes</a></li>
+<li><a href="#5-how-to-extend-this-guide">5. How to extend this guide</a></li></ul></nav>
+      <div class="reading-column">
+        <article class="prose"><p>This guide is an original framework. It is not a summary, an abridgement, or a reproduction of the three foundational sources. This file records what was extracted from each, how it was transformed, and what is new here — so that the provenance is auditable and the originality is explicit.</p>
+<hr />
+<h2 id="1-the-three-sources">1. The three sources</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>Role in this project</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Richard W. Hamming, <em>The Art of Doing Science and Engineering: Learning to Learn</em></td>
+<td>Supplies the <strong>meta-level</strong>: what it means to think well over a career, how to choose problems, how to reason under uncertainty, how computation and modeling fit into reasoning, and the philosophical status of mathematical structures.</td>
+</tr>
+<tr class="even">
+<td>Sandor Lehoczky and Richard Rusczyk, <em>The Art of Problem Solving, Volume 1: The Basics</em></td>
+<td>Supplies the <strong>elementary technique layer</strong>: the proof techniques, the "methods not memory" pedagogy, and the specific problem-solving moves (working backwards, auxiliary constructions, case discipline, pigeonhole, counting two ways).</td>
+</tr>
+<tr class="odd">
+<td>Sandor Lehoczky and Richard Rusczyk, <em>The Art of Problem Solving, Volume 2: And Beyond</em></td>
+<td>Supplies the <strong>structural technique layer</strong>: correspondences, generating functions, recurrences, functional identities, classification methods, and the transition from technique to structure.</td>
+</tr>
+</tbody>
+</table></div>
+<p>No text from these books is reproduced. Where a specific idea is theirs, it is paraphrased and attributed at the level of the idea, and then <strong>rebuilt inside this guide's own architecture</strong> — which is where the original work lies.</p>
+<hr />
+<h2 id="2-what-was-extracted-and-where-it-went">2. What was extracted, and where it went</h2>
+<h3 id="21-from-hamming">2.1 From Hamming</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
+<thead>
+<tr class="header">
+<th>Idea (paraphrased)</th>
+<th>Where it appears here</th>
+<th>How it was transformed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Education is <em>what, when, why</em>; training is <em>how</em>. Both are needed, and education must be built on technical experience.</td>
+<td>README (design commitments); Ch. <a href="chapter-35.html">35</a></td>
+<td>Turned into the guide's split between <em>principles</em> (education) and <em>demonstrations</em> (training), with the mastery criteria as the bridge.</td>
+</tr>
+<tr class="even">
+<td>Style of thinking, not content, is what a course should transmit; style is caught from examples, not from rules.</td>
+<td>README; Ch. <a href="chapter-24.html">24</a>; Ch. <a href="chapter-35.html">35</a></td>
+<td>Converted into the <strong>signature table</strong> and the <strong>difficulty taxonomy</strong> — an attempt to make "style" partly explicit and therefore trainable.</td>
+</tr>
+<tr class="odd">
+<td>Back-of-the-envelope calculation: a quick model to test whether a quantitative claim is even plausible.</td>
+<td>Ch. <a href="chapter-26.html">26</a></td>
+<td>Systematized into a procedure (decompose → anchor → log-combine → second route → range), with the two-route agreement rule as the reliability criterion.</td>
+</tr>
+<tr class="even">
+<td>The purpose of computing is insight, not numbers.</td>
+<td>Ch. <a href="chapter-28.html">28</a></td>
+<td>Turned into the chapter's standard: a computation must yield a structural claim (scaling law, threshold, mechanism), not a table.</td>
+</tr>
+<tr class="odd">
+<td>Knowledge doubles on a timescale shorter than a career; half of technical knowledge is obsolete in about fifteen years; therefore concentrate on fundamentals.</td>
+<td>Ch. <a href="chapter-06.html">6</a></td>
+<td>Turned into the <strong>two tests for "fundamental"</strong> (longevity, generativity) and the dependency-audit procedure.</td>
+</tr>
+<tr class="even">
+<td>Mathematics has no unique foundation; the schools (Platonic, formalist, logicist, intuitionist, constructivist) each capture something and each fails; meaning arises from use, not from definition.</td>
+<td>Ch. <a href="chapter-01.html">1</a>; Ch. <a href="chapter-02.html">2</a></td>
+<td>Turned into the operational stance: <em>truth is relative to a structure</em>, and identifying the structure is a required step in any argument.</td>
+</tr>
+<tr class="odd">
+<td>Standards of rigor rise over time; proofs are more or less convincing rather than certainly convincing.</td>
+<td>Ch. <a href="chapter-04.html">4</a></td>
+<td>Turned into <strong>rigor as a spectrum</strong> (every gap filled or flagged) and the four audit questions.</td>
+</tr>
+<tr class="even">
+<td>The creative process: recognize, refine, saturate, abandon temporarily, insight, clean up. "If I had a solution, what would it look like?"</td>
+<td>Ch. <a href="chapter-07.html">7</a>; Ch. <a href="chapter-17.html">17</a>; Ch. <a href="chapter-35.html">35</a></td>
+<td>Turned into the <strong>form question</strong> and the <strong>backward chain</strong>, with the incubation step preserved in the stuckness protocol.</td>
+</tr>
+<tr class="odd">
+<td>Analogy is the main tool of creativity, and a useful analogy need not be close — it need only suggest the next move.</td>
+<td>Ch. <a href="chapter-18.html">18</a>; Ch. <a href="chapter-19.html">19</a>; Ch. <a href="chapter-23.html">23</a></td>
+<td>Turned into the distinction between <strong>analogy (unverified), duality (verified dictionary), and isomorphism (exact)</strong>, with the verification requirement made explicit.</td>
+</tr>
+<tr class="even">
+<td>Impossibility proofs rest on assumptions; experts dismiss what does not fit their frame.</td>
+<td>Ch. <a href="chapter-32.html">32</a></td>
+<td>Turned into <strong>boundary hunting</strong>: delete each hypothesis and find the counterexample.</td>
+</tr>
+<tr class="odd">
+<td>The whole is more than the sum of the parts; feedback and stability are the central issues in systems.</td>
+<td>Ch. <a href="chapter-30.html">30</a></td>
+<td>Turned into the four properties (feedback, emergence, nonlinearity, interfaces) and the interface audit.</td>
+</tr>
+<tr class="even">
+<td>Work on important problems; confidence and courage are prerequisites; consistent direction compounds while random effort does not.</td>
+<td>Ch. <a href="chapter-35.html">35</a></td>
+<td>Turned into the <strong>important-problem table</strong> (why / known / obstruction / progress) and the quantified compounding argument.</td>
+</tr>
+<tr class="odd">
+<td>Data are unreliable in ways that are systematic, not random.</td>
+<td>Ch. <a href="chapter-29.html">29</a></td>
+<td>Turned into the taxonomy: noise, bias, selection, aggregation, regression to the mean, multiple comparisons.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>What was deliberately not taken from Hamming:</strong> the historical and technical chapters (hardware, software, coding theory, filters, fiber optics, quantum mechanics) supply illustrations but not the guide's structure. The guide borrows the <em>stance</em> — reasoning about reasoning, with technical material as evidence — not the content.</p>
+<h3 id="22-from-the-art-of-problem-solving-volume-1">2.2 From <em>The Art of Problem Solving, Volume 1</em></h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
+<thead>
+<tr class="header">
+<th>Idea (paraphrased)</th>
+<th>Where it appears here</th>
+<th>How it was transformed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>The book teaches approaches, not facts; formulas should become obvious rather than memorized; the exercises are the point.</td>
+<td>README; Ch. <a href="chapter-06.html">6</a></td>
+<td>Turned into the <strong>derivation requirement</strong> in every demonstration, and the rule that the guide contains no problem sets (the tutor supplies practice).</td>
+</tr>
+<tr class="even">
+<td>Subjects should be learned together, because the connections are the point.</td>
+<td>Ch. <a href="chapter-23.html">23</a></td>
+<td>Turned into the <strong>multiple-lenses</strong> chapter and the translation table.</td>
+</tr>
+<tr class="odd">
+<td>Proof techniques: contradiction, induction, pigeonhole; converses are not automatic; "iff" needs two directions.</td>
+<td>Ch. <a href="chapter-03.html">3</a>; Ch. <a href="chapter-04.html">4</a>; Ch. <a href="chapter-10.html">10</a>; Ch. <a href="chapter-13.html">13</a></td>
+<td>Reorganized by <strong>goal shape</strong> rather than by technique name, producing the four-engine table.</td>
+</tr>
+<tr class="even">
+<td>Rigorous means complete, with no unproven assumptions; circular reasoning is easy to hide.</td>
+<td>Ch. <a href="chapter-04.html">4</a></td>
+<td>Turned into the <strong>asset-list discipline</strong> and the circularity audit (including the algebraic variety).</td>
+</tr>
+<tr class="odd">
+<td>Think about what is special about every restriction in the problem.</td>
+<td>Ch. <a href="chapter-07.html">7</a></td>
+<td>Turned into the <strong>generic vs special constraint</strong> distinction and the "unused hypothesis is a signal" rule.</td>
+</tr>
+<tr class="even">
+<td>Working backwards; adding auxiliary lines; the auxiliary line is chosen to create similar triangles or equal angles.</td>
+<td>Ch. <a href="chapter-17.html">17</a></td>
+<td>Turned into the <strong>backward chain</strong> with the auxiliary object <em>forced</em> by the chain, rather than guessed.</td>
+</tr>
+<tr class="odd">
+<td>Always check that the proof covers all cases and makes no assumptions that are not part of the problem.</td>
+<td>Ch. <a href="chapter-04.html">4</a>; Ch. <a href="chapter-14.html">14</a>; Ch. <a href="chapter-32.html">32</a></td>
+<td>Turned into the <strong>exhaustiveness obligation</strong> and the boundary table.</td>
+</tr>
+<tr class="even">
+<td>Convincing but wrong: a wrong step hidden among correct ones; patterns are not proofs.</td>
+<td>Ch. <a href="chapter-04.html">4</a>; Ch. <a href="chapter-31.html">31</a></td>
+<td>Turned into the <strong>planted-defect</strong> problem type and the mechanism requirement for conjectures.</td>
+</tr>
+<tr class="odd">
+<td>Counting two ways; counting the wrong thing; doing it another way.</td>
+<td>Ch. <a href="chapter-12.html">12</a></td>
+<td>Turned into the <strong>relation-selection</strong> method (choose the set of pairs) and the multiplicity discipline.</td>
+</tr>
+<tr class="even">
+<td>Aesthetics matter; a proof can explain as well as certify; multiple proofs of the same theorem are valuable.</td>
+<td>Ch. <a href="chapter-04.html">4</a>; Ch. <a href="chapter-23.html">23</a></td>
+<td>Turned into the <strong>explanation vs certification</strong> distinction and the "two lenses" requirement.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="23-from-the-art-of-problem-solving-volume-2">2.3 From <em>The Art of Problem Solving, Volume 2</em></h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
+<thead>
+<tr class="header">
+<th>Idea (paraphrased)</th>
+<th>Where it appears here</th>
+<th>How it was transformed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Proofs are essential to understanding: if you do not know why a tool works, you cannot use it fully.</td>
+<td>Ch. <a href="chapter-04.html">4</a>; Ch. <a href="chapter-06.html">6</a></td>
+<td>Turned into the rule that every demonstration is a complete argument and every formula is derived.</td>
+</tr>
+<tr class="even">
+<td>Clever correspondences; counting by finding the right representation.</td>
+<td>Ch. <a href="chapter-12.html">12</a>; Ch. <a href="chapter-19.html">19</a></td>
+<td>Turned into the <strong>bijection-as-isomorphism</strong> view and the "find the set both sides count" procedure.</td>
+</tr>
+<tr class="odd">
+<td>Generating functions turn recurrences into algebra.</td>
+<td>Ch. <a href="chapter-15.html">15</a></td>
+<td>Turned into the four-step transform-solve-return-verify procedure, with verification made mandatory.</td>
+</tr>
+<tr class="even">
+<td>Functional identities: isolate, substitute values, use cyclic structure.</td>
+<td>Ch. <a href="chapter-15.html">15</a>; Ch. <a href="chapter-18.html">18</a></td>
+<td>Absorbed into <strong>transformation</strong> (substitution and parameterization) rather than kept as a separate topic.</td>
+</tr>
+<tr class="odd">
+<td>Recurrences, continued fractions, repeated structures.</td>
+<td>Ch. <a href="chapter-10.html">10</a>; Ch. <a href="chapter-15.html">15</a>; Ch. <a href="chapter-22.html">22</a></td>
+<td>Turned into the <strong>recursion ↔︎ induction duality</strong> and the asymptotics of recursively defined sequences.</td>
+</tr>
+<tr class="even">
+<td>Classification methods: cycle decomposition, canonical forms, invariants.</td>
+<td>Ch. <a href="chapter-14.html">14</a>; Ch. <a href="chapter-19.html">19</a></td>
+<td>Turned into the <strong>canonical form → classification</strong> procedure with the uniqueness obligation made explicit.</td>
+</tr>
+<tr class="odd">
+<td>General methods for Diophantine equations (factorization, modular obstruction, descent, Pell).</td>
+<td>Ch. <a href="chapter-24.html">24</a> (Demonstration 24.1); Ch. <a href="chapter-32.html">32</a></td>
+<td>Turned into the <strong>macro</strong> concept: a named sequence of principles that recurs as a unit.</td>
+</tr>
+<tr class="even">
+<td>Geometric transformations: projection, inversion, homothety, continuity arguments.</td>
+<td>Ch. <a href="chapter-15.html">15</a>; Ch. <a href="chapter-19.html">19</a></td>
+<td>Turned into the <strong>transformation table</strong> and the "reversibility must be tracked" rule.</td>
+</tr>
+<tr class="odd">
+<td>Graph theory: planarity, Euler trails, colorings, the Platonic solids.</td>
+<td>Ch. <a href="chapter-08.html">8</a>; Ch. <a href="chapter-19.html">19</a>; Ch. <a href="chapter-30.html">30</a></td>
+<td>Used as demonstration material for invariants, duality, and systems rather than as a subject chapter.</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="3-what-is-original-to-this-guide">3. What is original to this guide</h2>
+<p>The sources supply ideas. The following are constructed here and are not in the sources:</p>
+<ol type="1">
+<li><p><strong>The eight-part chapter template</strong> (Core Idea, First Principles, Reasoning Process, Demonstrations, Connections, Limitations, Applications, Mastery Criteria) and the failure mode each section is designed to prevent.</p></li>
+<li><p><strong>The principle taxonomy and dependency graph.</strong> The sources organize by subject (AoPS) or by lecture topic (Hamming). This guide organizes by <em>principle</em>, with an explicit DAG, hard and soft prerequisites, and a repair plan keyed to weakness codes.</p></li>
+<li><p><strong>The difficulty taxonomy</strong> (search / construction / impossibility / estimation) and the <strong>signature table</strong> that maps a problem's surface to a candidate principle. This is the guide's answer to "how do I know which technique to use?", which neither source addresses systematically.</p></li>
+<li><p><strong>The boundary-table method</strong> (Ch. <a href="chapter-32.html">32</a>, Demonstration 32.4): for each hypothesis of a theorem, delete it, produce a counterexample, and name what the hypothesis prevents. This is a specific, reusable instrument.</p></li>
+<li><p><strong>The mastery-level scale (0–4) with behavioral descriptors</strong>, and the certification protocol (five conditions, spaced review, downgrade rule).</p></li>
+<li><p><strong>The transfer-distance framework</strong> (near / medium / far) and the rule that mastery requires three consecutive far-transfer successes. This makes "understanding" measurable in a way that neither source attempts.</p></li>
+<li><p><strong>The weakness-code taxonomy</strong> (26 codes with symptom, root cause, and remediation), which turns diagnosis into a cumulative, queryable record.</p></li>
+<li><p><strong>The hint ladder</strong> (five levels, escalation rules, one level per exchange) and the <strong>anti-dependency protocol</strong> (effort gates, solution withholding, explain-back, fading).</p></li>
+<li><p><strong>The compound-strategy macros</strong> (Ch. <a href="chapter-24.html">24</a>): named sequences of principles that recur, such as "pick a modulus → enumerate residues → show divisibility → descend".</p></li>
+<li><p><strong>The applied reasoning chapters</strong> (modeling, estimation, scaling, computation, uncertainty, systems) treated as <em>reasoning principles</em> rather than as applications of mathematics. Hamming gestures at this; the guide makes it a structural part of the curriculum.</p></li>
+<li><p><strong>The research chapters</strong> (conjecture, counterexample, experiment, invention, judgment) as trainable practices with protocols, rather than as advice.</p></li>
+<li><p><strong>The AI tutor protocol</strong> in its entirety: the role definition, the learner-model schema, the diagnostic stages, the problem-generation specification, the evaluation rubric, and the guardrails.</p></li>
+</ol>
+<hr />
+<h2 id="4-verification-notes">4. Verification notes</h2>
+<p>Mathematical claims in the demonstrations were checked by computation or by direct argument. Where a demonstration is a classical theorem, the proof given is a standard one, presented in this guide's voice and connected to the chapter's principle. The following were verified numerically during preparation:</p>
+<ul>
+<li>The Moser circle-problem counts <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>8</mn><mo>,</mo><mn>16</mn><mo>,</mo><mn>31</mn></mrow><annotation encoding="application/x-tex">1,2,4,8,16,31</annotation></semantics></math> and the formula <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mn>4</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\binom{n}{4}+\binom{n}{2}+1</annotation></semantics></math>.</li>
+<li>The line-arrangement count <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>/</mi><mn>2</mn><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n(n+1)/2+1</annotation></semantics></math> for <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>0</mn><mo>,</mo><mi>…</mi><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">n = 0,\dots,5</annotation></semantics></math>.</li>
+<li>The <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mo>×</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">6\times6</annotation></semantics></math> board's complex weight <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>2</mn><mi>i</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">(1+i)^2 = 2i \ne 0</annotation></semantics></math> under fourth-root-of-unity weighting.</li>
+<li>The Sylvester–Gallai minimal-distance inequality <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>c</mi><mo>−</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>/</mi><msqrt><mrow><msup><mi>h</mi><mn>2</mn></msup><mo>+</mo><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt><mo>&lt;</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">h(c-b)/\sqrt{h^2+c^2} &lt; h</annotation></semantics></math> for <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><mi>b</mi><mo>&lt;</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">0&lt;b&lt;c</annotation></semantics></math>.</li>
+<li>The Braess network equilibria (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>65</mn><annotation encoding="application/x-tex">65</annotation></semantics></math> minutes without the link, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>80</mn><annotation encoding="application/x-tex">80</annotation></semantics></math> with it).</li>
+<li>The Simpson's-paradox table (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>90</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">90\%</annotation></semantics></math> vs <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>88.9</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">88.9\%</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>22.2</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">22.2\%</annotation></semantics></math> vs <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>20</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">20\%</annotation></semantics></math>, overall <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>29</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">29\%</annotation></semantics></math> vs <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>82</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">82\%</annotation></semantics></math>).</li>
+<li>The logistic-map stability condition <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><mn>2</mn><mo>−</mo><mi>r</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">|2-r|&lt;1</annotation></semantics></math> and the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mn>3.2</mn></mrow><annotation encoding="application/x-tex">r=3.2</annotation></semantics></math> two-cycle (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mn>0.513</mn></mrow><annotation encoding="application/x-tex">\approx 0.513</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mn>0.799</mn></mrow><annotation encoding="application/x-tex">\approx 0.799</annotation></semantics></math>).</li>
+<li>The <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mi>!</mi></mrow><annotation encoding="application/x-tex">100!</annotation></semantics></math> digit count (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>158</mn><annotation encoding="application/x-tex">158</annotation></semantics></math>) via Stirling.</li>
+<li>The atmospheric mass estimate (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5.3</mn><mo>×</mo><msup><mn>10</mn><mn>18</mn></msup></mrow><annotation encoding="application/x-tex">5.3\times10^{18}</annotation></semantics></math> kg vs the accepted <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5.15</mn><mo>×</mo><msup><mn>10</mn><mn>18</mn></msup></mrow><annotation encoding="application/x-tex">5.15\times10^{18}</annotation></semantics></math> kg).</li>
+<li>The M/M/1 waiting times <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>ρ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\rho/(1-\rho)</annotation></semantics></math> at <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo>=</mo><mn>0.5</mn><mo>,</mo><mn>0.8</mn><mo>,</mo><mn>0.9</mn><mo>,</mo><mn>0.95</mn><mo>,</mo><mn>0.99</mn></mrow><annotation encoding="application/x-tex">\rho = 0.5, 0.8, 0.9, 0.95, 0.99</annotation></semantics></math>.</li>
+<li>The two-square identity and its complex-modulus proof.</li>
+<li>The reciprocal-quartic substitution and the absence of real roots.</li>
+<li>Binet's formula from both the generating function and the matrix diagonalization.</li>
+<li>The weighted AM–GM induction step.</li>
+<li>The Erdős–Szekeres distinct-labels argument.</li>
+<li>The Dirichlet approximation pigeonhole bound.</li>
+</ul>
+<p>Any error that survives is the author's, and should be reported as a defect of this guide, not of the sources.</p>
+<hr />
+<h2 id="5-how-to-extend-this-guide">5. How to extend this guide</h2>
+<p>The architecture is designed to accept new chapters without restructuring. To add a principle:</p>
+<ol type="1">
+<li><strong>Place it in the DAG.</strong> Identify its hard prerequisites and the chapters that would draw on it. Update <a href="principle-map.html"><code>07-Principle-Map.md</code></a>.</li>
+<li><strong>Write the eight sections.</strong> The <em>Limitations</em> section is the one that determines whether the chapter is worth having: a principle whose failure modes you cannot state is a principle you do not understand.</li>
+<li><strong>Write the AI Tutor Brief.</strong> Specify the target subskill, the common failure modes, and the transfer distance.</li>
+<li><strong>Add a weakness code</strong> if the principle has a characteristic error not covered by the existing 26.</li>
+<li><strong>Add a checkpoint item.</strong> A principle that is not assessed will not be learned.</li>
+<li><strong>Add it to the signature table</strong> in Ch. <a href="chapter-24.html">24</a>, with its decoys.</li>
+</ol>
+<p>The guide's value is in the connections, not the count. A new chapter that does not connect to at least three existing ones should probably be a section instead.</p>
+<hr />
+</article>
+
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="shell bar">
+      <span>Tensor <span aria-hidden="true">/</span> The Structure of Mathematical Thought</span>
+      <a href="https://github.com/anipiso9989-ops/Tensor">View source <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chapter 25 of The Structure of Mathematical Thought. Modeling: World → Mathematics → World.">
+  <title>Chapter 25 · Modeling: World → Mathematics → World · Tensor</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell bar">
+      <a class="brand" href="index.html" aria-label="Tensor home"><img src="assets/mark.svg" width="26" height="26" alt="">Tensor</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html#contents">Contents</a>
+        <a href="index.html#reference">Reference</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell reader" id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Guide</a><span aria-hidden="true">/</span><a href="part-iv.html">Part IV</a><span aria-hidden="true">/</span><span aria-current="page">Chapter 25</span>
+    </nav>
+    <header class="reader-header">
+      <p class="eyebrow">Chapter 25 / Part IV</p>
+      <h1>Modeling: World → Mathematics → World</h1>
+    </header>
+    <div class="reading-layout">
+<nav class="outline" aria-label="On this page"><p class="eyebrow">On this page</p><ul><li><a href="#1-core-idea">1. Core Idea</a></li>
+<li><a href="#2-first-principles">2. First Principles</a></li>
+<li><a href="#3-reasoning-process">3. Reasoning Process</a></li>
+<li><a href="#4-demonstrations">4. Demonstrations</a></li>
+<li><a href="#5-connections">5. Connections</a></li>
+<li><a href="#6-limitations">6. Limitations</a></li>
+<li><a href="#7-applications">7. Applications</a></li>
+<li><a href="#8-mastery-criteria">8. Mastery Criteria</a></li></ul></nav>
+      <div class="reading-column">
+        <article class="prose"><h2 id="1-core-idea">1. Core Idea</h2>
+<p><strong>Modeling</strong> is the construction of a mathematical structure <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℳ</mi><annotation encoding="application/x-tex">\mathcal{M}</annotation></semantics></math> together with an interpretation that maps statements about <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℳ</mi><annotation encoding="application/x-tex">\mathcal{M}</annotation></semantics></math> to statements about a target system <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>.</p>
+<p>A model is therefore a <em>conditional</em>: <em>if</em> the target behaves as the assumptions say, <em>then</em> the theorems of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℳ</mi><annotation encoding="application/x-tex">\mathcal{M}</annotation></semantics></math> hold of the target. The assumptions are not a preliminary; they <strong>are</strong> the model. Two models with the same equations and different assumptions are different models.</p>
+<p>The cycle:</p>
+<p><span class="display-math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">question</mtext><mo>→</mo><mtext mathvariant="normal">entities and relations</mtext><mo>→</mo><mtext mathvariant="normal">assumptions</mtext><mo>→</mo><mtext mathvariant="normal">model</mtext><mo>→</mo><mtext mathvariant="normal">analysis</mtext><mo>→</mo><mtext mathvariant="normal">prediction</mtext><mo>→</mo><mtext mathvariant="normal">comparison</mtext><mo>→</mo><mtext mathvariant="normal">revision</mtext></mrow><annotation encoding="application/x-tex">\text{question} \to \text{entities and relations} \to \text{assumptions} \to \text{model} \to \text{analysis} \to \text{prediction} \to \text{comparison} \to \text{revision}</annotation></semantics></math></span></p>
+<p>The cycle is the point. A model is not a thing you build once; it is a hypothesis you iterate. The iteration is driven by <strong>discrepancy</strong>: where the prediction and the observation disagree is where the model is wrong, and the <em>pattern</em> of disagreement tells you which assumption to revise.</p>
+<p><strong>Principle signature.</strong> The question is about a real system; the data are noisy or incomplete; the answer must be actionable; and someone will make a decision based on it.</p>
+<h2 id="2-first-principles">2. First Principles</h2>
+<p><strong>Models are partial homomorphisms.</strong> A model preserves <em>some</em> structure of the target and discards the rest. The discarded structure is the model's <strong>scope</strong>: the set of questions it can answer. A model that is excellent for one question can be worthless for another, with no contradiction — the difference is which structure was preserved.</p>
+<p><strong>All models are wrong; some are useful.</strong> The aphorism is not cynicism; it is a criterion. Usefulness is relative to a purpose, so the first question about any model is not "is it true?" but "is it adequate for this decision?".</p>
+<p><strong>The three sources of model error.</strong></p>
+<ol type="1">
+<li><strong>Structural error:</strong> the equations have the wrong form (linear where the system is nonlinear; deterministic where it is stochastic).</li>
+<li><strong>Parameter error:</strong> the form is right but the constants are wrong or uncertain.</li>
+<li><strong>Observation error:</strong> the data used to calibrate or validate are noisy, biased, or selected (→ Ch. <a href="chapter-29.html">29</a>).</li>
+</ol>
+<p>These have different remedies. Better data fixes (3); better calibration fixes (2); only a different model fixes (1). Confusing them is the most common failure in applied work: adding data to a structurally wrong model makes the wrong answer more precise.</p>
+<p><strong>Verification versus validation.</strong> <em>Verification</em> asks: does the implementation solve the equations I wrote? <em>Validation</em> asks: are these the right equations for the target? A model can be perfectly verified and completely invalid. Both are necessary; neither implies the other.</p>
+<p><strong>Sensitivity is part of the result.</strong> A prediction that changes drastically when a parameter moves by 10% is not a prediction; it is a coin flip dressed as a number. Sensitivity analysis — varying each assumption and re-running — is not optional.</p>
+<h2 id="3-reasoning-process">3. Reasoning Process</h2>
+<ol type="1">
+<li><strong>State the decision the model must support.</strong> Not "understand X" but "should we do A or B, and by how much?". The decision determines the required precision and the relevant structure.</li>
+<li><strong>Name the entities and the relations.</strong> What are the objects, what interacts with what, what is conserved?</li>
+<li><strong>Write the assumptions as a numbered list.</strong> Each assumption should be a sentence that could be false. Rank them by confidence.</li>
+<li><strong>Build the simplest model that could possibly answer the question.</strong> Simplicity is a feature: it makes the assumptions visible and the analysis tractable.</li>
+<li><strong>Analyze.</strong> Solve, simulate, or bound. Derive the qualitative behavior (thresholds, equilibria, growth) before the numbers.</li>
+<li><strong>Compare with data or with a limiting case.</strong> Does it reproduce a known case? Does it satisfy a conservation law? Does it have the right units (→ Ch. <a href="chapter-27.html">27</a>)?</li>
+<li><strong>Stress-test.</strong> Vary each assumption by a plausible amount. Identify which ones the conclusion depends on.</li>
+<li><strong>Report with scope conditions.</strong> "Under assumptions 1–5, the model predicts X ± δ; the conclusion is sensitive to assumption 3, which is the weakest link."</li>
+</ol>
+<h2 id="4-demonstrations">4. Demonstrations</h2>
+<h3 id="demonstration-251--two-models-of-the-same-phenomenon">Demonstration 25.1 — Two models of the same phenomenon</h3>
+<p><em>Question.</em> How does a quantity <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">N(t)</annotation></semantics></math> — a population, a rumor's spread, the adoption of a product — grow over time?</p>
+<p><em>Model A (unlimited growth).</em> Assumption: the growth rate is proportional to the current size. <span class="display-math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>d</mi><mi>N</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>r</mi><mi>N</mi><mo>⟹</mo><mi>N</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mi>N</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>r</mi><mi>t</mi></mrow></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">\frac{dN}{dt} = rN \implies N(t) = N_0 e^{rt}.</annotation></semantics></math></span> <em>Qualitative behavior:</em> exponential growth; doubling time <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>ln</mo><mn>2</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">\ln 2 / r</annotation></semantics></math>, independent of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>N</mi><mn>0</mn></msub><annotation encoding="application/x-tex">N_0</annotation></semantics></math>; unbounded.</p>
+<p><em>Model B (limited growth).</em> Assumption: the growth rate is proportional to the current size <em>and</em> to the remaining capacity <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mi>N</mi><mi>/</mi><mi>K</mi></mrow><annotation encoding="application/x-tex">1 - N/K</annotation></semantics></math>, where <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>K</mi><annotation encoding="application/x-tex">K</annotation></semantics></math> is the carrying capacity. <span class="display-math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>d</mi><mi>N</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>r</mi><mi>N</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mfrac><mi>N</mi><mi>K</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>⟹</mo><mi>N</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mi>K</mi><mrow><mn>1</mn><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>K</mi><mo>−</mo><msub><mi>N</mi><mn>0</mn></msub></mrow><msub><mi>N</mi><mn>0</mn></msub></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><msup><mi>e</mi><mrow><mi>−</mi><mi>r</mi><mi>t</mi></mrow></msup></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">\frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right) \implies N(t) = \frac{K}{1 + \left(\frac{K-N_0}{N_0}\right)e^{-rt}}.</annotation></semantics></math></span></p>
+<p><em>Check.</em> At <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t=0</annotation></semantics></math>: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mi>K</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>K</mi><mo>−</mo><msub><mi>N</mi><mn>0</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mi>/</mi><msub><mi>N</mi><mn>0</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mi>N</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">N = K/\left(1 + (K-N_0)/N_0\right) = N_0</annotation></semantics></math> ✓. As <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>→</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">t\to\infty</annotation></semantics></math>: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>→</mo><mi>K</mi></mrow><annotation encoding="application/x-tex">N \to K</annotation></semantics></math> ✓. And substituting into the ODE verifies the solution.</p>
+<p><em>Qualitative behavior:</em> initial exponential growth with rate <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>; inflection at <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mi>K</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">N = K/2</annotation></semantics></math>; saturation at <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>K</mi><annotation encoding="application/x-tex">K</annotation></semantics></math>; the growth rate is maximal at <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">K/2</annotation></semantics></math>.</p>
+<p><strong>What to notice.</strong> The two models agree at small <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math> (both <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><msub><mi>N</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>r</mi><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\approx N_0 e^{rt}</annotation></semantics></math>) and diverge completely at large <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>. <strong>The data that distinguishes them is precisely the data that is hardest to get: the long-time behavior.</strong> This is a general fact about model discrimination — models that agree on the easy data differ on the hard data, and the hard data is expensive.</p>
+<p>The choice between them is not a matter of mathematical taste; it is a claim about the target. If the target has a finite capacity (a market, a population with limited food, a finite social network), Model B is structurally correct and Model A is not, regardless of how well A fits the early data.</p>
+<h3 id="demonstration-252--same-data-different-models-different-predictions">Demonstration 25.2 — Same data, different models, different predictions</h3>
+<p><em>Data.</em> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">f(0) = 1</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">f(1) = 2</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">f(2) = 4</annotation></semantics></math>.</p>
+<p><em>Model A (exponential).</em> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mn>2</mn><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">f(n) = 2^n</annotation></semantics></math>. Fits all three points.</p>
+<p><em>Model B (quadratic).</em> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>n</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">f(n) = \frac12 n^2 + \frac12 n + 1</annotation></semantics></math>. Check: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">f(0)=1</annotation></semantics></math> ✓, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn><mi>/</mi><mn>2</mn><mo>+</mo><mn>1</mn><mi>/</mi><mn>2</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">f(1)=1/2+1/2+1=2</annotation></semantics></math> ✓, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>2</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">f(2)=2+1+1=4</annotation></semantics></math> ✓.</p>
+<p><em>Predictions at <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">n = 10</annotation></semantics></math>:</em> <span class="display-math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>A</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mn>10</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>1024</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>f</mi><mi>B</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mn>10</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>50</mn><mo>+</mo><mn>5</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>56</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">f_A(10) = 1024, \qquad f_B(10) = 50 + 5 + 1 = 56.</annotation></semantics></math></span></p>
+<p><strong>What to notice.</strong> Both models fit the data exactly; they differ by a factor of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>18</mn><annotation encoding="application/x-tex">18</annotation></semantics></math> at <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">n=10</annotation></semantics></math>. <strong>Three data points cannot distinguish a two-parameter family from a one-parameter family</strong>, and the difference is invisible in the fitting range. This is the mathematical core of overfitting (→ Ch. <a href="chapter-29.html">29</a>) and of the danger of extrapolation.</p>
+<p>The resolution is not "use the simpler model" (Model B has more parameters but is not thereby wrong). The resolution is <strong>structural knowledge</strong>: if the mechanism is multiplicative (each unit produces more units), the exponential is right; if the mechanism is additive with a quadratic correction, Model B is right. Data alone cannot decide; data plus mechanism can.</p>
+<h3 id="demonstration-253--a-model-that-reveals-a-threshold">Demonstration 25.3 — A model that reveals a threshold</h3>
+<p><em>Model.</em> A single server with arrivals at rate <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math> and service rate <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math> (jobs per unit time), with random arrivals and service times (M/M/1). Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo>=</mo><mi>λ</mi><mi>/</mi><mi>μ</mi></mrow><annotation encoding="application/x-tex">\rho = \lambda/\mu</annotation></semantics></math> be the <strong>utilization</strong>.</p>
+<p><em>Result.</em> The expected time a job spends waiting in the queue is <span class="display-math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>W</mi><mi>q</mi></msub><mo>=</mo><mfrac><mi>ρ</mi><mrow><mi>μ</mi><mo>−</mo><mi>λ</mi></mrow></mfrac><mo>=</mo><mfrac><mi>ρ</mi><mrow><mi>μ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>ρ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">W_q = \frac{\rho}{\mu - \lambda} = \frac{\rho}{\mu(1-\rho)}.</annotation></semantics></math></span></p>
+<p><em>Behavior.</em> As <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>→</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">\lambda \to \mu</annotation></semantics></math> (utilization <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\to 1</annotation></semantics></math>), <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>W</mi><mi>q</mi></msub><mo>→</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">W_q \to \infty</annotation></semantics></math>. Numerically, with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\mu = 1</annotation></semantics></math>:</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
+<thead>
+<tr class="header">
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math></th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>W</mi><mi>q</mi></msub><annotation encoding="application/x-tex">W_q</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.5</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>0.8</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>0.9</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>0.95</td>
+<td>19</td>
+</tr>
+<tr class="odd">
+<td>0.99</td>
+<td>99</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>What to notice.</strong> A 10% increase in load from <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo>=</mo><mn>0.9</mn></mrow><annotation encoding="application/x-tex">\rho=0.9</annotation></semantics></math> to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo>=</mo><mn>0.99</mn></mrow><annotation encoding="application/x-tex">\rho=0.99</annotation></semantics></math> multiplies the wait by <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>11</mn><annotation encoding="application/x-tex">11</annotation></semantics></math>. The nonlinearity is not a modeling artifact; it is the reason queueing systems are fragile near capacity, and it is a <em>qualitative</em> prediction that survives changes in the detailed assumptions (the same <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>ρ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">1/(1-\rho)</annotation></semantics></math> blowup appears in most single-server models).</p>
+<p><strong>The modeling lesson.</strong> The value of the model was not the number <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>9</mn><annotation encoding="application/x-tex">9</annotation></semantics></math>; it was the discovery of the <strong>threshold</strong> and the <strong>functional form</strong> of the blowup. A model that gets the qualitative behavior right is useful even when its constants are wrong, because the qualitative behavior is what drives decisions (provision capacity for peak load, not average load).</p>
+<h2 id="5-connections">5. Connections</h2>
+<ul>
+<li><strong>← Ch. <a href="chapter-01.html">1</a>.</strong> A model is a structure plus an interpretation; the transfer principle tells you what the model's theorems say about the target.</li>
+<li><strong>← Ch. <a href="chapter-06.html">6</a>.</strong> The dependency audit of a model is the list of assumptions, ranked by confidence.</li>
+<li><strong>← Ch. <a href="chapter-18.html">18</a>.</strong> Generalizing a model is changing its scope; specializing it is calibrating it.</li>
+<li><strong>→ Ch. <a href="chapter-26.html">26</a>.</strong> Estimation supplies the parameters and the sanity checks.</li>
+<li><strong>→ Ch. <a href="chapter-27.html">27</a>.</strong> Dimensional analysis constrains the <em>form</em> of the model before any data is collected.</li>
+<li><strong>→ Ch. <a href="chapter-28.html">28</a>.</strong> Simulation is the analysis tool when the model has no closed form.</li>
+<li><strong>→ Ch. <a href="chapter-29.html">29</a>.</strong> Validation is inference from noisy data; the failure modes are statistical.</li>
+</ul>
+<h2 id="6-limitations">6. Limitations</h2>
+<p><strong>The map is not the territory.</strong> Every model discards structure, and the discarded structure is exactly where surprises come from. A model's success in its scope is not evidence of correctness outside it.</p>
+<p><strong>Fitting is not validation.</strong> A model with enough parameters can fit any finite dataset. Validation requires <em>out-of-sample</em> prediction, preferably on data the model was not tuned on.</p>
+<p><strong>Models can be self-fulfilling.</strong> Economic and social models change the system they describe (agents react to the model). This is a failure mode with no analogue in physics, and it invalidates the standard validation logic.</p>
+<p><strong>Complexity is not realism.</strong> Adding detail makes a model harder to analyze and its assumptions harder to see, without necessarily improving prediction. The right complexity is the minimum that captures the mechanism the decision depends on.</p>
+<p><strong>Parameter uncertainty can dominate structural uncertainty.</strong> Sometimes the model form is right and the constants are so uncertain that the prediction is useless. Distinguishing this from structural error requires sensitivity analysis.</p>
+<h2 id="7-applications">7. Applications</h2>
+<ul>
+<li><strong>Epidemiology.</strong> Compartmental models (SIR) are the canonical example: simple structure, identifiable parameters, qualitatively correct thresholds (the basic reproduction number <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mn>0</mn></msub><annotation encoding="application/x-tex">R_0</annotation></semantics></math>), and well-known failures when heterogeneity and behavior change are ignored.</li>
+<li><strong>Finance.</strong> Derivative pricing models are conditional on no-arbitrage and market completeness; the 2008 crisis was a failure of the assumptions (independence, liquidity, Gaussian tails), not of the mathematics.</li>
+<li><strong>Climate.</strong> General circulation models are high-dimensional simulations validated on historical data; the structural uncertainty (cloud feedback) dominates the parameter uncertainty.</li>
+<li><strong>Engineering.</strong> A digital twin is a model calibrated to a specific asset; its value depends on the sensor data quality and on the model's scope.</li>
+<li><strong>Operations.</strong> Queueing and inventory models determine capacity and safety stock; the threshold behavior of Demonstration 25.3 is why capacity planning is nonlinear.</li>
+<li><strong>Machine learning.</strong> A trained model is a model in this sense: structure (architecture) plus parameters, validated out-of-sample, with a scope (the training distribution).</li>
+</ul>
+<h2 id="8-mastery-criteria">8. Mastery Criteria</h2>
+<p>You have this chapter when you can:</p>
+<ol type="1">
+<li>Write a model as an explicit list of numbered assumptions plus a mathematical structure.</li>
+<li>State the decision the model is meant to support, and judge adequacy relative to it.</li>
+<li>Distinguish structural, parameter, and observation error, and prescribe the right remedy for each.</li>
+<li>Produce two models of the same phenomenon that agree on some data and disagree on other data, and say which data discriminates.</li>
+<li>Perform a sensitivity analysis and identify the weakest assumption.</li>
+<li>State a model's scope conditions and the observations that would falsify it.</li>
+</ol>
+<p><strong>Diagnostic question.</strong> "What would have to be true for this model's prediction to be wrong?" A learner who can answer with a specific assumption and a specific observation has understood the model.</p>
+<h3 id="ai-tutor-brief">AI Tutor Brief</h3>
+<ul>
+<li><strong>Generate:</strong> (i) phenomena to be modeled, with a requirement to state assumptions before equations; (ii) pairs of models fitting the same data with divergent predictions; (iii) sensitivity-analysis tasks (vary an assumption, recompute); (iv) "which error is this?" diagnoses (structural vs parameter vs observation).</li>
+<li><strong>Probe misconceptions:</strong> fitting = validation; more detail = more accurate; a model's success in one regime transfers to another; the equations are the model (they are not — the assumptions are).</li>
+<li><strong>Transfer distance:</strong> maximal. Every problem should be an unfamiliar system.</li>
+<li><strong>Do not</strong> accept a model without its assumption list, its scope, and its falsification condition.</li>
+</ul>
+</article>
+<nav class="pagination" aria-label="Reading order"><a href="chapter-24.html"><span class="eyebrow">← Chapter 24</span><span>Compound Strategy: Combining Principles</span></a><a href="chapter-26.html"><span class="eyebrow">Chapter 26 →</span><span>Estimation and Fermi Reasoning</span></a></nav>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="shell bar">
+      <span>Tensor <span aria-hidden="true">/</span> The Structure of Mathematical Thought</span>
+      <a href="https://github.com/anipiso9989-ops/Tensor">View source <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
+</body>
+</html>

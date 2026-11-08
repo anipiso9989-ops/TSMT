@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chapter 32 of The Structure of Mathematical Thought. Counterexamples and Boundary Hunting.">
+  <title>Chapter 32 · Counterexamples and Boundary Hunting · Tensor</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell bar">
+      <a class="brand" href="index.html" aria-label="Tensor home"><img src="assets/mark.svg" width="26" height="26" alt="">Tensor</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html#contents">Contents</a>
+        <a href="index.html#reference">Reference</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell reader" id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Guide</a><span aria-hidden="true">/</span><a href="part-v.html">Part V</a><span aria-hidden="true">/</span><span aria-current="page">Chapter 32</span>
+    </nav>
+    <header class="reader-header">
+      <p class="eyebrow">Chapter 32 / Part V</p>
+      <h1>Counterexamples and Boundary Hunting</h1>
+    </header>
+    <div class="reading-layout">
+<nav class="outline" aria-label="On this page"><p class="eyebrow">On this page</p><ul><li><a href="#1-core-idea">1. Core Idea</a></li>
+<li><a href="#2-first-principles">2. First Principles</a></li>
+<li><a href="#3-reasoning-process">3. Reasoning Process</a></li>
+<li><a href="#4-demonstrations">4. Demonstrations</a></li>
+<li><a href="#5-connections">5. Connections</a></li>
+<li><a href="#6-limitations">6. Limitations</a></li>
+<li><a href="#7-applications">7. Applications</a></li>
+<li><a href="#8-mastery-criteria">8. Mastery Criteria</a></li></ul></nav>
+      <div class="reading-column">
+        <article class="prose"><h2 id="1-core-idea">1. Core Idea</h2>
+<p>A theorem is only as strong as its weakest hypothesis. <strong>Boundary hunting</strong> is the systematic search for the case where a claim fails, and it serves three purposes:</p>
+<ol type="1">
+<li><strong>Refutation.</strong> One counterexample destroys a universal claim.</li>
+<li><strong>Understanding.</strong> The counterexample shows exactly what a hypothesis was doing.</li>
+<li><strong>Sharpness.</strong> The boundary case shows that a bound cannot be improved.</li>
+</ol>
+<p>The methods are systematic, not creative:</p>
+<ul>
+<li><strong>Small cases.</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n = 0, 1, 2</annotation></semantics></math>. Empty set, singleton, trivial group.</li>
+<li><strong>Degenerate cases.</strong> Collinear points, zero-length segments, repeated roots, disconnected graphs, the zero vector.</li>
+<li><strong>Extremal cases.</strong> The maximum, the minimum, the boundary of the domain.</li>
+<li><strong>Hypothesis deletion.</strong> Remove one hypothesis at a time and look for a failure.</li>
+<li><strong>Minimal counterexample.</strong> If a counterexample exists, a minimal one exists; analyze its structure.</li>
+</ul>
+<p><strong>Principle signature.</strong> A claim is universal ("for all", "every", "always"), and you want to know whether it is true, how strong it is, or what its hypotheses are for.</p>
+<h2 id="2-first-principles">2. First Principles</h2>
+<p><strong>Universals fail at one point.</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>x</mi><mspace width="0.167em"></mspace><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\forall x\, P(x)</annotation></semantics></math> is refuted by a single <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>¬</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\neg P(x)</annotation></semantics></math>. This asymmetry is the whole reason counterexamples are powerful: the cost of refutation is one object; the cost of proof is an argument.</p>
+<p><strong>The failure localizes the hypothesis.</strong> If a claim fails when hypothesis <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> is dropped, then <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> is load-bearing. If it survives, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> is redundant. This is the empirical method for finding the minimal hypothesis set (→ Ch. <a href="chapter-18.html">18</a>).</p>
+<p><strong>Minimal counterexamples have structure.</strong> If a counterexample exists, then by well-ordering a minimal one exists (→ Ch. <a href="chapter-10.html">10</a>). The minimality is an extra hypothesis, and it usually forces a contradiction. This is the engine behind infinite descent and behind many impossibility proofs.</p>
+<p><strong>Sharpness is a property of bounds.</strong> A bound <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>≤</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">f \le M</annotation></semantics></math> is sharp if there is a case with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">f = M</annotation></semantics></math>. A bound without a sharpness example is a statement about a possibly loose constant, and it may be improvable. Sharpness examples are as important as the bound.</p>
+<p><strong>Diagrams encode assumptions.</strong> A figure drawn with a point "inside" a triangle silently assumes an ordering that may fail. This is the mechanism behind the classical false proofs in geometry (all triangles isosceles, all angles equal), and it is why a case analysis must be driven by the algebra, not the picture.</p>
+<h2 id="3-reasoning-process">3. Reasoning Process</h2>
+<ol type="1">
+<li><strong>List the hypotheses.</strong> Each one is a candidate for deletion.</li>
+<li><strong>Delete one at a time.</strong> For each, try to construct a counterexample. If you find one, the hypothesis is necessary; if you cannot, try to prove the theorem without it.</li>
+<li><strong>Test the degenerate cases.</strong> The empty set, zero, one, the trivial object, the collinear configuration, the repeated root.</li>
+<li><strong>Test the extremes.</strong> The maximum and minimum of each parameter; the boundary of each domain.</li>
+<li><strong>Look for the minimal counterexample</strong> if a counterexample is believed to exist, and analyze its forced structure.</li>
+<li><strong>Check sharpness.</strong> Exhibit the case where the bound is attained, or prove it is not.</li>
+<li><strong>Re-examine the diagram.</strong> If the proof used a picture, redraw it in a different configuration and see whether the argument still applies.</li>
+</ol>
+<h2 id="4-demonstrations">4. Demonstrations</h2>
+<h3 id="demonstration-321--a-plausible-divisibility-claim-refuted">Demonstration 32.1 — A plausible divisibility claim, refuted</h3>
+<p><em>Claim.</em> If <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∣</mo><mi>b</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">a \mid bc</annotation></semantics></math>, then <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a \mid b</annotation></semantics></math> or <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∣</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">a \mid c</annotation></semantics></math>.</p>
+<p><em>Counterexample.</em> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">a = 6</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">b = 2</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">c = 3</annotation></semantics></math>: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mo>∣</mo><mn>6</mn><mo>=</mo><mn>2</mn><mo>⋅</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">6 \mid 6 = 2\cdot3</annotation></semantics></math>, but <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mo>∤</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">6 \nmid 2</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mo>∤</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">6 \nmid 3</annotation></semantics></math>.</p>
+<p><em>Diagnosis.</em> The claim is Euclid's lemma, which requires <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math> to be <strong>prime</strong> (or coprime to one of the factors). The counterexample shows exactly which hypothesis is missing: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mo>=</mo><mn>2</mn><mo>⋅</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">6 = 2\cdot3</annotation></semantics></math> splits the divisibility between the two factors.</p>
+<p><em>Repair.</em> If <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> is prime and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>∣</mo><mi>b</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">p \mid bc</annotation></semantics></math>, then <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>∣</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">p \mid b</annotation></semantics></math> or <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>∣</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">p \mid c</annotation></semantics></math>. The proof uses the fact that a prime has no nontrivial factorization — the very property the counterexample exploited.</p>
+<p><strong>What to notice.</strong> The counterexample did not just refute; it <em>identified the missing hypothesis</em> and <em>suggested the correct theorem</em>. This is the typical yield of a well-chosen counterexample: the failure mode is the hypothesis.</p>
+<h3 id="demonstration-322--minimal-degree-is-not-enough-for-a-hamiltonian-cycle">Demonstration 32.2 — Minimal degree is not enough for a Hamiltonian cycle</h3>
+<p><em>Claim (false).</em> Every connected graph with minimum degree at least <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math> has a Hamiltonian cycle.</p>
+<p><em>Counterexample.</em> Two triangles joined by a single edge (a "bridge"). Every vertex has degree <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math> or <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math>; the graph is connected; but any cycle that visits all six vertices would have to cross the bridge twice, which is impossible in a simple cycle.</p>
+<p><em>Diagnosis.</em> Minimum degree controls local connectivity, not global. The bridge is a <strong>cut edge</strong>: removing it disconnects the graph, and a Hamiltonian cycle cannot contain a cut edge (removing one edge of a cycle leaves a path, which is connected).</p>
+<p><em>Repair.</em> A sufficient condition must control global connectivity: e.g. Dirac's theorem requires minimum degree <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≥</mo><mi>n</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">\ge n/2</annotation></semantics></math>, which forces enough edges to preclude bridges and much more.</p>
+<p><strong>What to notice.</strong> The counterexample is minimal in a precise sense: it is the smallest graph with a cut edge and minimum degree <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>. <strong>When a conjecture fails, look for the smallest failure — its structure is usually the explanation.</strong></p>
+<h3 id="demonstration-323--the-diagram-that-assumed-its-conclusion">Demonstration 32.3 — The diagram that assumed its conclusion</h3>
+<p><em>The classical false proof.</em> "Every triangle is isosceles." Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>B</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">ABC</annotation></semantics></math> be a triangle. Draw the angle bisector of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∠</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">\angle B</annotation></semantics></math> and the perpendicular bisector of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">AC</annotation></semantics></math>; let them meet at <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>. Drop perpendiculars from <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math> to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">AB</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">BC</annotation></semantics></math>, and connect <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math> to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>. Working around the figure, one "proves" <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>B</mi><mo>=</mo><mi>B</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">AB = BC</annotation></semantics></math>.</p>
+<p><em>The flaw.</em> The proof assumes that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math> lies <em>inside</em> the triangle and that the perpendicular feet lie <em>between</em> the vertices — i.e. it assumes an ordering of points on the sides. In a scalene triangle, the two lines meet <em>outside</em> the triangle, and the feet fall outside the segments. The equalities that the proof derives are still true, but they combine with different signs, and the conclusion does not follow.</p>
+<p><em>The general lesson.</em> The diagram encoded: (i) <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math> inside, (ii) feet between vertices, (iii) a particular order of the points on each side. None of these follows from the hypotheses. Hamming's observation applies: only by <em>meta-reasoning</em> — noticing that the conclusion is false — do we know the proof must be wrong, and then the search for the flaw begins.</p>
+<p><strong>What to notice.</strong> This is the most instructive false proof in geometry because the algebra is correct at every step. The error is entirely in the <strong>case assumption</strong> encoded in the figure. The defense is not "draw more carefully" — it is to derive the ordering from the hypotheses, or to prove the result for all orderings.</p>
+<h3 id="demonstration-324--boundary-hunting-on-a-theorem">Demonstration 32.4 — Boundary hunting on a theorem</h3>
+<p><em>Theorem.</em> A continuous function on a closed bounded interval <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[a,b]</annotation></semantics></math> attains its maximum.</p>
+<p><em>Boundary hunt.</em> Which hypothesis can be deleted?</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
+<thead>
+<tr class="header">
+<th>Deleted hypothesis</th>
+<th>Counterexample</th>
+<th>What the hypothesis does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Continuity</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">f(x) = x</annotation></semantics></math> for <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x&lt;1</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f(1)=0</annotation></semantics></math> on <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[0,1]</annotation></semantics></math>: no maximum (sup <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> not attained)</td>
+<td>Continuity prevents jumps that "miss" the supremum</td>
+</tr>
+<tr class="even">
+<td>Closedness</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">f(x) = x</annotation></semantics></math> on <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(0,1)</annotation></semantics></math>: sup <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>, no maximum</td>
+<td>Closedness keeps the limit point in the domain</td>
+</tr>
+<tr class="odd">
+<td>Boundedness</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">f(x) = x</annotation></semantics></math> on <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>0</mn><mo>,</mo><mi>∞</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">[0,\infty)</annotation></semantics></math>: unbounded</td>
+<td>Boundedness prevents escape to infinity</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Sharpness.</em> On <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[0,1]</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">f(x)=x</annotation></semantics></math> attains its maximum at <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x=1</annotation></semantics></math>; the theorem is sharp in the sense that the maximum can be at an endpoint, so no stronger statement (e.g. "attained in the interior") holds.</p>
+<p><strong>What to notice.</strong> The table is the <em>complete</em> boundary analysis: every hypothesis is necessary, and each has a specific counterexample showing exactly what it prevents. <strong>This table is a better understanding of the theorem than the proof alone</strong>, because it tells you what happens in every neighboring theorem. When you learn a theorem, build this table.</p>
+<h2 id="5-connections">5. Connections</h2>
+<ul>
+<li><strong>← Ch. <a href="chapter-04.html">4</a>.</strong> Counterexamples are the audit tool for proofs; the missing case is a boundary.</li>
+<li><strong>← Ch. <a href="chapter-10.html">10</a>.</strong> Minimal counterexamples are descent; well-ordering guarantees they exist.</li>
+<li><strong>← Ch. <a href="chapter-18.html">18</a>.</strong> Hypothesis deletion is the method for finding the right generality.</li>
+<li><strong>← Ch. <a href="chapter-20.html">20</a>.</strong> Sharpness is the counterexample side of an optimization bound.</li>
+<li><strong>→ Ch. <a href="chapter-31.html">31</a>.</strong> Every conjecture should be hunted before it is believed.</li>
+<li><strong>→ Ch. <a href="chapter-33.html">33</a>.</strong> Systematic search is how counterexamples are found when they are not obvious.</li>
+</ul>
+<h2 id="6-limitations">6. Limitations</h2>
+<p><strong>A failed search is not a proof.</strong> Not finding a counterexample in the cases you tried is weak evidence. The Pólya conjecture survived hundreds of millions of cases.</p>
+<p><strong>Counterexamples can be non-constructive.</strong> Some refutations show that a counterexample exists without producing one (e.g. by a cardinality or compactness argument). These are valid but less informative.</p>
+<p><strong>The minimal counterexample may be enormous.</strong> The minimal counterexample to a plausible conjecture can be far outside computational reach, which is why proofs are necessary even when the conjecture is "obviously" false.</p>
+<p><strong>Sharpness may be unattainable.</strong> Some bounds are not attained but are approached asymptotically; the correct statement is about a supremum, not a maximum (→ Ch. <a href="chapter-11.html">11</a>).</p>
+<p><strong>Diagrams are necessary and dangerous.</strong> Geometry without figures is impractical; geometry with figures is unreliable. The discipline is: use the figure to find the argument, use the algebra to verify the cases.</p>
+<h2 id="7-applications">7. Applications</h2>
+<ul>
+<li><strong>Mathematics.</strong> Counterexamples are the standard tool for sharpening theorems; the history of analysis is full of them (Weierstrass's nowhere-differentiable function, Cantor's set, the Banach–Tarski paradox).</li>
+<li><strong>Software testing.</strong> A test case is a search for a counterexample to "the program is correct"; boundary values and degenerate inputs are the highest-yield tests.</li>
+<li><strong>Engineering.</strong> Failure analysis is boundary hunting: find the operating point where the design fails, and understand which assumption it violates.</li>
+<li><strong>Law.</strong> A hypothetical is a counterexample to a rule; the reasoning that distinguishes it is the reasoning that limits the rule's scope.</li>
+<li><strong>Science.</strong> A single anomalous observation can refute a theory; the anomaly is the counterexample, and its structure is the clue to the better theory.</li>
+<li><strong>Statistics.</strong> Outliers and edge cases are the empirical counterexamples; investigating them is how models are improved (→ Ch. <a href="chapter-29.html">29</a>).</li>
+</ul>
+<h2 id="8-mastery-criteria">8. Mastery Criteria</h2>
+<p>You have this chapter when you can:</p>
+<ol type="1">
+<li>Delete each hypothesis of a theorem in turn and produce a counterexample or a proof without it.</li>
+<li>Build a boundary table for a theorem, as in Demonstration 32.4.</li>
+<li>Find the smallest counterexample to a plausible claim and explain its structure.</li>
+<li>Distinguish sharp from non-sharp bounds, and exhibit the extremal case.</li>
+<li>Detect a case assumption hidden in a diagram, and repair the proof by deriving the ordering.</li>
+<li>Use a counterexample to identify the missing hypothesis and state the corrected theorem.</li>
+</ol>
+<p><strong>Diagnostic question.</strong> "This theorem has three hypotheses. Which one is doing the work?" A learner who deletes them one at a time and produces counterexamples has the method.</p>
+<h3 id="ai-tutor-brief">AI Tutor Brief</h3>
+<ul>
+<li><strong>Generate:</strong> (i) plausible false claims with a small counterexample; (ii) theorems to be boundary-tested (delete each hypothesis); (iii) false proofs with a hidden case assumption; (iv) sharpness questions for bounds.</li>
+<li><strong>Probe misconceptions:</strong> "no counterexample found, so it's true"; a diagram as a case analysis; sharpness as an afterthought.</li>
+<li><strong>Transfer distance:</strong> high. Test in algebra, analysis, combinatorics, and geometry.</li>
+<li><strong>Do not</strong> accept "it's obviously true" for any universal claim. Require the boundary hunt.</li>
+</ul>
+</article>
+<nav class="pagination" aria-label="Reading order"><a href="chapter-31.html"><span class="eyebrow">← Chapter 31</span><span>Conjecture Formation</span></a><a href="chapter-33.html"><span class="eyebrow">Chapter 33 →</span><span>Mathematical Experimentation</span></a></nav>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="shell bar">
+      <span>Tensor <span aria-hidden="true">/</span> The Structure of Mathematical Thought</span>
+      <a href="https://github.com/anipiso9989-ops/Tensor">View source <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
+</body>
+</html>
