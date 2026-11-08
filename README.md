@@ -1,6 +1,6 @@
 # The Structure of Mathematical Thought
 
-[The Structure of Mathematical Thought](https://anipiso9989-ops.github.io/Tensor/) is a principle-based guide to rigorous, creative, independent mathematical reasoning.
+[The Structure of Mathematical Thought](https://anipiso9989-ops.github.io/TSMT/) is a principle-based guide to rigorous, creative, independent mathematical reasoning.
 
 The original Markdown lives in [guide/](guide/README.md). GitHub Pages serves the generated site from `main` → `/docs`.
 
