@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Dependencies, cross-references, and study sequences.">
+  <meta name="description" content="Ways to choose a method and find what to review.">
   <title>Principle Map · The Structure of Mathematical Thought</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
@@ -26,969 +26,128 @@
     </nav>
     <header class="reader-header">
       <p class="eyebrow">Reference</p>
-      <h1>Principle Map: Dependencies, Cross-References, and Sequencing</h1>
+      <h1>Principle Map</h1>
     </header>
     <div class="reading-layout">
-<nav class="outline" aria-label="On this page"><p class="eyebrow">On this page</p><ul><li><a href="#1-dependency-graph">1. Dependency graph</a></li>
-<li><a href="#2-cross-reference-matrix">2. Cross-reference matrix</a></li>
-<li><a href="#3-target-principle-index-for-the-tutor">3. Target-principle index (for the tutor)</a></li>
-<li><a href="#4-legal-combinations">4. Legal combinations</a></li>
-<li><a href="#5-sequencing-plans">5. Sequencing plans</a></li>
-<li><a href="#6-assessment-checkpoints">6. Assessment checkpoints</a></li>
-<li><a href="#7-how-to-read-a-failure">7. How to read a failure</a></li></ul></nav>
+<nav class="outline" aria-label="On this page"><p class="eyebrow">On this page</p><ul><li><a href="#choose-a-move">Choose a move</a></li>
+<li><a href="#review-in-a-sensible-order">Review in a sensible order</a></li>
+<li><a href="#combine-moves">Combine moves</a></li>
+<li><a href="#pick-a-study-path">Pick a study path</a></li></ul></nav>
       <div class="reading-column">
-        <article class="prose"><p>This file is the structural index of the guide. Use it for three purposes:</p>
-<ol type="1">
-<li><strong>Sequencing</strong> — what must be learned before what.</li>
-<li><strong>Diagnosis</strong> — when a learner fails at chapter <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>, which prerequisite is the likely cause.</li>
-<li><strong>Tutor configuration</strong> — which principles are available as targets, and which combinations are legal.</li>
-</ol>
-<hr />
-<h2 id="1-dependency-graph">1. Dependency graph</h2>
-<p>An arrow <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \to B</annotation></semantics></math> means <em>B assumes A</em>. The graph is a DAG; there are no cycles.</p>
-<pre><code>                         ┌──────────────────────────────┐
-                         │ 1  Mathematics as Structure  │
-                         └──────────────┬───────────────┘
-                                        │
-                    ┌───────────────────┼───────────────────┐
-                    ▼                   ▼                   ▼
-            ┌───────────────┐   ┌───────────────┐   ┌───────────────┐
-            │ 2 Definition  │   │  3  Logic     │   │ 5 Abstraction │
-            └───────┬───────┘   └───────┬───────┘   └───────┬───────┘
-                    │                   │                   │
-                    └───────────┬───────┴───────────┬───────┘
-                                ▼                   ▼
-                        ┌───────────────┐   ┌───────────────┐
-                        │  4  Proof     │   │6 First Princ. │
-                        └───────┬───────┘   └───────┬───────┘
-                                │                   │
-        ┌───────────────────────┴───────────────────┘
-        ▼
-┌───────────────────────────────────────────────────────────────────┐
-│                    PART II  (7 – 17)                              │
-│                                                                   │
-│  7 Anatomy ──┬──► 8 Invariants ──┬──► 16 Constructive             │
-│              ├──► 9 Symmetry     │                                │
-│              ├──► 10 Induction ──┼──► 14 Decomposition            │
-│              ├──► 11 Extremal ───┘        │                       │
-│              ├──► 12 Counting ────────────┤                       │
-│              ├──► 13 Pigeonhole           │                       │
-│              ├──► 15 Transformation ◄─────┘                       │
-│              └──► 17 Backwards                                    │
-│                                                                   │
-│  (8,9,10,11,12,13,14,15,16,17 are mutually independent               │
-│   but are combined constantly; 7 is the prerequisite for all.)     │
-└───────────────────────────────┬───────────────────────────────────┘
-                                ▼
-┌───────────────────────────────────────────────────────────────────┐
-│                    PART III  (18 – 24)                            │
-│                                                                   │
-│  18 Generalization ◄── (5, 6, 10, 17)                             │
-│  19 Isomorphism    ◄── (1, 5, 14)                                 │
-│  20 Optimization   ◄── (6, 11, 16)                                │
-│  21 Probability    ◄── (12, 13)                                   │
-│  22 Asymptotics    ◄── (10, 15)                                   │
-│  23 Multi-Lens     ◄── (15, 19)                                   │
-│  24 Compound       ◄── (7 – 23)   ← synthesis checkpoint           │
-└───────────────────────────────┬───────────────────────────────────┘
-                                ▼
-┌───────────────────────────────────────────────────────────────────┐
-│                    PART IV  (25 – 30)                             │
-│                                                                   │
-│  25 Modeling     ◄── (1, 6, 18)                                   │
-│  26 Estimation   ◄── (22)                                         │
-│  27 Scaling      ◄── (18, 26)                                     │
-│  28 Computation  ◄── (22, 25)                                     │
-│  29 Uncertainty  ◄── (21, 25)                                     │
-│  30 Systems      ◄── (8, 11, 19, 25)                              │
-└───────────────────────────────┬───────────────────────────────────┘
-                                ▼
-┌───────────────────────────────────────────────────────────────────┐
-│                    PART V  (31 – 35)                              │
-│                                                                   │
-│  31 Conjecture   ◄── (7, 18, 22)                                  │
-│  32 Counterex.   ◄── (4, 10, 18, 20)                              │
-│  33 Experiment   ◄── (12, 22, 28)                                 │
-│  34 Invention    ◄── (7, 18, 19, 31)                              │
-│  35 Judgment     ◄── (24, 31 – 34)                                │
-└───────────────────────────────────────────────────────────────────┘</code></pre>
-<h3 id="hard-prerequisites">Hard prerequisites</h3>
+        <article class="prose"><p>Use this page when a problem stalls or when you need to review. Start by saying what you are missing. The clue suggests a first move, and the work still lies in checking whether the move fits your problem.</p>
+<h2 id="choose-a-move">Choose a move</h2>
 <div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
 <thead>
 <tr class="header">
-<th>Chapter</th>
-<th>Cannot be studied without</th>
+<th>Clue</th>
+<th>First question to ask</th>
+<th>Chapters</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>4</td>
-<td>2, 3</td>
+<td>The terms or goal are unclear</td>
+<td>Which objects are allowed, and what would count as a solution?</td>
+<td>Chs. <a href="chapter-01.html">1</a>, <a href="chapter-02.html">2</a>, <a href="chapter-03.html">3</a>, <a href="chapter-07.html">7</a></td>
 </tr>
 <tr class="even">
-<td>7</td>
-<td>3, 4</td>
+<td>I have examples and need a proof</td>
+<td>What is an arbitrary case, and what do the assumptions give me?</td>
+<td>Chs. <a href="chapter-04.html">4</a>, <a href="chapter-06.html">6</a>, <a href="chapter-10.html">10</a></td>
 </tr>
 <tr class="odd">
-<td>8–17</td>
-<td>7</td>
+<td>Legal moves change the state</td>
+<td>What stays fixed? What changes strictly in one direction?</td>
+<td>Chs. <a href="chapter-08.html">8</a>, <a href="chapter-16.html">16</a>, <a href="chapter-24.html">24</a></td>
 </tr>
 <tr class="even">
-<td>20</td>
-<td>6, 11</td>
+<td>Labels seem interchangeable</td>
+<td>Can I swap labels while preserving the conditions and conclusion?</td>
+<td>Chs. <a href="chapter-09.html">9</a>, <a href="chapter-19.html">19</a></td>
 </tr>
 <tr class="odd">
-<td>22</td>
-<td>10</td>
+<td>I need a best or impossible case</td>
+<td>What happens at a smallest or largest example? Can I match a bound?</td>
+<td>Chs. <a href="chapter-11.html">11</a>, <a href="chapter-20.html">20</a>, <a href="chapter-24.html">24</a></td>
 </tr>
 <tr class="even">
-<td>24</td>
-<td>8–23 (all)</td>
+<td>I need to count or force a collision</td>
+<td>What objects can I match, count twice, or put in boxes?</td>
+<td>Chs. <a href="chapter-05.html">5</a>, <a href="chapter-12.html">12</a>, <a href="chapter-13.html">13</a></td>
 </tr>
 <tr class="odd">
-<td>25</td>
-<td>1, 6</td>
+<td>The current description hides the relationships</td>
+<td>Can I split into cases, change representation, or draw a useful object?</td>
+<td>Chs. <a href="chapter-14.html">14</a>, <a href="chapter-15.html">15</a>, <a href="chapter-17.html">17</a>, <a href="chapter-23.html">23</a></td>
 </tr>
 <tr class="even">
-<td>28</td>
-<td>22</td>
+<td>The same argument keeps appearing</td>
+<td>Which assumptions matter, and how far can I generalize?</td>
+<td>Chs. <a href="chapter-18.html">18</a>, <a href="chapter-19.html">19</a>, <a href="chapter-32.html">32</a></td>
 </tr>
 <tr class="odd">
-<td>29</td>
-<td>21</td>
+<td>Exact computation seems unnecessary</td>
+<td>What bounds or rough estimates already answer the question?</td>
+<td>Chs. <a href="chapter-22.html">22</a>, <a href="chapter-26.html">26</a>, <a href="chapter-27.html">27</a></td>
 </tr>
 <tr class="even">
-<td>31</td>
-<td>7, 18</td>
+<td>An observation has several explanations</td>
+<td>What group am I measuring? What observation would separate the models?</td>
+<td>Chs. <a href="chapter-21.html">21</a>, <a href="chapter-25.html">25</a>, <a href="chapter-28.html">28</a>, <a href="chapter-29.html">29</a>, <a href="chapter-30.html">30</a></td>
 </tr>
 <tr class="odd">
-<td>32</td>
-<td>4, 10</td>
-</tr>
-<tr class="even">
-<td>35</td>
-<td>31–34</td>
+<td>I see a pattern or want a new question</td>
+<td>What would refute it, and what rule could I change?</td>
+<td>Chs. <a href="chapter-31.html">31</a>, <a href="chapter-32.html">32</a>, <a href="chapter-33.html">33</a>, <a href="chapter-34.html">34</a>, <a href="chapter-35.html">35</a></td>
 </tr>
 </tbody>
 </table></div>
-<h3 id="soft-prerequisites-helpful-not-required">Soft prerequisites (helpful, not required)</h3>
+<h2 id="review-in-a-sensible-order">Review in a sensible order</h2>
+<p>Work through Part I first. Then try Chapter <a href="chapter-07.html">7</a> before choosing among the techniques in Part II. For the later chapters, this table points to the places that explain their main building blocks.</p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
 <thead>
 <tr class="header">
-<th>Chapter</th>
-<th>Benefits from</th>
+<th>Before studying</th>
+<th>Review if needed</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>9</td>
-<td>8 (invariance is the discrete form of symmetry)</td>
+<td>Chs. <a href="chapter-18.html">18</a>, <a href="chapter-19.html">19</a></td>
+<td>Abstraction, standard forms, and transformations (Chs. <a href="chapter-05.html">5</a>, <a href="chapter-14.html">14</a>, <a href="chapter-15.html">15</a>)</td>
 </tr>
 <tr class="even">
-<td>12</td>
-<td>10 (recursive counting)</td>
+<td>Chs. <a href="chapter-20.html">20</a>, <a href="chapter-21.html">21</a>, <a href="chapter-22.html">22</a></td>
+<td>Extremal choices, counting, and induction (Chs. <a href="chapter-10.html">10</a>, <a href="chapter-11.html">11</a>, <a href="chapter-12.html">12</a>)</td>
 </tr>
 <tr class="odd">
-<td>14</td>
-<td>2 (canonical forms need well-definedness)</td>
+<td>Chs. <a href="chapter-23.html">23</a>, <a href="chapter-24.html">24</a></td>
+<td>Invariants, transformations, and working backwards (Chs. <a href="chapter-08.html">8</a>, <a href="chapter-15.html">15</a>, <a href="chapter-17.html">17</a>)</td>
 </tr>
 <tr class="even">
-<td>19</td>
-<td>14 (classification needs canonical forms)</td>
+<td>Chs. <a href="chapter-25.html">25</a>, <a href="chapter-26.html">26</a>, <a href="chapter-27.html">27</a>, <a href="chapter-28.html">28</a>, <a href="chapter-29.html">29</a>, <a href="chapter-30.html">30</a></td>
+<td>Probability, bounds, and representation (Chs. <a href="chapter-15.html">15</a>, <a href="chapter-21.html">21</a>, <a href="chapter-22.html">22</a>, <a href="chapter-23.html">23</a>)</td>
 </tr>
 <tr class="odd">
-<td>23</td>
-<td>15, 19</td>
-</tr>
-<tr class="even">
-<td>27</td>
-<td>18 (scaling is generalization in the size parameter)</td>
-</tr>
-<tr class="odd">
-<td>30</td>
-<td>8, 11</td>
-</tr>
-<tr class="even">
-<td>33</td>
-<td>12, 28</td>
+<td>Chs. <a href="chapter-31.html">31</a>, <a href="chapter-32.html">32</a>, <a href="chapter-33.html">33</a>, <a href="chapter-34.html">34</a>, <a href="chapter-35.html">35</a></td>
+<td>Proof, problem setup, and combining methods (Chs. <a href="chapter-04.html">4</a>, <a href="chapter-07.html">7</a>, <a href="chapter-24.html">24</a>)</td>
 </tr>
 </tbody>
 </table></div>
-<hr />
-<h2 id="2-cross-reference-matrix">2. Cross-reference matrix</h2>
-<p>Rows: the chapter you are reading. Columns: chapters it draws on most heavily.</p>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
-<thead>
-<tr class="header">
-<th>Ch</th>
-<th>Draws on</th>
-<th>Is drawn on by</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>—</td>
-<td>5, 19, 25</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>1</td>
-<td>4, 5, 14</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>2</td>
-<td>4, 11, 21, 29</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>2, 3</td>
-<td>8, 10, 11, 32, 35</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>1, 2</td>
-<td>18, 19, 25</td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>1, 4</td>
-<td>18, 20, 25</td>
-</tr>
-<tr class="odd">
-<td>7</td>
-<td>3, 4</td>
-<td>8–17, 25, 31, 34</td>
-</tr>
-<tr class="even">
-<td>8</td>
-<td>4, 7</td>
-<td>9, 10, 16, 27, 30</td>
-</tr>
-<tr class="odd">
-<td>9</td>
-<td>8, 13</td>
-<td>11, 19, 20, 27</td>
-</tr>
-<tr class="even">
-<td>10</td>
-<td>4, 8</td>
-<td>12, 14, 22, 32</td>
-</tr>
-<tr class="odd">
-<td>11</td>
-<td>3, 8, 9</td>
-<td>20, 32</td>
-</tr>
-<tr class="even">
-<td>12</td>
-<td>10</td>
-<td>13, 15, 21, 33</td>
-</tr>
-<tr class="odd">
-<td>13</td>
-<td>9, 12</td>
-<td>11, 21, 31</td>
-</tr>
-<tr class="even">
-<td>14</td>
-<td>2, 5, 10</td>
-<td>19, 32</td>
-</tr>
-<tr class="odd">
-<td>15</td>
-<td>3, 12</td>
-<td>19, 22, 23</td>
-</tr>
-<tr class="even">
-<td>16</td>
-<td>8, 10, 11</td>
-<td>20, 22, 28</td>
-</tr>
-<tr class="odd">
-<td>17</td>
-<td>4, 7, 11</td>
-<td>18, 20, 34</td>
-</tr>
-<tr class="even">
-<td>18</td>
-<td>5, 6, 10, 17</td>
-<td>19, 27, 31, 32</td>
-</tr>
-<tr class="odd">
-<td>19</td>
-<td>1, 5, 14</td>
-<td>20, 23, 30</td>
-</tr>
-<tr class="even">
-<td>20</td>
-<td>6, 11, 16</td>
-<td>21, 26, 32</td>
-</tr>
-<tr class="odd">
-<td>21</td>
-<td>12, 13</td>
-<td>22, 25, 29</td>
-</tr>
-<tr class="even">
-<td>22</td>
-<td>10, 15</td>
-<td>25, 26, 27, 28</td>
-</tr>
-<tr class="odd">
-<td>23</td>
-<td>15, 19</td>
-<td>34, 35</td>
-</tr>
-<tr class="even">
-<td>24</td>
-<td>7–23</td>
-<td>35</td>
-</tr>
-<tr class="odd">
-<td>25</td>
-<td>1, 6, 18</td>
-<td>26, 27, 28, 29, 30</td>
-</tr>
-<tr class="even">
-<td>26</td>
-<td>22</td>
-<td>27, 28</td>
-</tr>
-<tr class="odd">
-<td>27</td>
-<td>18, 26</td>
-<td>28, 30</td>
-</tr>
-<tr class="even">
-<td>28</td>
-<td>22, 25</td>
-<td>29, 33</td>
-</tr>
-<tr class="odd">
-<td>29</td>
-<td>21, 25</td>
-<td>31, 35</td>
-</tr>
-<tr class="even">
-<td>30</td>
-<td>8, 11, 19, 25</td>
-<td>35</td>
-</tr>
-<tr class="odd">
-<td>31</td>
-<td>7, 18, 22</td>
-<td>32, 33, 34, 35</td>
-</tr>
-<tr class="even">
-<td>32</td>
-<td>4, 10, 18, 20</td>
-<td>31, 33, 35</td>
-</tr>
-<tr class="odd">
-<td>33</td>
-<td>12, 22, 28</td>
-<td>31, 34</td>
-</tr>
-<tr class="even">
-<td>34</td>
-<td>7, 18, 19, 31</td>
-<td>35</td>
-</tr>
-<tr class="odd">
-<td>35</td>
-<td>24, 31–34</td>
-<td>—</td>
-</tr>
-</tbody>
-</table></div>
-<hr />
-<h2 id="3-target-principle-index-for-the-tutor">3. Target-principle index (for the tutor)</h2>
-<p>The tutor may generate problems for any principle in this table. "Signature" is the phrase that should appear in the problem's <em>reasoning</em>, not in its statement.</p>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
-<thead>
-<tr class="header">
-<th>Ch</th>
-<th>Principle</th>
-<th>Signature the problem should have</th>
-<th>Common decoys</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>Structure</td>
-<td>Same relations in a different domain</td>
-<td>Topic-label thinking</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>Definition</td>
-<td>A supplied definition must be used; a clause is missing</td>
-<td>Appeal to prior knowledge</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>Logic</td>
-<td>Quantifier order matters; negation is the key</td>
-<td>Prose reading</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>Proof</td>
-<td>One engine is much shorter; a gap must be found</td>
-<td>"It's obvious"</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>Abstraction</td>
-<td>A hypothesis can be deleted; a quotient is needed</td>
-<td>Over-abstraction</td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>First principles</td>
-<td>A standard formula must be derived or its scope found</td>
-<td>Recall</td>
-</tr>
-<tr class="odd">
-<td>7</td>
-<td>Anatomy</td>
-<td>Goal type is ambiguous; a hypothesis is superfluous</td>
-<td>Immediate computation</td>
-</tr>
-<tr class="even">
-<td>8</td>
-<td>Invariant</td>
-<td>Reachability or termination question</td>
-<td>Direct construction</td>
-</tr>
-<tr class="odd">
-<td>9</td>
-<td>Symmetry</td>
-<td>Data can be relabeled; a WLOG is available or invalid</td>
-<td>"By symmetry"</td>
-</tr>
-<tr class="even">
-<td>10</td>
-<td>Induction</td>
-<td>A discrete parameter with recursive structure</td>
-<td>Direct proof</td>
-</tr>
-<tr class="odd">
-<td>11</td>
-<td>Extremal</td>
-<td>Existence of an object with a property</td>
-<td>Random construction</td>
-</tr>
-<tr class="even">
-<td>12</td>
-<td>Counting</td>
-<td>An identity or a count</td>
-<td>Algebraic expansion</td>
-</tr>
-<tr class="odd">
-<td>13</td>
-<td>Pigeonhole</td>
-<td>More objects than slots</td>
-<td>Structural argument</td>
-</tr>
-<tr class="even">
-<td>14</td>
-<td>Decomposition</td>
-<td>Classification; cases; canonical form</td>
-<td>Ad hoc casework</td>
-</tr>
-<tr class="odd">
-<td>15</td>
-<td>Transformation</td>
-<td>The current representation resists</td>
-<td>Pushing harder</td>
-</tr>
-<tr class="even">
-<td>16</td>
-<td>Constructive</td>
-<td>"Find" or "describe an algorithm"</td>
-<td>Existence only</td>
-</tr>
-<tr class="odd">
-<td>17</td>
-<td>Backwards</td>
-<td>Goal is a relation; auxiliary object needed</td>
-<td>Forward search</td>
-</tr>
-<tr class="even">
-<td>18</td>
-<td>Generalization</td>
-<td>An arbitrary constant; a failing induction</td>
-<td>Special-case proof</td>
-</tr>
-<tr class="odd">
-<td>19</td>
-<td>Isomorphism</td>
-<td>Two structures that are the same</td>
-<td>Analogy</td>
-</tr>
-<tr class="even">
-<td>20</td>
-<td>Optimization</td>
-<td>Bound plus attainment; a certificate</td>
-<td>Bound only</td>
-</tr>
-<tr class="odd">
-<td>21</td>
-<td>Probability</td>
-<td>Existence via expectation; base rate</td>
-<td>Direct construction</td>
-</tr>
-<tr class="even">
-<td>22</td>
-<td>Asymptotics</td>
-<td>Large/small parameter; growth comparison</td>
-<td>Exact computation</td>
-</tr>
-<tr class="odd">
-<td>23</td>
-<td>Multi-lens</td>
-<td>Easy statement, hard in its current branch</td>
-<td>One-lens persistence</td>
-</tr>
-<tr class="even">
-<td>24</td>
-<td>Compound</td>
-<td>Requires three or more principles</td>
-<td>Single-technique</td>
-</tr>
-<tr class="odd">
-<td>25</td>
-<td>Modeling</td>
-<td>Real system, noisy data, a decision</td>
-<td>Fitting</td>
-</tr>
-<tr class="even">
-<td>26</td>
-<td>Estimation</td>
-<td>No data; implausible claim</td>
-<td>Precision</td>
-</tr>
-<tr class="odd">
-<td>27</td>
-<td>Scaling</td>
-<td>Variables with dimensions; scale-up question</td>
-<td>Curve fitting</td>
-</tr>
-<tr class="even">
-<td>28</td>
-<td>Computation</td>
-<td>Error, stability, verification</td>
-<td>"The computer says"</td>
-</tr>
-<tr class="odd">
-<td>29</td>
-<td>Uncertainty</td>
-<td>Selection, aggregation, base rates</td>
-<td>Naive statistics</td>
-</tr>
-<tr class="even">
-<td>30</td>
-<td>Systems</td>
-<td>Feedback, thresholds, interfaces</td>
-<td>Sum-of-parts</td>
-</tr>
-<tr class="odd">
-<td>31</td>
-<td>Conjecture</td>
-<td>Data with a pattern; a vague claim</td>
-<td>Pattern = proof</td>
-</tr>
-<tr class="even">
-<td>32</td>
-<td>Counterexample</td>
-<td>A universal claim; a boundary</td>
-<td>Verification bias</td>
-</tr>
-<tr class="odd">
-<td>33</td>
-<td>Experiment</td>
-<td>A computable family; a transform needed</td>
-<td>Brute force</td>
-</tr>
-<tr class="even">
-<td>34</td>
-<td>Invention</td>
-<td>A result to be transformed</td>
-<td>Relabeling</td>
-</tr>
-<tr class="odd">
-<td>35</td>
-<td>Judgment</td>
-<td>A choice under uncertainty</td>
-<td>Effort as proxy</td>
-</tr>
-</tbody>
-</table></div>
-<hr />
-<h2 id="4-legal-combinations">4. Legal combinations</h2>
-<p>Combination problems are the main instrument for levels 3–4. The following pairs are natural, well-tested, and produce clean chains:</p>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
-<thead>
-<tr class="header">
-<th>Combination</th>
-<th>Chain shape</th>
-<th>Example problem type</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>8 + 14</td>
-<td>Invariant, then case split to prove completeness</td>
-<td>Reachability with a weighted invariant</td>
-</tr>
-<tr class="even">
-<td>8 + 10</td>
-<td>Monovariant as descent</td>
-<td>Termination of a process</td>
-</tr>
-<tr class="odd">
-<td>9 + 13</td>
-<td>Symmetry reduces cases, pigeonhole produces the object</td>
-<td>Ramsey-type</td>
-</tr>
-<tr class="even">
-<td>10 + 11</td>
-<td>Induction with an extremal choice in the step</td>
-<td>Existence for all <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math></td>
-</tr>
-<tr class="odd">
-<td>11 + 12</td>
-<td>Extremal object counted two ways</td>
-<td>Double counting at an extremum</td>
-</tr>
-<tr class="even">
-<td>12 + 15</td>
-<td>Bijection, then generating function</td>
-<td>Counting with a recurrence</td>
-</tr>
-<tr class="odd">
-<td>14 + 15</td>
-<td>Canonical form as a change of representation</td>
-<td>Classification</td>
-</tr>
-<tr class="even">
-<td>15 + 18</td>
-<td>Substitution that exposes a parameter</td>
-<td>Generalizing a solved case</td>
-</tr>
-<tr class="odd">
-<td>16 + 20</td>
-<td>Algorithm plus exchange certificate</td>
-<td>Greedy optimality</td>
-</tr>
-<tr class="even">
-<td>18 + 20</td>
-<td>Generalize to get a bound, specialize to attain</td>
-<td>Sharp inequality</td>
-</tr>
-<tr class="odd">
-<td>19 + 23</td>
-<td>Isomorphism across branches</td>
-<td>Same theorem, two lenses</td>
-</tr>
-<tr class="even">
-<td>21 + 22</td>
-<td>First moment plus asymptotics</td>
-<td>Existence at large <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math></td>
-</tr>
-<tr class="odd">
-<td>22 + 27</td>
-<td>Scaling exponent from dimensions, corrections from asymptotics</td>
-<td>Physical law</td>
-</tr>
-<tr class="even">
-<td>25 + 29</td>
-<td>Model plus selection diagnosis</td>
-<td>Confounded data</td>
-</tr>
-<tr class="odd">
-<td>28 + 33</td>
-<td>Computation plus experiment design</td>
-<td>Conjecture from simulation</td>
-</tr>
-<tr class="even">
-<td>31 + 32</td>
-<td>Conjecture plus boundary hunt</td>
-<td>Falsification</td>
-</tr>
-<tr class="odd">
-<td>32 + 34</td>
-<td>Counterexample plus inversion</td>
-<td>Repairing a theorem</td>
-</tr>
-<tr class="even">
-<td>33 + 34</td>
-<td>Experiment plus variant generation</td>
-<td>Research lab</td>
-</tr>
-</tbody>
-</table></div>
-<p><strong>Illegal or unproductive combinations</strong> (the tutor should avoid these):</p>
+<h2 id="combine-moves">Combine moves</h2>
 <ul>
-<li>26 + 27 on a problem with no physical dimensions (scaling is vacuous).</li>
-<li>30 on a single-agent optimization problem (no feedback, no emergence).</li>
-<li>35 as a <em>problem</em> target: judgment is assessed through scenarios, not solved problems.</li>
+<li><strong>Unreachable state.</strong> Identify the legal moves, choose a candidate invariant, and verify it for each move. Compare its start and target values.</li>
+<li><strong>Optimal answer.</strong> Construct a candidate, derive a bound for every allowed choice, and check whether the candidate attains it.</li>
+<li><strong>Suspected pattern.</strong> Test small cases and edge cases, state an exact claim, and try to prove it. Change the claim if the evidence demands it.</li>
+<li><strong>Uncertain prediction.</strong> Write down the model's assumptions, estimate a range, and name an observation that could separate competing explanations.</li>
 </ul>
-<hr />
-<h2 id="5-sequencing-plans">5. Sequencing plans</h2>
-<h3 id="plan-a--olympiad-12-months-8-hweek">Plan A — Olympiad (12 months, ~8 h/week)</h3>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
-<thead>
-<tr class="header">
-<th>Months</th>
-<th>Content</th>
-<th>Emphasis</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>Ch. <a href="chapter-01.html">1</a>–<a href="chapter-06.html">6</a></td>
-<td>Definitions, quantifiers, proof audit</td>
-</tr>
-<tr class="even">
-<td>2–3</td>
-<td>Ch. <a href="chapter-07.html">7</a>–<a href="chapter-10.html">10</a></td>
-<td>Anatomy, invariants, symmetry, induction</td>
-</tr>
-<tr class="odd">
-<td>4–5</td>
-<td>Ch. <a href="chapter-11.html">11</a>–<a href="chapter-14.html">14</a></td>
-<td>Extremal, counting, pigeonhole, decomposition</td>
-</tr>
-<tr class="even">
-<td>6–7</td>
-<td>Ch. <a href="chapter-15.html">15</a>–<a href="chapter-17.html">17</a></td>
-<td>Transformation, construction, backwards</td>
-</tr>
-<tr class="odd">
-<td>8</td>
-<td>Ch. <a href="chapter-24.html">24</a> (checkpoint) + review</td>
-<td>Strategy under time pressure</td>
-</tr>
-<tr class="even">
-<td>9–10</td>
-<td>Ch. <a href="chapter-18.html">18</a>–<a href="chapter-20.html">20</a>, <a href="chapter-23.html">23</a></td>
-<td>Generalization, structure, optimization</td>
-</tr>
-<tr class="odd">
-<td>11</td>
-<td>Ch. <a href="chapter-31.html">31</a>–<a href="chapter-33.html">33</a></td>
-<td>Conjecture, counterexample, experiment</td>
-</tr>
-<tr class="even">
-<td>12</td>
-<td>Full review + mock contests</td>
-<td>Transfer under pressure</td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="plan-b--ai-research--quantitative-12-months">Plan B — AI research / quantitative (12 months)</h3>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
-<thead>
-<tr class="header">
-<th>Months</th>
-<th>Content</th>
-<th>Emphasis</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>Ch. <a href="chapter-01.html">1</a>–<a href="chapter-04.html">4</a></td>
-<td>Rigor and quantifiers</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>Ch. <a href="chapter-05.html">5</a>–<a href="chapter-07.html">7</a></td>
-<td>Abstraction, first principles, anatomy</td>
-</tr>
-<tr class="odd">
-<td>3–4</td>
-<td>Ch. <a href="chapter-08.html">8</a>, <a href="chapter-10.html">10</a>, <a href="chapter-12.html">12</a>, <a href="chapter-15.html">15</a></td>
-<td>Invariants, induction, counting, transforms</td>
-</tr>
-<tr class="even">
-<td>5–6</td>
-<td>Ch. <a href="chapter-20.html">20</a>–<a href="chapter-22.html">22</a></td>
-<td>Optimization, probability, asymptotics</td>
-</tr>
-<tr class="odd">
-<td>7–8</td>
-<td>Ch. <a href="chapter-25.html">25</a>–<a href="chapter-28.html">28</a></td>
-<td>Modeling, estimation, scaling, computation</td>
-</tr>
-<tr class="even">
-<td>9</td>
-<td>Ch. <a href="chapter-29.html">29</a>–<a href="chapter-30.html">30</a></td>
-<td>Uncertainty, systems</td>
-</tr>
-<tr class="odd">
-<td>10–11</td>
-<td>Ch. <a href="chapter-18.html">18</a>–<a href="chapter-19.html">19</a>, <a href="chapter-23.html">23</a></td>
-<td>Generalization, structure, lenses</td>
-</tr>
-<tr class="even">
-<td>12</td>
-<td>Ch. <a href="chapter-31.html">31</a>, <a href="chapter-33.html">33</a>, <a href="chapter-35.html">35</a></td>
-<td>Conjecture, experiment, judgment</td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="plan-c--repair-plan-for-a-learner-with-gaps">Plan C — Repair plan (for a learner with gaps)</h3>
-<p>When the diagnostic shows weakness codes concentrated in the foundations, do <strong>not</strong> proceed to Part II. Instead:</p>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
-<thead>
-<tr class="header">
-<th>Weakness code</th>
-<th>Repair sequence</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>W-DEF, W-QORDER, W-CONV</td>
-<td>Ch. <a href="chapter-02.html">2</a> → 3 → 4, with audit drills only</td>
-</tr>
-<tr class="even">
-<td>W-CASE-EXH, W-CIRC</td>
-<td>Ch. <a href="chapter-04.html">4</a> → 14 → 32</td>
-</tr>
-<tr class="odd">
-<td>W-INV-FIND, W-INV-PRESERVE</td>
-<td>Ch. <a href="chapter-08.html">8</a> → 10 → 16</td>
-</tr>
-<tr class="even">
-<td>W-BOUND-ONLY, W-EXIST</td>
-<td>Ch. <a href="chapter-11.html">11</a> → 20</td>
-</tr>
-<tr class="odd">
-<td>W-MEAN-TYPICAL, W-SELECTION</td>
-<td>Ch. <a href="chapter-21.html">21</a> → 29</td>
-</tr>
-<tr class="even">
-<td>W-PATTERN, W-ASYMPTOTIC</td>
-<td>Ch. <a href="chapter-22.html">22</a> → 31 → 33</td>
-</tr>
-<tr class="odd">
-<td>W-ABANDON, W-GREEDY</td>
-<td>Ch. <a href="chapter-24.html">24</a> → 16</td>
-</tr>
-</tbody>
-</table></div>
-<p>The repair plan is usually 4–6 weeks. It is the highest-yield investment in the entire curriculum, because these codes compound.</p>
-<hr />
-<h2 id="6-assessment-checkpoints">6. Assessment checkpoints</h2>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
-<thead>
-<tr class="header">
-<th>Checkpoint</th>
-<th>After</th>
-<th>Tests</th>
-<th>Pass criterion</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>CP-0</td>
-<td>Diagnostic</td>
-<td>All</td>
-<td>Baseline recorded</td>
-</tr>
-<tr class="even">
-<td>CP-1</td>
-<td>Ch. <a href="chapter-06.html">6</a></td>
-<td>2, 3, 4, 6</td>
-<td>Level 2 on 3 of 4</td>
-</tr>
-<tr class="odd">
-<td>CP-2</td>
-<td>Ch. <a href="chapter-11.html">11</a></td>
-<td>7–11</td>
-<td>Level 2 on 4 of 5; one unaided</td>
-</tr>
-<tr class="even">
-<td>CP-3</td>
-<td>Ch. <a href="chapter-17.html">17</a></td>
-<td>12–17</td>
-<td>Level 3 on 3 of 6; one combination</td>
-</tr>
-<tr class="odd">
-<td>CP-4</td>
-<td>Ch. <a href="chapter-24.html">24</a></td>
-<td>18–24</td>
-<td>Level 3 on 3 of 7; two combinations</td>
-</tr>
-<tr class="even">
-<td>CP-5</td>
-<td>Ch. <a href="chapter-30.html">30</a></td>
-<td>25–30</td>
-<td>Level 3 on 3 of 6; one applied transfer</td>
-</tr>
-<tr class="odd">
-<td>CP-6</td>
-<td>Ch. <a href="chapter-35.html">35</a></td>
-<td>31–35</td>
-<td>Level 3 on 3 of 5; one original problem invented</td>
-</tr>
-</tbody>
-</table></div>
-<p><strong>Failure at a checkpoint</strong> means returning to the weakest chapter in that block, not repeating the whole block.</p>
-<hr />
-<h2 id="7-how-to-read-a-failure">7. How to read a failure</h2>
-<p>When a learner fails at chapter <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>, the cause is usually upstream. Use this table.</p>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
-<thead>
-<tr class="header">
-<th>Symptom at chapter <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math></th>
-<th>Likely upstream cause</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Cannot start</td>
-<td>Ch. <a href="chapter-07.html">7</a> (anatomy) or Ch. <a href="chapter-03.html">3</a> (goal not parsed)</td>
-</tr>
-<tr class="even">
-<td>Starts, but the approach is irrelevant</td>
-<td>Ch. <a href="chapter-07.html">7</a> (goal type), Ch. <a href="chapter-24.html">24</a> (signature selection)</td>
-</tr>
-<tr class="odd">
-<td>Right principle, wrong execution</td>
-<td>Ch. <a href="chapter-02.html">2</a> (definition unpacking) or Ch. <a href="chapter-06.html">6</a> (derivation)</td>
-</tr>
-<tr class="even">
-<td>Right execution, missing case</td>
-<td>Ch. <a href="chapter-14.html">14</a> (exhaustiveness) or Ch. <a href="chapter-04.html">4</a> (audit)</td>
-</tr>
-<tr class="odd">
-<td>Right proof, wrong conclusion</td>
-<td>Ch. <a href="chapter-03.html">3</a> (quantifiers) or Ch. <a href="chapter-07.html">7</a> (goal statement)</td>
-</tr>
-<tr class="even">
-<td>Cannot verify the answer</td>
-<td>Ch. <a href="chapter-03.html">3</a> (reversibility) or Ch. <a href="chapter-04.html">4</a> (audit)</td>
-</tr>
-<tr class="odd">
-<td>Understands the chapter, cannot use it</td>
-<td>Ch. <a href="chapter-05.html">5</a> (structure) or Ch. <a href="chapter-18.html">18</a> (generality)</td>
-</tr>
-<tr class="even">
-<td>Can use it in the chapter, not outside</td>
-<td>Insufficient far-transfer practice — the tutor's fault, not the learner's</td>
-</tr>
-</tbody>
-</table></div>
-<p>The last row is important. <strong>Transfer failure is usually a curriculum failure</strong>: the learner practiced near-transfer only. The remedy is more far-transfer problems, not more reading.</p>
-<hr />
+<h2 id="pick-a-study-path">Pick a study path</h2>
+<ul>
+<li><strong>Starting from scratch.</strong> Follow the chapter order through Part I, then work through Part II. Do each part's checkpoint before moving ahead.</li>
+<li><strong>Preparing for contest problems.</strong> After Part I, focus on Chapters <a href="chapter-07.html">7</a>, <a href="chapter-08.html">8</a>, <a href="chapter-10.html">10</a>, <a href="chapter-11.html">11</a>, <a href="chapter-12.html">12</a>, <a href="chapter-13.html">13</a>, <a href="chapter-17.html">17</a>, and 24. Mix old and new problems without labeling the expected method.</li>
+<li><strong>Applying math to data or computing.</strong> After Part I, review Chapters <a href="chapter-07.html">7</a>, <a href="chapter-12.html">12</a>, <a href="chapter-15.html">15</a>, <a href="chapter-21.html">21</a>, and 22. Work through Part IV, then build and test a model for a question you can measure.</li>
+<li><strong>Starting an investigation.</strong> After Part III, try Chapters <a href="chapter-31.html">31</a>–<a href="chapter-35.html">35</a> in order. Keep a log with one question, your evidence, your strongest claim, and the next test.</li>
+</ul>
 </article>
 
       </div>
@@ -997,7 +156,7 @@
   <footer class="site-footer">
     <div class="shell bar">
       <span>The Structure of Mathematical Thought</span>
-      <a href="https://github.com/anipiso9989-ops/Tensor">View source <span aria-hidden="true">↗</span></a>
+      <a href="https://github.com/anipiso9989-ops/TSMT">View source <span aria-hidden="true">↗</span></a>
     </div>
   </footer>
 </body>

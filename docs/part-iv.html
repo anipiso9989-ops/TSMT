@@ -32,41 +32,25 @@
 <nav class="outline" aria-label="On this page"><p class="eyebrow">On this page</p><ul><li><a href="#chapters">Chapters in this part</a></li>
 <li><a href="#checkpoint">Part IV checkpoint</a></li></ul></nav>
       <div class="reading-column">
-        <article class="prose"><blockquote>
-<p><em>In pure mathematics the problem is given. In applied mathematics the problem must be constructed — and the construction, not the solution, is where most of the errors live.</em></p>
-</blockquote>
-<p><strong>What changes in the applied setting</strong></p>
-<p>Four things, and each one breaks a habit that pure training instills:</p>
-<ol type="1">
-<li><strong>There is no correct answer, only an adequate one.</strong> Adequacy is relative to a purpose, and the purpose must be stated before the model can be judged.</li>
-<li><strong>The assumptions are the model.</strong> In pure mathematics the hypotheses are given and true by stipulation. In applied work they are guesses, and they carry all the risk.</li>
-<li><strong>Error is part of the answer.</strong> A number without an error bar is not a result. An estimate without a range is not an estimate.</li>
-<li><strong>The system fights back.</strong> Parts interact, feedback loops appear, and the decomposition that made the problem tractable may be the thing that makes the answer wrong.</li>
-</ol>
-<h2 id="chapters">Chapters in this part</h2><ol class="chapter-list" start="25"><li><a href="chapter-25.html"><span class="entry-number" aria-hidden="true">25</span><span>Modeling: World → Mathematics → World</span><span class="entry-arrow" aria-hidden="true">→</span></a></li>
-<li><a href="chapter-26.html"><span class="entry-number" aria-hidden="true">26</span><span>Estimation and Fermi Reasoning</span><span class="entry-arrow" aria-hidden="true">→</span></a></li>
-<li><a href="chapter-27.html"><span class="entry-number" aria-hidden="true">27</span><span>Dimensional Analysis and Scaling</span><span class="entry-arrow" aria-hidden="true">→</span></a></li>
-<li><a href="chapter-28.html"><span class="entry-number" aria-hidden="true">28</span><span>Computation, Simulation, and Numerical Thinking</span><span class="entry-arrow" aria-hidden="true">→</span></a></li>
-<li><a href="chapter-29.html"><span class="entry-number" aria-hidden="true">29</span><span>Uncertainty, Data, and Inference</span><span class="entry-arrow" aria-hidden="true">→</span></a></li>
-<li><a href="chapter-30.html"><span class="entry-number" aria-hidden="true">30</span><span>Systems Thinking</span><span class="entry-arrow" aria-hidden="true">→</span></a></li></ol><h2 id="checkpoint">Part IV checkpoint</h2>
-<ol type="1">
-<li>Write a model as numbered assumptions plus structure, and state its scope and falsification condition. (Ch. <a href="chapter-25.html">25</a>)</li>
-<li>Estimate a quantity two ways and interpret the agreement. (Ch. <a href="chapter-26.html">26</a>)</li>
-<li>Derive a scaling law and say what remains undetermined. (Ch. <a href="chapter-27.html">27</a>)</li>
-<li>Identify catastrophic cancellation and the stability condition of an explicit scheme. (Ch. <a href="chapter-28.html">28</a>)</li>
-<li>Detect Simpson's paradox and predict regression to the mean. (Ch. <a href="chapter-29.html">29</a>)</li>
-<li>Find the feedback loop, the threshold, and the interface in a system. (Ch. <a href="chapter-30.html">30</a>)</li>
-</ol>
-<p>Part V is where the problem is no longer given to you at all.</p>
+        <article class="prose"><p>A proof tells you what follows from stated assumptions. In an application, you also have to decide whether those assumptions fit the situation. Practice keeping the calculation, the model, and the evidence separate.</p>
+<h2 id="chapters">Chapters in this part</h2><ol class="chapter-list" start="25"><li><a href="chapter-25.html"><span class="entry-number" aria-hidden="true">25</span><span>Build a Model and Test It</span><span class="entry-arrow" aria-hidden="true">→</span></a></li>
+<li><a href="chapter-26.html"><span class="entry-number" aria-hidden="true">26</span><span>Estimate Before You Calculate</span><span class="entry-arrow" aria-hidden="true">→</span></a></li>
+<li><a href="chapter-27.html"><span class="entry-number" aria-hidden="true">27</span><span>Check Units and Scaling</span><span class="entry-arrow" aria-hidden="true">→</span></a></li>
+<li><a href="chapter-28.html"><span class="entry-number" aria-hidden="true">28</span><span>Compute, Simulate, and Check</span><span class="entry-arrow" aria-hidden="true">→</span></a></li>
+<li><a href="chapter-29.html"><span class="entry-number" aria-hidden="true">29</span><span>Ask What the Data Can Tell You</span><span class="entry-arrow" aria-hidden="true">→</span></a></li>
+<li><a href="chapter-30.html"><span class="entry-number" aria-hidden="true">30</span><span>Follow Feedback Through a System</span><span class="entry-arrow" aria-hidden="true">→</span></a></li></ol><h2 id="checkpoint">Part IV checkpoint</h2>
+<p>Choose a question with a measurable answer, such as how many people a line can serve in 30 minutes. Build a simple model, state its assumptions, and calculate a plausible range. Propose an observation that could distinguish two reasonable models. Explain what the observation would establish and what uncertainty would remain.</p>
+<h3 id="further-challenge">Further challenge</h3>
+<p>A desk can serve five customers per minute. Compare two six-minute arrival schedules, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mn>5</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>5</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(5,5,5,5,5,5)</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>10</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>10</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>10</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(0,10,0,10,0,10)</annotation></semantics></math>. In each minute, add arrivals before serving people. Compute the largest queue left after service and the total number of customer-minutes of waiting, counted by adding the six after-service queues. Then test whether capacity six prevents all waiting under either schedule. Explain what the average arrival rate does and does not determine.</p>
 </article>
-<nav class="pagination" aria-label="Reading order"><a href="chapter-25.html"><span class="eyebrow">First chapter</span><span>Modeling: World → Mathematics → World</span></a><a href="part-v.html"><span class="eyebrow">Part V →</span><span>Independent Mathematical Research</span></a></nav>
+<nav class="pagination" aria-label="Reading order"><a href="chapter-25.html"><span class="eyebrow">First chapter</span><span>Build a Model and Test It</span></a><a href="part-v.html"><span class="eyebrow">Part V →</span><span>Independent Mathematical Research</span></a></nav>
       </div>
     </div>
   </main>
   <footer class="site-footer">
     <div class="shell bar">
       <span>The Structure of Mathematical Thought</span>
-      <a href="https://github.com/anipiso9989-ops/Tensor">View source <span aria-hidden="true">↗</span></a>
+      <a href="https://github.com/anipiso9989-ops/TSMT">View source <span aria-hidden="true">↗</span></a>
     </div>
   </footer>
 </body>

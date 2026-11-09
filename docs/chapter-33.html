@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Chapter 33 of The Structure of Mathematical Thought. Mathematical Experimentation.">
-  <title>Chapter 33 · Mathematical Experimentation · The Structure of Mathematical Thought</title>
+  <meta name="description" content="Chapter 33 of The Structure of Mathematical Thought. Run an Experiment That Can Surprise You.">
+  <title>Chapter 33 · Run an Experiment That Can Surprise You · The Structure of Mathematical Thought</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
 </head>
@@ -26,237 +26,37 @@
     </nav>
     <header class="reader-header">
       <p class="eyebrow">Chapter 33 / Part V</p>
-      <h1>Mathematical Experimentation</h1>
+      <h1>Run an Experiment That Can Surprise You</h1>
     </header>
     <div class="reading-layout">
-<nav class="outline" aria-label="On this page"><p class="eyebrow">On this page</p><ul><li><a href="#1-core-idea">1. Core Idea</a></li>
-<li><a href="#2-first-principles">2. First Principles</a></li>
-<li><a href="#3-reasoning-process">3. Reasoning Process</a></li>
-<li><a href="#4-demonstrations">4. Demonstrations</a></li>
-<li><a href="#5-connections">5. Connections</a></li>
-<li><a href="#6-limitations">6. Limitations</a></li>
-<li><a href="#7-applications">7. Applications</a></li>
-<li><a href="#8-mastery-criteria">8. Mastery Criteria</a></li></ul></nav>
+<nav class="outline" aria-label="On this page"><p class="eyebrow">On this page</p><ul><li><a href="#start-here">Start here</a></li>
+<li><a href="#worked-example">Worked example</a></li>
+<li><a href="#try-it">Try it</a></li>
+<li><a href="#check-your-work">Check your work</a></li></ul></nav>
       <div class="reading-column">
-        <article class="prose"><h2 id="1-core-idea">1. Core Idea</h2>
-<p><strong>Experimental mathematics</strong> is the systematic use of computation and structured exploration to discover, test, and refine mathematical claims. It is a laboratory discipline with its own methodology:</p>
-<ol type="1">
-<li><strong>Design the experiment.</strong> Which parameter varies? What is measured? What would confirm or refute the hypothesis?</li>
-<li><strong>Enumerate systematically.</strong> Not the cases that are convenient — the cases that span the space.</li>
-<li><strong>Tabulate and transform.</strong> Differences, ratios, logs, residues. The right transform reveals the structure.</li>
-<li><strong>Conjecture and test.</strong> Propose the pattern, then test it on the <em>next</em> case, not the cases you used.</li>
-<li><strong>Record everything</strong>, including failures. The negative results are the most informative.</li>
-</ol>
-<p>The output of an experiment is not a proof. It is a <strong>conjecture with evidence</strong>, and the evidence must be strong enough to justify the effort of proving it.</p>
-<p><strong>Principle signature.</strong> You have a computable family, a parameter to vary, and no formula. Or you have a formula and want to know whether it is sharp, general, or optimal.</p>
-<h2 id="2-first-principles">2. First Principles</h2>
-<p><strong>Finite differences reveal polynomial structure.</strong> If <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>n</mi></msub><annotation encoding="application/x-tex">a_n</annotation></semantics></math> is a polynomial of degree <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math> in <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>, then the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>-th differences are constant. Tabulating successive differences is the standard way to guess a polynomial, and the degree of the difference table is the degree of the polynomial.</p>
-<p><strong>Ratios reveal exponential and factorial structure.</strong> If <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mi>/</mi><msub><mi>a</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">a_{n+1}/a_n</annotation></semantics></math> tends to a constant, the sequence is asymptotically geometric; if it grows linearly, there is a factorial factor. Logs convert multiplicative structure to additive structure (→ Ch. <a href="chapter-22.html">22</a>).</p>
-<p><strong>Residues reveal arithmetic structure.</strong> Reducing a sequence modulo small primes reveals periodicity and divisibility patterns that are invisible in the raw values. Most number-theoretic conjectures are found this way.</p>
-<p><strong>Search is only as good as the search space.</strong> Enumerating <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi>…</mi><mo>,</mo><mn>20</mn></mrow><annotation encoding="application/x-tex">n = 1,\dots,20</annotation></semantics></math> tests a tiny corner. A good experiment varies the <em>structure</em> (different graphs, different primes, different dimensions), not just the index.</p>
-<p><strong>Confirmation bias is the main hazard.</strong> You will notice the patterns you are looking for. The defense is to state the conjecture <em>before</em> testing it on new cases, and to test on cases chosen to break it.</p>
-<h2 id="3-reasoning-process">3. Reasoning Process</h2>
-<ol type="1">
-<li><strong>Define the family and the parameter.</strong> What varies? What is fixed?</li>
-<li><strong>Compute small cases by hand</strong> to check the computation itself. (An experiment on a buggy program is an experiment on the program.)</li>
-<li><strong>Automate the enumeration</strong> over a structured range.</li>
-<li><strong>Transform the data.</strong> Differences, ratios, logs, residues, generating function coefficients.</li>
-<li><strong>State the conjecture</strong>, with its domain and its sharpness claim.</li>
-<li><strong>Test on held-out cases</strong>, especially adversarial ones.</li>
-<li><strong>Look for the mechanism</strong> — a counting argument, a recurrence, a bijection. Without a mechanism, the conjecture is a coincidence (→ Ch. <a href="chapter-31.html">31</a>).</li>
-<li><strong>Record the failures</strong>, and what they ruled out.</li>
-</ol>
-<h2 id="4-demonstrations">4. Demonstrations</h2>
-<h3 id="demonstration-331--discovering-an-identity-by-tabulation">Demonstration 33.1 — Discovering an identity by tabulation</h3>
-<p><em>Experiment.</em> Compute <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mi>k</mi><mo>⋅</mo><mi>k</mi><mi>!</mi></mrow><annotation encoding="application/x-tex">S_n = \sum_{k=1}^{n} k\cdot k!</annotation></semantics></math> for small <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>:</p>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
-<thead>
-<tr class="header">
-<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math></th>
-<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S_n</annotation></semantics></math></th>
-<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">S_n + 1</annotation></semantics></math></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>=</mo><mn>2</mn><mi>!</mi></mrow><annotation encoding="application/x-tex">2 = 2!</annotation></semantics></math></td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mn>4</mn><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">1 + 4 = 5</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mo>=</mo><mn>3</mn><mi>!</mi></mrow><annotation encoding="application/x-tex">6 = 3!</annotation></semantics></math></td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>+</mo><mn>18</mn><mo>=</mo><mn>23</mn></mrow><annotation encoding="application/x-tex">5 + 18 = 23</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>24</mn><mo>=</mo><mn>4</mn><mi>!</mi></mrow><annotation encoding="application/x-tex">24 = 4!</annotation></semantics></math></td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>23</mn><mo>+</mo><mn>96</mn><mo>=</mo><mn>119</mn></mrow><annotation encoding="application/x-tex">23 + 96 = 119</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>120</mn><mo>=</mo><mn>5</mn><mi>!</mi></mrow><annotation encoding="application/x-tex">120 = 5!</annotation></semantics></math></td>
-</tr>
-</tbody>
-</table></div>
-<p><em>Conjecture.</em> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>!</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">S_n = (n+1)! - 1</annotation></semantics></math>.</p>
-<p><em>Mechanism (and proof).</em> The summand telescopes: <span class="display-math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>⋅</mo><mi>k</mi><mi>!</mi><mo>=</mo><mo minsize="1.2" maxsize="1.2" stretchy="false" form="prefix">(</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><mn>1</mn><mo minsize="1.2" maxsize="1.2" stretchy="false" form="postfix">)</mo><mi>k</mi><mi>!</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>!</mi><mo>−</mo><mi>k</mi><mi>!</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">k\cdot k! = \big((k+1)-1\big)k! = (k+1)! - k!.</annotation></semantics></math></span> Summing from <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k=1</annotation></semantics></math> to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>: <span class="display-math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mo minsize="1.2" maxsize="1.2" stretchy="false" form="prefix">(</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>!</mi><mo>−</mo><mi>k</mi><mi>!</mi><mo minsize="1.2" maxsize="1.2" stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>!</mi><mo>−</mo><mn>1</mn><mi>!</mi><mi>.</mi><mspace width="2.0em"></mspace><mi>◼</mi></mrow><annotation encoding="application/x-tex">\sum_{k=1}^{n}\big((k+1)! - k!\big) = (n+1)! - 1!. \qquad \blacksquare</annotation></semantics></math></span></p>
-<p><strong>What to notice.</strong> The table suggested the formula; the <em>mechanism</em> — telescoping — proved it and explained it. The mechanism was found by asking "why would <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>⋅</mo><mi>k</mi><mi>!</mi></mrow><annotation encoding="application/x-tex">k\cdot k!</annotation></semantics></math> telescope?", and the answer is that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k = (k+1)-1</annotation></semantics></math> is exactly the difference that produces consecutive factorials.</p>
-<p><strong>The general lesson.</strong> When a table suggests a closed form, look for a <strong>telescoping</strong> structure first. It is the most common mechanism behind sums of the form <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>k</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\sum f(k)</annotation></semantics></math> with a factorial or binomial flavor, and it is the reason generating functions and finite differences are related (→ Ch. <a href="chapter-15.html">15</a>).</p>
-<h3 id="demonstration-332--discovering-a-counterexample-by-search">Demonstration 33.2 — Discovering a counterexample by search</h3>
-<p><em>Conjecture (false).</em> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^n - 1</annotation></semantics></math> is prime for all <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n \ge 2</annotation></semantics></math>.</p>
-<p><em>Search.</em> Compute <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^n - 1</annotation></semantics></math> and test primality for small <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>:</p>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
-<thead>
-<tr class="header">
-<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math></th>
-<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^n-1</annotation></semantics></math></th>
-<th>Prime?</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2</td>
-<td>3</td>
-<td>yes</td>
-</tr>
-<tr class="even">
-<td>3</td>
-<td>7</td>
-<td>yes</td>
-</tr>
-<tr class="odd">
-<td>4</td>
-<td>15</td>
-<td>no (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>⋅</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">3\cdot5</annotation></semantics></math>)</td>
-</tr>
-<tr class="even">
-<td>5</td>
-<td>31</td>
-<td>yes</td>
-</tr>
-<tr class="odd">
-<td>6</td>
-<td>63</td>
-<td>no</td>
-</tr>
-<tr class="even">
-<td>7</td>
-<td>127</td>
-<td>yes</td>
-</tr>
-<tr class="odd">
-<td>8</td>
-<td>255</td>
-<td>no</td>
-</tr>
-<tr class="even">
-<td>9</td>
-<td>511</td>
-<td>no (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7</mn><mo>⋅</mo><mn>73</mn></mrow><annotation encoding="application/x-tex">7\cdot73</annotation></semantics></math>)</td>
-</tr>
-<tr class="odd">
-<td>10</td>
-<td>1023</td>
-<td>no</td>
-</tr>
-<tr class="even">
-<td>11</td>
-<td>2047</td>
-<td><strong>no</strong> (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>23</mn><mo>⋅</mo><mn>89</mn></mrow><annotation encoding="application/x-tex">23\cdot89</annotation></semantics></math>)</td>
-</tr>
-</tbody>
-</table></div>
-<p><em>Observation.</em> For composite <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^n-1</annotation></semantics></math> factors (since <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mi>a</mi><mi>b</mi></mrow></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^{ab}-1</annotation></semantics></math> is divisible by <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>a</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^a-1</annotation></semantics></math>). So the interesting cases are prime <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>. But <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>11</mn></mrow><annotation encoding="application/x-tex">n=11</annotation></semantics></math> is prime and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>11</mn></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>2047</mn><mo>=</mo><mn>23</mn><mo>⋅</mo><mn>89</mn></mrow><annotation encoding="application/x-tex">2^{11}-1 = 2047 = 23\cdot89</annotation></semantics></math> is composite.</p>
-<p><em>Repair.</em> The correct conjecture is about <strong>Mersenne primes</strong>: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>p</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^p - 1</annotation></semantics></math> is prime for <em>some</em> primes <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> (2, 3, 5, 7, 13, 17, 19, 31, ...), not all. The search found the first failure at <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mn>11</mn></mrow><annotation encoding="application/x-tex">p=11</annotation></semantics></math>, which is close enough to be found by hand and far enough to be missed by casual checking.</p>
-<p><strong>What to notice.</strong> The search was structured: the parity/compositeness observation reduced the search space to prime <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>, and the failure appeared immediately. <strong>Good experiments reduce the search space by structure before enumerating.</strong> Brute force over all <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> would have found the same counterexample at <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">n=4</annotation></semantics></math> (a composite case, less informative); the structural reduction found the <em>interesting</em> one.</p>
-<h3 id="demonstration-333--finite-differences-and-the-polynomial-guess">Demonstration 33.3 — Finite differences and the polynomial guess</h3>
-<p><em>Experiment.</em> Count the maximum number of regions into which <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> lines in general position divide the plane:</p>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
-<thead>
-<tr class="header">
-<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math></th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>n</mi></msub><annotation encoding="application/x-tex">R_n</annotation></semantics></math></td>
-<td>1</td>
-<td>2</td>
-<td>4</td>
-<td>7</td>
-<td>11</td>
-<td>16</td>
-</tr>
-</tbody>
-</table></div>
-<p><em>First differences:</em> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">1, 2, 3, 4, 5</annotation></semantics></math>. <em>Second differences:</em> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">1, 1, 1, 1</annotation></semantics></math> — constant.</p>
-<p><em>Conjecture.</em> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>n</mi></msub><annotation encoding="application/x-tex">R_n</annotation></semantics></math> is a quadratic polynomial in <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>. With second difference <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>, the leading coefficient is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1/2</annotation></semantics></math>. Fitting <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>n</mi></msub><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>n</mi><mo>+</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">R_n = \frac12 n^2 + bn + c</annotation></semantics></math> to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>0</mn></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">R_0 = 1</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">R_1 = 2</annotation></semantics></math> gives <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">c = 1</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mi>b</mi><mo>+</mo><mn>1</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\frac12 + b + 1 = 2</annotation></semantics></math>, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">b = \frac12</annotation></semantics></math>. Hence <span class="display-math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>n</mi></msub><mo>=</mo><mfrac><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mi>n</mi><mo>+</mo><mn>2</mn></mrow><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mn>2</mn></mfrac><mo>+</mo><mn>1</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">R_n = \frac{n^2+n+2}{2} = \frac{n(n+1)}{2} + 1.</annotation></semantics></math></span> Check <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n=2</annotation></semantics></math>: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">3+1 = 4</annotation></semantics></math> ✓; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">n=5</annotation></semantics></math>: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>15</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>16</mn></mrow><annotation encoding="application/x-tex">15+1 = 16</annotation></semantics></math> ✓.</p>
-<p><em>Mechanism.</em> Adding the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>-th line: it crosses the previous <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math> lines at <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math> points, dividing it into <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> segments, each of which splits an existing region. So <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>n</mi></msub><mo>=</mo><msub><mi>R</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">R_n = R_{n-1} + n</annotation></semantics></math>, with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>0</mn></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">R_0 = 1</annotation></semantics></math>. Summing gives <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>n</mi></msub><mo>=</mo><mn>1</mn><mo>+</mo><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mi>k</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">R_n = 1 + \sum_{k=1}^n k = 1 + n(n+1)/2</annotation></semantics></math>. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>◼</mi><annotation encoding="application/x-tex">\blacksquare</annotation></semantics></math></p>
-<p><strong>What to notice.</strong> The finite-difference table found the <em>degree</em> and the leading coefficient, which is enough to fit the rest. The recurrence found the <em>mechanism</em>, which gives the proof and generalizes (to hyperplanes, to circles, to other arrangements).</p>
-<p><strong>The division of labor is the point:</strong> the table is fast and unreliable; the mechanism is slow and certain. Use the table to guess, the mechanism to prove, and always do both.</p>
-<h3 id="demonstration-334--the-experiment-that-lies">Demonstration 33.4 — The experiment that lies</h3>
-<p><em>Cautionary case.</em> The Pólya conjecture (1919): for every <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n \ge 2</annotation></semantics></math>, at least half of the integers <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">2,\dots,n</annotation></semantics></math> have an odd number of prime factors (counted with multiplicity). It was verified for all <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> up to hundreds of millions, and it is <strong>false</strong>: a counterexample was found (by Haselgrove, 1958) near <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><mo>×</mo><msup><mn>10</mn><mn>8</mn></msup></mrow><annotation encoding="application/x-tex">9\times10^8</annotation></semantics></math>.</p>
-<p><em>Why the experiment was misleading.</em> The conjecture is about a <em>sign change</em> in a sum that is dominated by a slowly varying main term; the sign change occurs only after the fluctuations accumulate past the main term. The first counterexample is far beyond any feasible hand computation, and even the early computer searches missed it.</p>
-<p><strong>What to notice.</strong> The evidence was overwhelming by the standards of any practical experiment, and the conjecture was still false. <strong>Finite verification cannot establish a universal statement</strong>, no matter how many cases (→ Ch. <a href="chapter-04.html">4</a>). This is not a reason to stop experimenting; it is a reason to treat experiments as <em>evidence about mechanism</em>, not as proof. The experiment's real value was in suggesting the mechanism (the distribution of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\omega(n)</annotation></semantics></math>), which is what eventually led to the proof of the related theorems.</p>
-<h2 id="5-connections">5. Connections</h2>
+        <article class="prose"><h2 id="start-here">Start here</h2>
+<p>How many pieces can <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> straight cuts make in a sheet of paper? Sketch several cases. For zero through four cuts, the maximum counts are 1, 2, 4, 7, and 11. The increases are 1, 2, 3, and 4. What mechanism could explain them?</p>
+<h2 id="worked-example">Worked example</h2>
+<p>Treat the sheet as a convex region, such as a rectangle, and make each cut a straight line through it. The <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>th cut meets at most <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k-1</annotation></semantics></math> earlier cuts at distinct points inside the sheet. These points divide the cut into at most <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> segments. Each segment splits one existing region. The maximum increase is therefore <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>.</p>
+<p>To attain the bound for a fixed number of cuts, draw lines of distinct directions through the center, then move each line by a small distance. Move the lines one at a time. When placing a line, avoid the finitely many shifts that would make it pass through an intersection of two already placed lines. For each pair, a sufficiently small shift keeps its intersection near the center because their directions are distinct. There are only finitely many pairs, so you can keep every intersection inside the sheet. Now the increases attain <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">1,2,\dots,n</annotation></semantics></math>. The maximum count is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1+n(n+1)/2</annotation></semantics></math>.</p>
+<p>The sketches suggested an exact claim. The intersection argument explains both the upper bound and when it is attainable.</p>
+<h2 id="try-it">Try it</h2>
 <ul>
-<li><strong>← Ch. <a href="chapter-12.html">12</a>.</strong> Counting sequences are the most common experimental objects.</li>
-<li><strong>← Ch. <a href="chapter-22.html">22</a>.</strong> Asymptotic fitting is the transform that reveals growth structure.</li>
-<li><strong>← Ch. <a href="chapter-28.html">28</a>.</strong> Computational methodology (verification, error) is the infrastructure of experimentation.</li>
-<li><strong>← Ch. <a href="chapter-31.html">31</a>.</strong> Conjecture formation is the output of the experiment.</li>
-<li><strong>→ Ch. <a href="chapter-32.html">32</a>.</strong> The experiment's most valuable output is a counterexample.</li>
-<li><strong>→ Ch. <a href="chapter-35.html">35</a>.</strong> Knowing when to stop experimenting and start proving is a judgment call.</li>
+<li><strong>Practice.</strong> Predict the maximum number of pieces after six cuts. Explain what happens if all six are parallel.</li>
+<li><strong>Stretch.</strong> Suppose <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n\ge1</annotation></semantics></math> cuts all pass through the center with distinct directions. Find the number of pieces and explain exactly where the maximum-count proof loses pieces.</li>
 </ul>
-<h2 id="6-limitations">6. Limitations</h2>
-<p><strong>Experiments cannot prove universals.</strong> No finite number of cases establishes "for all <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>". This is not a technicality; it is the definition of a universal quantifier.</p>
-<p><strong>The search space is usually wrong.</strong> Enumerating indices tests a thin slice; the structure that matters may be in a different dimension (larger primes, different graphs, higher dimension).</p>
-<p><strong>Computational bugs produce mathematical "discoveries".</strong> An experiment on a buggy program discovers a property of the program. Verification against hand-computed cases is mandatory.</p>
-<p><strong>Patterns can be coincidences.</strong> The Moser circle problem (→ Ch. <a href="chapter-31.html">31</a>) is the canonical example: five cases agreeing is not evidence of a mechanism.</p>
-<p><strong>Recording is undervalued.</strong> The negative results — the cases that failed, the patterns that broke — are the most informative and the most often lost. Keep a log.</p>
-<h2 id="7-applications">7. Applications</h2>
-<ul>
-<li><strong>Mathematics.</strong> The discovery of the Rogers–Ramanujan identities, the Birch–Swinnerton-Dyer conjecture, and countless combinatorial identities came from systematic computation.</li>
-<li><strong>Number theory.</strong> Primality patterns, class numbers, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>-function zeros are explored computationally before being proved.</li>
-<li><strong>Combinatorics.</strong> Enumerating small cases is how most conjectures about graphs, permutations, and partitions are born.</li>
-<li><strong>Physics.</strong> Experimental mathematics overlaps with numerical simulation; the difference is that the target is a theorem, not a measurement.</li>
-<li><strong>Machine learning.</strong> Automated conjecture generation (pattern finding in sequences, symbolic regression) is an active research area; the methodology is the one in this chapter, automated.</li>
-<li><strong>Engineering.</strong> Design-space exploration is structured experimentation; the finite-difference and scaling techniques apply to performance data.</li>
-</ul>
-<h2 id="8-mastery-criteria">8. Mastery Criteria</h2>
-<p>You have this chapter when you can:</p>
-<ol type="1">
-<li>Design an experiment that varies structure, not just index.</li>
-<li>Use finite differences, ratios, logs, and residues to transform data into a recognizable form.</li>
-<li>State a conjecture from data, with a mechanism, before testing it on new cases.</li>
-<li>Test adversarially on held-out and boundary cases.</li>
-<li>Recognize when a pattern is a coincidence and when it has a mechanism.</li>
-<li>Keep a record of negative results and use them to constrain the next experiment.</li>
-</ol>
-<p><strong>Diagnostic question.</strong> "You have a table of values. What do you do next?" A learner who transforms the data and looks for a mechanism has the method. A learner who stares at the numbers does not.</p>
-<h3 id="ai-tutor-brief">AI Tutor Brief</h3>
-<ul>
-<li><strong>Generate:</strong> (i) sequences to be identified by differences/ratios; (ii) families to be enumerated with a structural reduction; (iii) patterns with a hidden failure just outside the tested range; (iv) "design the experiment" tasks where the learner must choose what to vary.</li>
-<li><strong>Probe misconceptions:</strong> "verified for many cases, therefore true"; brute force over indices as a substitute for structural variation; ignoring the possibility of a computational bug.</li>
-<li><strong>Transfer distance:</strong> high. Use sequences, graphs, and geometric configurations.</li>
-<li><strong>Do not</strong> accept a conjecture from data without a mechanism and a held-out test.</li>
-</ul>
+<h2 id="check-your-work">Check your work</h2>
+<p><strong>Practice.</strong> The maximum is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mn>6</mn><mo>⋅</mo><mn>7</mn><mi>/</mi><mn>2</mn><mo>=</mo><mn>22</mn></mrow><annotation encoding="application/x-tex">1+6\cdot7/2=22</annotation></semantics></math>. Six parallel cuts through the interior give seven pieces because each cut adds only one.</p>
+<p><strong>Stretch.</strong> The first cut makes two pieces. Each subsequent cut meets all earlier cuts at the same point, producing only two segments and two new pieces. The total is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>n</mi></mrow><annotation encoding="application/x-tex">2n</annotation></semantics></math>. The loss comes from several intersections occupying one point.</p>
 </article>
-<nav class="pagination" aria-label="Reading order"><a href="chapter-32.html"><span class="eyebrow">← Chapter 32</span><span>Counterexamples and Boundary Hunting</span></a><a href="chapter-34.html"><span class="eyebrow">Chapter 34 →</span><span>Problem Invention and Original Approaches</span></a></nav>
+<nav class="pagination" aria-label="Reading order"><a href="chapter-32.html"><span class="eyebrow">← Chapter 32</span><span>Find Counterexamples and Test the Boundaries</span></a><a href="chapter-34.html"><span class="eyebrow">Chapter 34 →</span><span>Invent a Problem Worth Solving</span></a></nav>
       </div>
     </div>
   </main>
   <footer class="site-footer">
     <div class="shell bar">
       <span>The Structure of Mathematical Thought</span>
-      <a href="https://github.com/anipiso9989-ops/Tensor">View source <span aria-hidden="true">↗</span></a>
+      <a href="https://github.com/anipiso9989-ops/TSMT">View source <span aria-hidden="true">↗</span></a>
     </div>
   </footer>
 </body>

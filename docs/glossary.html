@@ -31,77 +31,201 @@
     <div class="reading-layout">
 
       <div class="reading-column">
-        <article class="prose"><p>Working definitions of every load-bearing term in the guide. Where a term has a precise technical meaning and a looser working meaning, both are given. Chapter references point to the place where the term is developed.</p>
-<hr />
-<p><strong>Abstraction</strong> — Deliberate information loss: keeping the features an argument uses and discarding the rest, so the result applies to every object sharing those features. (Ch. <a href="chapter-05.html">5</a>)</p>
-<p><strong>Adversarial audit</strong> — Reading your own argument as someone trying to find a gap. The four audit questions: are all cases covered, is anything assumed that was not granted, is any step non-reversible, does the conclusion say exactly what was claimed. (Ch. <a href="chapter-04.html">4</a>)</p>
-<p><strong>Affine</strong> — Preserved by translations and linear maps; a property that does not depend on the choice of origin. (Ch. <a href="chapter-15.html">15</a>)</p>
-<p><strong>Auxiliary object</strong> — An object introduced that was not in the problem (a line, a variable, a function, a sequence), justified by well-definedness, and used to make the goal reachable. (Ch. <a href="chapter-17.html">17</a>)</p>
-<p><strong>Base rate</strong> — The prior probability of a condition in the population, before any evidence. Dominates posterior probabilities when the condition is rare. (Ch. <a href="chapter-21.html">21</a>, <a href="chapter-29.html">29</a>)</p>
-<p><strong>Bijection</strong> — A map that is both injective and surjective; a reversible encoding. Proves equal cardinality without counting. (Ch. <a href="chapter-12.html">12</a>)</p>
-<p><strong>Boundary hunting</strong> — Systematically searching for the case where a claim fails: deleting hypotheses one at a time, testing degenerate and extremal cases. (Ch. <a href="chapter-32.html">32</a>)</p>
-<p><strong>Canonical form</strong> — A unique representative of each equivalence class, produced by a reduction that preserves the class and is idempotent. Examples: lowest terms, reduced echelon form, cycle type. (Ch. <a href="chapter-14.html">14</a>)</p>
-<p><strong>Certificate</strong> — A checkable object that proves optimality (or feasibility) without re-solving the problem. In linear programming, the dual solution. (Ch. <a href="chapter-20.html">20</a>)</p>
-<p><strong>Characterization</strong> — A theorem of the form "<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> iff <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>", where <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math> is an alternative description of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>. Distinct from a definition, and requiring two proofs. (Ch. <a href="chapter-02.html">2</a>)</p>
-<p><strong>Combinatorial proof</strong> — A proof of an identity by exhibiting a set that both sides count, or a bijection between two families. (Ch. <a href="chapter-12.html">12</a>)</p>
-<p><strong>Compound strategy</strong> — The selection and sequencing of principles to solve a problem that no single principle solves. (Ch. <a href="chapter-24.html">24</a>)</p>
-<p><strong>Condition number</strong> — The sensitivity of a problem's output to a relative change in its input. A property of the problem, not the algorithm. (Ch. <a href="chapter-28.html">28</a>)</p>
-<p><strong>Conjecture</strong> — A precisely stated, falsifiable mathematical claim believed but not proved. Must specify its domain, its sharpness claim, and what would refute it. (Ch. <a href="chapter-31.html">31</a>)</p>
-<p><strong>Constructive existence</strong> — An existence proof that produces the object or an algorithm for it, as opposed to a proof that the object must exist. (Ch. <a href="chapter-04.html">4</a>, <a href="chapter-16.html">16</a>)</p>
-<p><strong>Contrapositive</strong> — The statement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>¬</mo><mi>Q</mi><mo>⟹</mo><mo>¬</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">\neg Q \implies \neg P</annotation></semantics></math>, logically equivalent to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>⟹</mo><mi>Q</mi></mrow><annotation encoding="application/x-tex">P \implies Q</annotation></semantics></math>. (Ch. <a href="chapter-03.html">3</a>)</p>
-<p><strong>Converse</strong> — The statement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>⟹</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">Q \implies P</annotation></semantics></math>. Not equivalent to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>⟹</mo><mi>Q</mi></mrow><annotation encoding="application/x-tex">P \implies Q</annotation></semantics></math>, and not implied by it. (Ch. <a href="chapter-03.html">3</a>)</p>
-<p><strong>Counterexample</strong> — A single object refuting a universal claim. The minimal counterexample, if one exists, has extra structure by well-ordering. (Ch. <a href="chapter-32.html">32</a>)</p>
-<p><strong>Decomposition</strong> — Partitioning a problem into parts that are exhaustive, independent, and simpler. (Ch. <a href="chapter-14.html">14</a>)</p>
-<p><strong>Definition</strong> — A deliberate act fixing the meaning of a term. Must be unambiguous, non-circular, and (when it names an object via a representative) well-defined. (Ch. <a href="chapter-02.html">2</a>)</p>
-<p><strong>Degrees of freedom</strong> — The number of independent directions in which a configuration can vary after the constraints are imposed. (Ch. <a href="chapter-07.html">7</a>)</p>
-<p><strong>Descent</strong> — Proving nonexistence by showing that any putative object yields a strictly smaller one, contradicting well-ordering. (Ch. <a href="chapter-10.html">10</a>)</p>
-<p><strong>Difficulty type</strong> — One of four causes of hardness: search, construction, impossibility, estimation. Determines the first move. (Ch. <a href="chapter-24.html">24</a>)</p>
-<p><strong>Dimensional analysis</strong> — The use of dimensional homogeneity to constrain the form of a physical law. (Ch. <a href="chapter-27.html">27</a>)</p>
-<p><strong>Dominant balance</strong> — The principle that a solution is controlled by a small number of terms that balance, and that the balance can change in thin regions. (Ch. <a href="chapter-22.html">22</a>)</p>
-<p><strong>Double counting</strong> — Counting one set of objects along two decompositions; the equality of the two totals is the identity to be proved. (Ch. <a href="chapter-12.html">12</a>)</p>
-<p><strong>Duality</strong> — A contravariant correspondence between two structures with an explicit dictionary, such that theorems translate. Weaker than isomorphism, often more useful. (Ch. <a href="chapter-19.html">19</a>)</p>
-<p><strong>Emergence</strong> — An aggregate property that no component has. Example: intransitive majority preferences from transitive individual preferences. (Ch. <a href="chapter-30.html">30</a>)</p>
-<p><strong>Equivalence relation</strong> — Reflexive, symmetric, transitive relation. Its classes partition the set; the quotient is the set of classes. (Ch. <a href="chapter-05.html">5</a>, <a href="chapter-14.html">14</a>)</p>
-<p><strong>Exchange argument</strong> — Proving optimality by showing that any configuration with a given local pattern can be improved by swapping two elements. (Ch. <a href="chapter-16.html">16</a>, <a href="chapter-20.html">20</a>)</p>
-<p><strong>Extremal principle</strong> — Proving existence or structure by choosing the object maximizing or minimizing a quantity, then using the inequality that extremality provides. (Ch. <a href="chapter-11.html">11</a>)</p>
-<p><strong>Falsifiability</strong> — The property of a claim that specifies what observation would refute it. The entry ticket for a conjecture. (Ch. <a href="chapter-31.html">31</a>)</p>
-<p><strong>Fermi reasoning</strong> — Order-of-magnitude estimation by multiplicative decomposition into independently estimable factors. (Ch. <a href="chapter-26.html">26</a>)</p>
-<p><strong>First-principles reasoning</strong> — Rebuilding a claim from the smallest set of assumptions one can defend, with an explicit dependency audit. (Ch. <a href="chapter-06.html">6</a>)</p>
-<p><strong>Generalization</strong> — Replacing a problem by a family containing it, chosen so the family has more structure. (Ch. <a href="chapter-18.html">18</a>)</p>
-<p><strong>Hint ladder</strong> — The five-level escalation protocol used by the tutor: restate, orient, categorize, scaffold, solution-skeleton. (Protocol §6)</p>
-<p><strong>Induction</strong> — The principle that if <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(1)</annotation></semantics></math> holds and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>⟹</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(n) \implies P(n+1)</annotation></semantics></math>, then <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(n)</annotation></semantics></math> holds for all <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>; equivalent to the well-ordering of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℕ</mi><annotation encoding="application/x-tex">\mathbb{N}</annotation></semantics></math>. (Ch. <a href="chapter-10.html">10</a>)</p>
-<p><strong>Integrality gap</strong> — The difference between the optimum of an integer program and that of its continuous relaxation. (Ch. <a href="chapter-20.html">20</a>)</p>
-<p><strong>Invariant</strong> — A quantity unchanged by every allowed move; used to prove unreachability. (Ch. <a href="chapter-08.html">8</a>)</p>
-<p><strong>Isomorphism</strong> — A bijection preserving all operations and relations; isomorphic structures satisfy the same theorems. (Ch. <a href="chapter-19.html">19</a>)</p>
-<p><strong>Lemma</strong> — A subsidiary theorem proved in order to prove a larger one. (Ch. <a href="chapter-04.html">4</a>)</p>
-<p><strong>Model</strong> — A mathematical structure together with an interpretation mapping its theorems to statements about a target system. The assumptions are the model. (Ch. <a href="chapter-25.html">25</a>)</p>
-<p><strong>Monovariant</strong> — A quantity that changes in only one direction under every allowed move; used to prove termination when bounded. (Ch. <a href="chapter-08.html">8</a>)</p>
-<p><strong>Multiple comparisons</strong> — Testing many hypotheses inflates the probability of at least one false positive: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>α</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">1-(1-\alpha)^m</annotation></semantics></math>. (Ch. <a href="chapter-29.html">29</a>)</p>
-<p><strong>Necessary and sufficient</strong> — <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math> is necessary for <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> if <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>⟹</mo><mi>Q</mi></mrow><annotation encoding="application/x-tex">P \implies Q</annotation></semantics></math>; sufficient if <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>⟹</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">Q \implies P</annotation></semantics></math>. A definition or characterization needs both. (Ch. <a href="chapter-02.html">2</a>)</p>
-<p><strong>Non-constructive existence</strong> — An existence proof that does not produce the object. (Ch. <a href="chapter-04.html">4</a>)</p>
-<p><strong>Pigeonhole principle</strong> — If <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> objects occupy <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>&lt;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m &lt; n</annotation></semantics></math> boxes, some box has at least two. The art is choosing the boxes. (Ch. <a href="chapter-13.html">13</a>)</p>
-<p><strong>Principle signature</strong> — The structural feature of a problem that indicates which principle applies. (Ch. <a href="chapter-24.html">24</a>, and each chapter's opening)</p>
-<p><strong>Probabilistic method</strong> — Proving that an object with a property exists by showing that a random object has the property with positive probability. (Ch. <a href="chapter-21.html">21</a>)</p>
-<p><strong>Quotient</strong> — The set of equivalence classes of a relation, with operations that must be proved well-defined on classes. (Ch. <a href="chapter-05.html">5</a>)</p>
-<p><strong>Reduction (in a proof)</strong> — A transformation of a claim into an equivalent or stronger one that is easier to prove. (Ch. <a href="chapter-10.html">10</a>, <a href="chapter-18.html">18</a>)</p>
-<p><strong>Regression to the mean</strong> — The tendency of extreme measurements to be less extreme on re-measurement, when the measurement includes independent noise. (Ch. <a href="chapter-29.html">29</a>)</p>
-<p><strong>Relaxation</strong> — Replacing a hard problem by an easier one whose feasible set contains the original's; the easier optimum bounds the harder one. (Ch. <a href="chapter-20.html">20</a>)</p>
-<p><strong>Rigor</strong> — The property of an argument in which every gap is either filled or explicitly flagged. A spectrum, not a binary. (Ch. <a href="chapter-04.html">4</a>)</p>
-<p><strong>Selection bias</strong> — Error caused by the sample not being representative of the population, usually because the selection mechanism is correlated with the quantity of interest. (Ch. <a href="chapter-29.html">29</a>)</p>
-<p><strong>Sharpness</strong> — The property of a bound that is attained by some case; a non-sharp bound may be improvable. (Ch. <a href="chapter-20.html">20</a>, <a href="chapter-32.html">32</a>)</p>
-<p><strong>Simpson's paradox</strong> — A trend present in every stratum of a population but reversed in the pooled data, caused by unequal stratum sizes. (Ch. <a href="chapter-29.html">29</a>)</p>
-<p><strong>Singular perturbation</strong> — A perturbation in which the small parameter multiplies the highest-order term, so the reduced problem has a different structure and loses solutions. (Ch. <a href="chapter-22.html">22</a>)</p>
-<p><strong>Stability (numerical)</strong> — The property of an algorithm that does not amplify the errors it introduces. Distinct from the conditioning of the problem. (Ch. <a href="chapter-28.html">28</a>)</p>
-<p><strong>Structural equivalence</strong> — Sameness of structure, made precise by isomorphism; or a verified dictionary, in the case of duality. (Ch. <a href="chapter-19.html">19</a>)</p>
-<p><strong>Sufficient condition</strong> — A condition that implies the goal. Working backwards is the construction of a chain of sufficient conditions. (Ch. <a href="chapter-17.html">17</a>)</p>
-<p><strong>Symmetry</strong> — A transformation preserving the structure of a problem and the goal; it partitions configurations into orbits. (Ch. <a href="chapter-09.html">9</a>)</p>
-<p><strong>Transfer distance</strong> — How far a practice problem is from the chapter's setting: near (same domain), medium (adjacent), far (unrelated). Mastery requires far transfer. (Protocol §5.3)</p>
-<p><strong>Vacuous truth</strong> — The truth of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∈</mo><mi>∅</mi><mspace width="0.167em"></mspace><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\forall x \in \emptyset\, P(x)</annotation></semantics></math> and of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>⟹</mo><mi>Q</mi></mrow><annotation encoding="application/x-tex">P \implies Q</annotation></semantics></math> when <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> is false. Useful for stating theorems without empty cases; dangerous when existence is assumed. (Ch. <a href="chapter-03.html">3</a>)</p>
-<p><strong>Validity vs soundness</strong> — An argument is valid if the conclusion follows from the premises; sound if valid and the premises are true. (Ch. <a href="chapter-03.html">3</a>)</p>
-<p><strong>Well-definedness</strong> — The independence of a definition from the representative or choice used to state it. (Ch. <a href="chapter-02.html">2</a>)</p>
-<p><strong>Well-ordering</strong> — Every nonempty set of positive integers has a least element; equivalent to induction and the basis of descent. (Ch. <a href="chapter-10.html">10</a>)</p>
-<p><strong>WLOG ("without loss of generality")</strong> — A restriction of the problem to a subset of configurations, legitimate only if the goal is invariant under the symmetry group and every orbit has a representative satisfying the restriction. (Ch. <a href="chapter-09.html">9</a>)</p>
-<hr />
+        <article class="prose"><p>Use these short definitions as reminders. The chapter references show how each idea works on a problem.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Abstraction</td>
+<td>Keep the features the reasoning uses and set aside the rest. Ch. <a href="chapter-05.html">5</a></td>
+</tr>
+<tr class="even">
+<td>Asymptotic reasoning</td>
+<td>Compare how quantities grow or shrink at large input sizes. Ch. <a href="chapter-22.html">22</a></td>
+</tr>
+<tr class="odd">
+<td>Auxiliary object</td>
+<td>Something you introduce to help an argument, such as a line or an extra variable. Ch. <a href="chapter-17.html">17</a></td>
+</tr>
+<tr class="even">
+<td>Base rate</td>
+<td>How common something is before you use additional information. Ch. <a href="chapter-21.html">21</a></td>
+</tr>
+<tr class="odd">
+<td>Bijection</td>
+<td>A pairing where each object on either side has exactly one partner. Ch. <a href="chapter-12.html">12</a></td>
+</tr>
+<tr class="even">
+<td>Bound</td>
+<td>A value a quantity can never go above or never go below under the stated conditions. Chs. <a href="chapter-20.html">20</a>, <a href="chapter-22.html">22</a></td>
+</tr>
+<tr class="odd">
+<td>Canonical form</td>
+<td>A standard description that gives the same result for every representation of the same object. Ch. <a href="chapter-14.html">14</a></td>
+</tr>
+<tr class="even">
+<td>Certificate</td>
+<td>A short piece of evidence someone can check to verify a result, such as a bound paired with a matching example. Ch. <a href="chapter-20.html">20</a></td>
+</tr>
+<tr class="odd">
+<td>Conditional probability</td>
+<td>The chance of an event when you restrict attention to cases where another event has occurred. Ch. <a href="chapter-21.html">21</a></td>
+</tr>
+<tr class="even">
+<td>Conjecture</td>
+<td>A precise mathematical claim you suspect is true and have yet to prove. Ch. <a href="chapter-31.html">31</a></td>
+</tr>
+<tr class="odd">
+<td>Constructive proof</td>
+<td>A proof of existence that gives an example or a method for building one. Chs. <a href="chapter-04.html">4</a>, <a href="chapter-16.html">16</a></td>
+</tr>
+<tr class="even">
+<td>Contrapositive</td>
+<td>For “if P, then Q,” the equivalent statement “if Q is false, then P is false.” Ch. <a href="chapter-03.html">3</a></td>
+</tr>
+<tr class="odd">
+<td>Converse</td>
+<td>For “if P, then Q,” the statement “if Q, then P.” It requires its own proof. Ch. <a href="chapter-03.html">3</a></td>
+</tr>
+<tr class="even">
+<td>Counterexample</td>
+<td>An allowed case where the claimed conclusion fails. Ch. <a href="chapter-32.html">32</a></td>
+</tr>
+<tr class="odd">
+<td>Decomposition</td>
+<td>A division into parts that together account for the original problem. Ch. <a href="chapter-14.html">14</a></td>
+</tr>
+<tr class="even">
+<td>Descent</td>
+<td>A proof that rules out a solution by showing any solution would give a smaller one, even though a smallest one must exist. Ch. <a href="chapter-24.html">24</a></td>
+</tr>
+<tr class="odd">
+<td>Dimensional analysis</td>
+<td>Use the units of a quantity to check or constrain a formula. Ch. <a href="chapter-27.html">27</a></td>
+</tr>
+<tr class="even">
+<td>Double counting</td>
+<td>Count the same collection in two ways and equate the totals. Ch. <a href="chapter-12.html">12</a></td>
+</tr>
+<tr class="odd">
+<td>Duality</td>
+<td>A verified correspondence that swaps roles, such as rows and columns in a table. Ch. <a href="chapter-19.html">19</a></td>
+</tr>
+<tr class="even">
+<td>Emergence</td>
+<td>A property of a whole system that arises from how its parts interact. Ch. <a href="chapter-30.html">30</a></td>
+</tr>
+<tr class="odd">
+<td>Exchange argument</td>
+<td>Improve a candidate by a small swap to show that its original form cannot be optimal. Ch. <a href="chapter-20.html">20</a></td>
+</tr>
+<tr class="even">
+<td>Expectation</td>
+<td>The probability-weighted average of the possible values. Ch. <a href="chapter-21.html">21</a></td>
+</tr>
+<tr class="odd">
+<td>Extremal principle</td>
+<td>Choose a smallest or largest case and exploit what that choice forces. Ch. <a href="chapter-11.html">11</a></td>
+</tr>
+<tr class="even">
+<td>Feedback</td>
+<td>An output affects the inputs or state of a later round. Ch. <a href="chapter-30.html">30</a></td>
+</tr>
+<tr class="odd">
+<td>Fermi estimation</td>
+<td>Make a rough estimate by breaking a question into smaller estimates you can justify. Ch. <a href="chapter-26.html">26</a></td>
+</tr>
+<tr class="even">
+<td>Generalization</td>
+<td>A claim covering a larger family of cases than the original. Ch. <a href="chapter-18.html">18</a></td>
+</tr>
+<tr class="odd">
+<td>Graph</td>
+<td>A collection of vertices joined by edges, used to record connections. Chs. <a href="chapter-05.html">5</a>, <a href="chapter-19.html">19</a></td>
+</tr>
+<tr class="even">
+<td>Induction</td>
+<td>Prove a starting case, then prove each next case from the current case. Strong induction may use all earlier cases. Ch. <a href="chapter-10.html">10</a></td>
+</tr>
+<tr class="odd">
+<td>Invariant</td>
+<td>A value or property that stays unchanged under every allowed move. Ch. <a href="chapter-08.html">8</a></td>
+</tr>
+<tr class="even">
+<td>Isomorphism</td>
+<td>A one-to-one correspondence that preserves the relevant structure in both directions. Ch. <a href="chapter-19.html">19</a></td>
+</tr>
+<tr class="odd">
+<td>Model</td>
+<td>A set of assumptions and rules connecting a real question to a calculation. Ch. <a href="chapter-25.html">25</a></td>
+</tr>
+<tr class="even">
+<td>Modular arithmetic</td>
+<td>Reason about integers through their remainders upon division by a fixed positive integer. Chs. <a href="chapter-02.html">2</a>, <a href="chapter-13.html">13</a>, <a href="chapter-24.html">24</a></td>
+</tr>
+<tr class="odd">
+<td>Monovariant</td>
+<td>A quantity that moves in only one direction under the allowed moves. Strict decrease through nonnegative integers proves termination. Ch. <a href="chapter-08.html">8</a></td>
+</tr>
+<tr class="even">
+<td>Parity</td>
+<td>Whether an integer is even or odd. Chs. <a href="chapter-02.html">2</a>, <a href="chapter-08.html">8</a></td>
+</tr>
+<tr class="odd">
+<td>Pigeonhole principle</td>
+<td>If more objects than boxes are assigned to boxes, some box contains at least two objects. Ch. <a href="chapter-13.html">13</a></td>
+</tr>
+<tr class="even">
+<td>Probabilistic method</td>
+<td>Use a random construction to prove that at least one choice has a desired property. Ch. <a href="chapter-21.html">21</a></td>
+</tr>
+<tr class="odd">
+<td>Relaxation</td>
+<td>Loosen constraints to make a problem easier and get a bound for the original. Ch. <a href="chapter-20.html">20</a></td>
+</tr>
+<tr class="even">
+<td>Sharp bound</td>
+<td>A bound that cannot be improved for the stated problem, for example because an allowed case attains it. Chs. <a href="chapter-13.html">13</a>, <a href="chapter-20.html">20</a></td>
+</tr>
+<tr class="odd">
+<td>Simpson's paradox</td>
+<td>A comparison reverses when data groups are pooled, because the group weights can differ. Ch. <a href="chapter-29.html">29</a></td>
+</tr>
+<tr class="even">
+<td>Symmetry</td>
+<td>A transformation that preserves the relevant conditions and goals. Ch. <a href="chapter-09.html">9</a></td>
+</tr>
+<tr class="odd">
+<td>Transfer</td>
+<td>Recognize and apply a familiar idea in a different-looking problem. Ch. <a href="chapter-24.html">24</a></td>
+</tr>
+<tr class="even">
+<td>Transitivity</td>
+<td>If A is related to B and B to C, then A is related to C by the same rule. Ch. <a href="chapter-01.html">1</a></td>
+</tr>
+<tr class="odd">
+<td>Validation</td>
+<td>Check whether a model describes the real situation well enough for its purpose. Ch. <a href="chapter-28.html">28</a></td>
+</tr>
+<tr class="even">
+<td>Verification</td>
+<td>Check whether an argument or computation follows the stated rules. Ch. <a href="chapter-28.html">28</a></td>
+</tr>
+<tr class="odd">
+<td>Well-defined</td>
+<td>The answer stays the same when you choose a different allowed description of the same object. Ch. <a href="chapter-02.html">2</a></td>
+</tr>
+<tr class="even">
+<td>Without loss of generality</td>
+<td>Work on one case after showing how symmetry reduces every other case to it. Ch. <a href="chapter-09.html">9</a></td>
+</tr>
+</tbody>
+</table></div>
 </article>
 
       </div>
@@ -110,7 +234,7 @@
   <footer class="site-footer">
     <div class="shell bar">
       <span>The Structure of Mathematical Thought</span>
-      <a href="https://github.com/anipiso9989-ops/Tensor">View source <span aria-hidden="true">↗</span></a>
+      <a href="https://github.com/anipiso9989-ops/TSMT">View source <span aria-hidden="true">↗</span></a>
     </div>
   </footer>
 </body>

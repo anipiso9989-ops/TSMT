@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "guide"
 PUBLIC = ROOT / "docs"
 SITE_TITLE = "The Structure of Mathematical Thought"
-REPO = "https://github.com/anipiso9989-ops/Tensor"
+REPO = "https://github.com/anipiso9989-ops/TSMT"
 
 PARTS = [
     ("I", "01-Part-I-Foundations.md", "Foundations"),
@@ -22,7 +22,7 @@ PARTS = [
 ]
 REFERENCES = [
     ("06-AI-Tutor-Protocol.md", "tutor-protocol.html", "AI Tutor Protocol", "Practice prompts, hints, and mastery criteria."),
-    ("07-Principle-Map.md", "principle-map.html", "Principle Map", "Dependencies, cross-references, and study sequences."),
+    ("07-Principle-Map.md", "principle-map.html", "Principle Map", "Ways to choose a method and find what to review."),
     ("08-Glossary.md", "glossary.html", "Glossary", "Working definitions and the chapters behind them."),
     ("09-Sources-and-Synthesis.md", "sources.html", "Sources and Synthesis", "The source texts and the ideas developed from them."),
 ]
@@ -213,7 +213,7 @@ def landing(parts):
       <div>
         <p class="eyebrow">A field guide to reasoning</p>
         <h1 id="guide-title">The Structure of<br class="title-break"> Mathematical<br class="title-break"> Thought</h1>
-        <p class="lede">A principle-based training system for rigorous, creative, independent mathematical reasoning.</p>
+        <p class="lede">Start with small examples. Learn to write proofs, solve unfamiliar problems, and investigate questions of your own.</p>
         <div class="hero-links">
           <a class="button" href="chapter-01.html">Start reading <span aria-hidden="true">→</span></a>
           <a class="text-link" href="orientation.html">How to use the guide <span aria-hidden="true">↗</span></a>
@@ -240,7 +240,7 @@ def landing(parts):
       <ul class="reference-list">{reference_rows}</ul>
     </section>
   </main>"""
-    write("index.html", page(SITE_TITLE, "A principle-based guide to mathematical reasoning in five parts and 35 chapters.", main, home=True))
+    write("index.html", page(SITE_TITLE, "A beginner-friendly guide to proofs, problem solving, applied reasoning, and independent mathematical research.", main, home=True))
 
 
 def chapter_list(part):

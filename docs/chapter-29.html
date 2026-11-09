@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Chapter 29 of The Structure of Mathematical Thought. Uncertainty, Data, and Inference.">
-  <title>Chapter 29 · Uncertainty, Data, and Inference · The Structure of Mathematical Thought</title>
+  <meta name="description" content="Chapter 29 of The Structure of Mathematical Thought. Ask What the Data Can Tell You.">
+  <title>Chapter 29 · Ask What the Data Can Tell You · The Structure of Mathematical Thought</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
 </head>
@@ -26,150 +26,60 @@
     </nav>
     <header class="reader-header">
       <p class="eyebrow">Chapter 29 / Part IV</p>
-      <h1>Uncertainty, Data, and Inference</h1>
+      <h1>Ask What the Data Can Tell You</h1>
     </header>
     <div class="reading-layout">
-<nav class="outline" aria-label="On this page"><p class="eyebrow">On this page</p><ul><li><a href="#1-core-idea">1. Core Idea</a></li>
-<li><a href="#2-first-principles">2. First Principles</a></li>
-<li><a href="#3-reasoning-process">3. Reasoning Process</a></li>
-<li><a href="#4-demonstrations">4. Demonstrations</a></li>
-<li><a href="#5-connections">5. Connections</a></li>
-<li><a href="#6-limitations">6. Limitations</a></li>
-<li><a href="#7-applications">7. Applications</a></li>
-<li><a href="#8-mastery-criteria">8. Mastery Criteria</a></li></ul></nav>
+<nav class="outline" aria-label="On this page"><p class="eyebrow">On this page</p><ul><li><a href="#start-here">Start here</a></li>
+<li><a href="#worked-example">Worked example</a></li>
+<li><a href="#try-it">Try it</a></li>
+<li><a href="#check-your-work">Check your work</a></li></ul></nav>
       <div class="reading-column">
-        <article class="prose"><h2 id="1-core-idea">1. Core Idea</h2>
-<p>Data are not facts. They are <strong>measurements</strong>, produced by a process that includes selection, instrumentation, and aggregation. Inference is the reconstruction of the underlying quantity from the measurements, and it fails in characteristic, predictable ways:</p>
-<ul>
-<li><strong>Noise:</strong> random error that averages out with enough data.</li>
-<li><strong>Bias:</strong> systematic error that does <em>not</em> average out, no matter how much data you collect.</li>
-<li><strong>Selection:</strong> the data are not a random sample of the population you care about.</li>
-<li><strong>Aggregation:</strong> the pattern in the whole is not the pattern in the parts (Simpson's paradox).</li>
-<li><strong>Regression to the mean:</strong> extreme measurements are extreme partly by luck, so they move toward the average on re-measurement.</li>
-<li><strong>Multiple comparisons:</strong> with enough tests, something will look significant by chance.</li>
-<li><strong>Overfitting:</strong> a model with enough freedom fits noise and fails out of sample.</li>
-</ul>
-<p>The unifying principle: <strong>more data reduces noise and does nothing for bias, selection, or aggregation.</strong> This is why "big data" does not solve bad measurement, and why the most dangerous errors are the ones that more data makes <em>more</em> confident.</p>
-<p><strong>Principle signature.</strong> A conclusion is being drawn from data; a comparison is being made between groups; a measurement is being used as if it were the quantity itself.</p>
-<h2 id="2-first-principles">2. First Principles</h2>
-<p><strong>Signal and noise.</strong> A measurement is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>=</mo><mi>θ</mi><mo>+</mo><mi>ε</mi></mrow><annotation encoding="application/x-tex">X = \theta + \varepsilon</annotation></semantics></math>, where <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math> is the quantity and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ε</mi><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math> is error. The mean of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ε</mi><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math> is the bias; the variance is the noise. Averaging <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> independent measurements reduces the noise by <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mi>n</mi></msqrt><annotation encoding="application/x-tex">\sqrt n</annotation></semantics></math> and leaves the bias unchanged.</p>
-<p><strong>Selection changes the distribution.</strong> If you observe only a subset <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math> of the population, the distribution of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>∣</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">X \mid S</annotation></semantics></math> is not the distribution of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>. Every conclusion is about <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>∣</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">X \mid S</annotation></semantics></math>, not about <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> — unless you can argue the selection is ignorable.</p>
-<p><strong>Aggregation is not additive.</strong> A relationship that holds within each stratum need not hold in the pooled data, because the strata may have different sizes and different base rates. This is Simpson's paradox, and it is not a paradox — it is a warning that the <em>unit of analysis</em> must be chosen deliberately.</p>
-<p><strong>Regression to the mean.</strong> If <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>=</mo><mi>θ</mi><mo>+</mo><mi>ε</mi></mrow><annotation encoding="application/x-tex">X = \theta + \varepsilon</annotation></semantics></math> with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ε</mi><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math> independent across measurements, then conditional on observing a large <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>, the expected <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math> is closer to the mean than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> was. The re-measurement is expected to be less extreme <em>even if nothing changed</em>. Any intervention evaluated on extreme cases will appear to work.</p>
-<p><strong>Multiple comparisons.</strong> With <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math> independent tests at significance <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>, the probability of at least one false positive is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>α</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">1 - (1-\alpha)^m</annotation></semantics></math>. For <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mn>20</mn></mrow><annotation encoding="application/x-tex">m=20</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mn>0.05</mn></mrow><annotation encoding="application/x-tex">\alpha=0.05</annotation></semantics></math>, this is about <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>64</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">64\%</annotation></semantics></math>. Correction (Bonferroni, FDR) is mandatory when many hypotheses are tested.</p>
-<p><strong>Correlation is not causation.</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math> can be correlated because <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> causes <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math> causes <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>, a third variable <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Z</mi><annotation encoding="application/x-tex">Z</annotation></semantics></math> causes both, or the selection mechanism induces the correlation. Distinguishing these requires an intervention or a natural experiment, not more observational data.</p>
-<h2 id="3-reasoning-process">3. Reasoning Process</h2>
-<ol type="1">
-<li><strong>State the quantity and the population.</strong> What is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>, and what is the set of units you want to generalize to?</li>
-<li><strong>Ask how the data were produced.</strong> Who was measured, who was excluded, how was the measurement made, what was the protocol?</li>
-<li><strong>Separate noise from bias.</strong> Can the error be reduced by averaging? If not, it is bias, and more data will not help.</li>
-<li><strong>Check for selection.</strong> Is the sample representative? What is the mechanism that put units in the sample?</li>
-<li><strong>Check the unit of analysis.</strong> Are you comparing strata with different sizes or base rates? Compute both the stratified and pooled results.</li>
-<li><strong>Check for regression to the mean</strong> whenever the data are selected on an extreme value.</li>
-<li><strong>Correct for multiple comparisons</strong> if many hypotheses were tested.</li>
-<li><strong>Distinguish association from causation</strong>, and state what evidence would be needed for the causal claim.</li>
-</ol>
-<h2 id="4-demonstrations">4. Demonstrations</h2>
-<h3 id="demonstration-291--simpsons-paradox">Demonstration 29.1 — Simpson's paradox</h3>
-<p><em>Setup.</em> Two treatments, A and B, are compared on easy and hard cases.</p>
+        <article class="prose"><h2 id="start-here">Start here</h2>
+<p>Two routes have the same average travel time. One is usually steady, and the other alternates between very fast trips and long delays. The average alone hides the difference. Ask how the observations were produced and what statistic answers your question.</p>
+<h2 id="worked-example">Worked example</h2>
+<p>Compare success rates for two practice methods on easy and hard problems.</p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
 <thead>
 <tr class="header">
-<th></th>
-<th>Easy cases</th>
-<th>Hard cases</th>
-<th>Overall</th>
+<th>Method</th>
+<th style="text-align: right;">Easy</th>
+<th style="text-align: right;">Hard</th>
+<th style="text-align: right;">Total</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>A</strong></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><mi>/</mi><mn>10</mn><mo>=</mo><mn>90</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">9/10 = 90\%</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>20</mn><mi>/</mi><mn>90</mn><mo>≈</mo><mn>22.2</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">20/90 \approx 22.2\%</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>29</mn><mi>/</mi><mn>100</mn><mo>=</mo><mn>29</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">29/100 = 29\%</annotation></semantics></math></td>
+<td>A</td>
+<td style="text-align: right;">9 of 10</td>
+<td style="text-align: right;">30 of 100</td>
+<td style="text-align: right;">39 of 110</td>
 </tr>
 <tr class="even">
-<td><strong>B</strong></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>80</mn><mi>/</mi><mn>90</mn><mo>≈</mo><mn>88.9</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">80/90 \approx 88.9\%</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>/</mi><mn>10</mn><mo>=</mo><mn>20</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">2/10 = 20\%</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>82</mn><mi>/</mi><mn>100</mn><mo>=</mo><mn>82</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">82/100 = 82\%</annotation></semantics></math></td>
+<td>B</td>
+<td style="text-align: right;">80 of 100</td>
+<td style="text-align: right;">2 of 10</td>
+<td style="text-align: right;">82 of 110</td>
 </tr>
 </tbody>
 </table></div>
-<p><em>Observation.</em> A has a higher success rate in <em>both</em> strata (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>90</mn><mi>%</mi><mo>&gt;</mo><mn>88.9</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">90\% &gt; 88.9\%</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>22.2</mn><mi>%</mi><mo>&gt;</mo><mn>20</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">22.2\% &gt; 20\%</annotation></semantics></math>), but B has a much higher overall rate (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>82</mn><mi>%</mi><mo>&gt;</mo><mn>29</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">82\% &gt; 29\%</annotation></semantics></math>).</p>
-<p><em>Mechanism.</em> A was applied mostly to hard cases (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>90</mn><annotation encoding="application/x-tex">90</annotation></semantics></math> of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>100</mn><annotation encoding="application/x-tex">100</annotation></semantics></math>), where success is rare; B was applied mostly to easy cases (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>90</mn><annotation encoding="application/x-tex">90</annotation></semantics></math> of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>100</mn><annotation encoding="application/x-tex">100</annotation></semantics></math>), where success is common. The pooled rate is dominated by the stratum composition, not by the treatment effect.</p>
-<p><strong>What to notice.</strong> Both the stratified comparison and the pooled comparison are arithmetically correct. They answer <em>different questions</em>: the stratified comparison answers "for a patient like this, which treatment is better?"; the pooled comparison answers "which treatment had a better record overall?". <strong>The unit of analysis is a modeling decision, not a fact</strong> (→ Ch. <a href="chapter-25.html">25</a>), and it must be made explicitly.</p>
-<p>The general lesson: whenever a pooled statistic and a stratified statistic disagree, the composition of the groups is doing the work. This is the mathematical form of confounding.</p>
-<h3 id="demonstration-292--regression-to-the-mean">Demonstration 29.2 — Regression to the mean</h3>
-<p><em>Model.</em> Suppose true ability <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>∼</mo><mi>N</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\theta \sim N(0,1)</annotation></semantics></math> across a population, and a test measures <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>=</mo><mi>θ</mi><mo>+</mo><mi>ε</mi></mrow><annotation encoding="application/x-tex">X = \theta + \varepsilon</annotation></semantics></math> with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi><mo>∼</mo><mi>N</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\varepsilon \sim N(0,1)</annotation></semantics></math> independent of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>. Select the top <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">10\%</annotation></semantics></math> of scorers and re-test them.</p>
-<p><em>Computation.</em> Given <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">X = x</annotation></semantics></math>, the conditional expectation of ability is <span class="display-math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝔼</mi><mrow><mo stretchy="true" form="prefix">[</mo><mi>θ</mi><mo>∣</mo><mi>X</mi><mo>=</mo><mi>x</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow></mfrac><mi>x</mi><mo>=</mo><mfrac><mi>x</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\mathbb{E}[\theta \mid X = x] = \frac{1}{1+1}x = \frac{x}{2}</annotation></semantics></math></span> (by the standard normal-normal update: the posterior mean is a precision-weighted average, and here the precisions are equal, so the weight is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1/2</annotation></semantics></math>).</p>
-<p>So a person who scored <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>1.64</mn></mrow><annotation encoding="application/x-tex">x = 1.64</annotation></semantics></math> (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>95</mn><annotation encoding="application/x-tex">95</annotation></semantics></math>th percentile) has expected ability <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.82</mn><annotation encoding="application/x-tex">0.82</annotation></semantics></math> — and their expected <em>re-test</em> score is also <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.82</mn><annotation encoding="application/x-tex">0.82</annotation></semantics></math>, because <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝔼</mi><mrow><mo stretchy="true" form="prefix">[</mo><mi>X</mi><mi>′</mi><mo>∣</mo><mi>X</mi><mo>=</mo><mi>x</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mi>𝔼</mi><mrow><mo stretchy="true" form="prefix">[</mo><mi>θ</mi><mo>∣</mo><mi>X</mi><mo>=</mo><mi>x</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mi>x</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">\mathbb{E}[X&#39; \mid X=x] = \mathbb{E}[\theta\mid X=x] = x/2</annotation></semantics></math>.</p>
-<p><em>Conclusion.</em> The top decile's average score falls by a factor of about <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math> on re-testing, with no change in anyone's ability.</p>
-<p><strong>What to notice.</strong> Any intervention applied to the worst performers will show improvement, and any intervention applied to the best will show decline — <em>even if the intervention does nothing</em>. This is the single most common error in program evaluation, sports commentary ("the Sports Illustrated cover jinx"), and medical follow-up.</p>
-<p>The defense is a control group: compare the treated group's change to the change in an untreated group selected the same way.</p>
-<h3 id="demonstration-293--selection-bias-the-missing-data">Demonstration 29.3 — Selection bias: the missing data</h3>
-<p><em>Story.</em> During WWII, engineers examined returning aircraft and proposed reinforcing the areas with the most bullet holes: the wings and fuselage. Abraham Wald pointed out that the relevant sample was the <em>returning</em> aircraft, and that the areas with <em>no</em> holes on returning planes were the areas where a hit was fatal — because planes hit there did not return.</p>
-<p><em>Analysis.</em> Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> be the set of hit locations and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math> the event of returning. The data are drawn from <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>∣</mo><mi>R</mi></mrow><annotation encoding="application/x-tex">H \mid R</annotation></semantics></math>, not from <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>. The correct inference is about the locations where <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>R</mi><mo>∣</mo><mrow><mtext mathvariant="normal">hit at </mtext><mspace width="0.333em"></mspace></mrow><mi>h</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(R \mid \text{hit at } h)</annotation></semantics></math> is low, and those are <em>under-represented</em> in the data.</p>
-<p><em>Conclusion.</em> Reinforce where the returning planes have <em>no</em> holes.</p>
-<p><strong>What to notice.</strong> The data were real, abundant, and accurately measured. The error was in the <strong>sampling frame</strong>: the population of interest (all aircraft hit) was not the population observed (aircraft that returned). No amount of additional data on returning planes would fix this, because the missing planes are missing by construction.</p>
-<p>This is the general form of survivorship bias, and it is why "the data show" is not an argument until you know what data are absent.</p>
-<h3 id="demonstration-294--multiple-comparisons">Demonstration 29.4 — Multiple comparisons</h3>
-<p><em>Setup.</em> Twenty independent hypotheses are tested, each at significance level <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mn>0.05</mn></mrow><annotation encoding="application/x-tex">\alpha = 0.05</annotation></semantics></math>, and all null hypotheses are true.</p>
-<p><em>Computation.</em> The probability that at least one test is significant is <span class="display-math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.05</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>20</mn></msup><mo>=</mo><mn>1</mn><mo>−</mo><msup><mn>0.95</mn><mn>20</mn></msup><mo>≈</mo><mn>1</mn><mo>−</mo><mn>0.358</mn><mo>=</mo><mn>0.642</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">1 - (1-0.05)^{20} = 1 - 0.95^{20} \approx 1 - 0.358 = 0.642.</annotation></semantics></math></span> So there is about a <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>64</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">64\%</annotation></semantics></math> chance of at least one false positive, even though nothing is real.</p>
-<p><em>Correction.</em> Bonferroni: test each at <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mi>/</mi><mi>m</mi><mo>=</mo><mn>0.05</mn><mi>/</mi><mn>20</mn><mo>=</mo><mn>0.0025</mn></mrow><annotation encoding="application/x-tex">\alpha/m = 0.05/20 = 0.0025</annotation></semantics></math>, which restores the family-wise error rate to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.05</mn><annotation encoding="application/x-tex">0.05</annotation></semantics></math>. The cost is reduced power: real effects must be larger to be detected.</p>
-<p><strong>What to notice.</strong> The individual tests are each valid; the <em>collection</em> of tests is not, because the error rate compounds. This is why pre-registration, correction, and replication are not bureaucratic formalities — they are the mathematical consequence of testing many hypotheses.</p>
-<p>The same arithmetic explains why "a study found that X is linked to Y" is weak evidence when many links were examined, and why replication is essential.</p>
-<h2 id="5-connections">5. Connections</h2>
+<p>A has a higher success rate within each difficulty group. B has a higher pooled rate because B attempted many more easy problems. This reversal is an example of <strong>Simpson's paradox</strong>. A pooled rate weights groups according to how often they appear. Whether you should compare within groups depends on the question. These counts alone also leave open whether a method caused a difference in success.</p>
+<h2 id="try-it">Try it</h2>
 <ul>
-<li><strong>← Ch. <a href="chapter-21.html">21</a>.</strong> Base rates, Bayes, and the mean-versus-typical distinction are the probabilistic foundation.</li>
-<li><strong>← Ch. <a href="chapter-25.html">25</a>.</strong> The unit of analysis and the sampling frame are modeling decisions; this chapter is their statistical consequence.</li>
-<li><strong>← Ch. <a href="chapter-26.html">26</a>.</strong> Estimation is the antidote to numerically absurd claims; this chapter is the antidote to statistically absurd ones.</li>
-<li><strong>→ Ch. <a href="chapter-31.html">31</a>.</strong> Conjectures from data inherit every bias in the data.</li>
-<li><strong>→ Ch. <a href="chapter-33.html">33</a>.</strong> Experimental mathematics has its own selection effects (you notice the patterns you look for).</li>
-<li><strong>→ Ch. <a href="chapter-35.html">35</a>.</strong> Research judgment includes knowing which claims are supported by the evidence and which are supported by the sample.</li>
+<li><strong>Practice.</strong> Compute the four within-group percentages and the two pooled percentages.</li>
+<li><strong>Stretch.</strong> Imagine each method is assigned to an equal mix of easy and hard problems, and the within-group rates stay the same. Predict each pooled rate. Which assumption would you test before acting on the prediction?</li>
 </ul>
-<h2 id="6-limitations">6. Limitations</h2>
-<p><strong>Noise can be irreducible.</strong> Sometimes the quantity is genuinely random, and no amount of data will reduce the variance. Distinguishing irreducible noise from measurement error requires repeated measurements and a model.</p>
-<p><strong>Bias can be undetectable from the data alone.</strong> If the bias affects every measurement equally, no internal check can find it. External validation (a different instrument, a different population) is the only defense.</p>
-<p><strong>Correction for multiple comparisons can be too conservative.</strong> Bonferroni controls the family-wise error rate at the cost of power; in exploratory work, false discovery rate control is often more appropriate. The choice is a judgment call, not a theorem.</p>
-<p><strong>Causal inference requires assumptions that data cannot verify.</strong> Instrumental variables, difference-in-differences, and regression discontinuity all rest on assumptions (exclusion, parallel trends, continuity) that are not testable from the data they use.</p>
-<p><strong>Statistical significance is not practical significance.</strong> A tiny effect can be significant with enough data, and a large effect can be non-significant with little data. Report effect sizes and intervals, not just p-values.</p>
-<h2 id="7-applications">7. Applications</h2>
-<ul>
-<li><strong>Medicine.</strong> Clinical trials, screening, and diagnosis are the canonical setting for base rates, regression to the mean, and selection effects.</li>
-<li><strong>Finance.</strong> Backtested strategies suffer from selection (many strategies tried), survivorship (failed funds disappear), and overfitting (parameters tuned to the past).</li>
-<li><strong>Public policy.</strong> Program evaluation is regression to the mean plus selection; randomized controlled trials are the response.</li>
-<li><strong>Machine learning.</strong> Train/test splits address selection; cross-validation addresses overfitting; distribution shift is the modern form of sampling frame error.</li>
-<li><strong>Science.</strong> Publication bias, p-hacking, and the replication crisis are all instances of multiple comparisons and selection.</li>
-<li><strong>Engineering.</strong> Reliability testing has its own selection effects (units that fail early are removed from the sample).</li>
-</ul>
-<h2 id="8-mastery-criteria">8. Mastery Criteria</h2>
-<p>You have this chapter when you can:</p>
-<ol type="1">
-<li>Separate noise from bias in a measurement process and say which can be reduced by more data.</li>
-<li>Identify the sampling frame and the mechanism that selected the data.</li>
-<li>Detect Simpson's paradox by computing both stratified and pooled statistics.</li>
-<li>Predict the direction and magnitude of regression to the mean for a selected group.</li>
-<li>Correct for multiple comparisons and explain the cost.</li>
-<li>State what evidence would be required to move from association to causation.</li>
-</ol>
-<p><strong>Diagnostic question.</strong> "The data show that X works. What would make this conclusion wrong?" A learner who names selection, regression to the mean, and multiple comparisons has the skill.</p>
-<h3 id="ai-tutor-brief">AI Tutor Brief</h3>
-<ul>
-<li><strong>Generate:</strong> (i) Simpson's-paradox datasets requiring both analyses; (ii) regression-to-the-mean predictions; (iii) selection-bias scenarios with a missing subpopulation; (iv) multiple-comparison calculations; (v) "association or causation?" case studies.</li>
-<li><strong>Probe misconceptions:</strong> "more data means more truth"; pooled statistics as automatically correct; significance as importance; correlation as causation.</li>
-<li><strong>Transfer distance:</strong> high. Use medicine, finance, sports, and policy settings, since the mathematics is identical and the surface is not.</li>
-<li><strong>Do not</strong> accept a conclusion from data without the sampling frame and the unit of analysis stated.</li>
-</ul>
+<h2 id="check-your-work">Check your work</h2>
+<p><strong>Practice.</strong> For A the rates are 90%, 30%, and about 35.5%. For B they are 80%, 20%, and about 74.5%.</p>
+<p><strong>Stretch.</strong> Equal weights give 60% for A and 50% for B. Test whether the within-group rates carry over to the new population. Check whether assignment, preparation, or differences within the difficulty groups could affect success.</p>
 </article>
-<nav class="pagination" aria-label="Reading order"><a href="chapter-28.html"><span class="eyebrow">← Chapter 28</span><span>Computation, Simulation, and Numerical Thinking</span></a><a href="chapter-30.html"><span class="eyebrow">Chapter 30 →</span><span>Systems Thinking</span></a></nav>
+<nav class="pagination" aria-label="Reading order"><a href="chapter-28.html"><span class="eyebrow">← Chapter 28</span><span>Compute, Simulate, and Check</span></a><a href="chapter-30.html"><span class="eyebrow">Chapter 30 →</span><span>Follow Feedback Through a System</span></a></nav>
       </div>
     </div>
   </main>
   <footer class="site-footer">
     <div class="shell bar">
       <span>The Structure of Mathematical Thought</span>
-      <a href="https://github.com/anipiso9989-ops/Tensor">View source <span aria-hidden="true">↗</span></a>
+      <a href="https://github.com/anipiso9989-ops/TSMT">View source <span aria-hidden="true">↗</span></a>
     </div>
   </footer>
 </body>
