@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Chapter 24 of The Structure of Mathematical Thought. Compound Strategy: Combining Principles.">
-  <title>Chapter 24 · Compound Strategy: Combining Principles · The Structure of Mathematical Thought</title>
+  <meta name="description" content="Chapter 24 of The Structure of Mathematical Thought. Combine Strategies and Know When to Switch.">
+  <title>Chapter 24 · Combine Strategies and Know When to Switch · The Structure of Mathematical Thought</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
 </head>
@@ -26,265 +26,38 @@
     </nav>
     <header class="reader-header">
       <p class="eyebrow">Chapter 24 / Part III</p>
-      <h1>Compound Strategy: Combining Principles</h1>
+      <h1>Combine Strategies and Know When to Switch</h1>
     </header>
     <div class="reading-layout">
-<nav class="outline" aria-label="On this page"><p class="eyebrow">On this page</p><ul><li><a href="#1-core-idea">1. Core Idea</a></li>
-<li><a href="#2-first-principles">2. First Principles</a></li>
-<li><a href="#3-reasoning-process">3. Reasoning Process</a></li>
-<li><a href="#4-demonstrations">4. Demonstrations</a></li>
-<li><a href="#5-connections">5. Connections</a></li>
-<li><a href="#6-limitations">6. Limitations</a></li>
-<li><a href="#7-applications">7. Applications</a></li>
-<li><a href="#8-mastery-criteria">8. Mastery Criteria</a></li></ul></nav>
+<nav class="outline" aria-label="On this page"><p class="eyebrow">On this page</p><ul><li><a href="#start-here">Start here</a></li>
+<li><a href="#worked-example">Worked example</a></li>
+<li><a href="#try-it">Try it</a></li>
+<li><a href="#check-your-work">Check your work</a></li></ul></nav>
       <div class="reading-column">
-        <article class="prose"><h2 id="1-core-idea">1. Core Idea</h2>
-<p>Real problems are not solved by one principle. They are solved by a <strong>sequence</strong> of principles, where each one converts the problem into a form where the next one applies. The meta-skill is:</p>
-<ol type="1">
-<li><strong>Recognizing</strong> which principle's signature is present (repertoire).</li>
-<li><strong>Sequencing</strong> principles so that each one hands off to the next (planning).</li>
-<li><strong>Detecting</strong> that a sequence is failing, and abandoning it before it consumes the session (control).</li>
-</ol>
-<p>This chapter is a synthesis checkpoint. It assumes Chapters <a href="chapter-07.html">7</a>–<a href="chapter-23.html">23</a> and does not introduce new techniques. What it adds is the <strong>strategy layer</strong>: the part of problem solving that is about allocating effort rather than applying methods.</p>
-<h2 id="2-first-principles">2. First Principles</h2>
-<p><strong>Problems have a "difficulty type".</strong> Most hard problems are hard for one of four reasons:</p>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
-<thead>
-<tr class="header">
-<th>Difficulty type</th>
-<th>Signature</th>
-<th>First move</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Search</strong></td>
-<td>Many cases, no obvious structure</td>
-<td>Look for an invariant or a canonical form to collapse the cases</td>
-</tr>
-<tr class="even">
-<td><strong>Construction</strong></td>
-<td>Need to exhibit an object with many constraints</td>
-<td>Work backwards from the constraints; build incrementally</td>
-</tr>
-<tr class="odd">
-<td><strong>Impossibility</strong></td>
-<td>Need to prove something cannot happen</td>
-<td>Find an invariant, a monovariant, or a counting obstruction</td>
-</tr>
-<tr class="even">
-<td><strong>Estimation</strong></td>
-<td>Need a bound, not an exact value</td>
-<td>Relax, bound, and check sharpness</td>
-</tr>
-</tbody>
-</table></div>
-<p>Identifying the difficulty type is the highest-leverage act in problem solving, because it eliminates most of the principle space immediately.</p>
-<p><strong>Principles chain in characteristic ways.</strong> Some sequences recur so often that they are worth memorizing as macros:</p>
+        <article class="prose"><h2 id="start-here">Start here</h2>
+<p>One method often opens the door and another finishes. If a direct proof stalls, write down what would finish it. Then choose a method that can supply that missing step.</p>
+<h2 id="worked-example">Worked example</h2>
+<p>Show that the only integer solution of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>=</mo><mn>2</mn><msup><mi>y</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">x^2=2y^2</annotation></semantics></math> is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(0,0)</annotation></semantics></math>. The parity argument from Chapter <a href="chapter-04.html">4</a> forces <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> to be even. If a nonzero solution exists, choose one with the smallest positive <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">|</mo><mi>y</mi><mo stretchy="true" form="postfix">|</mo></mrow><annotation encoding="application/x-tex">|y|</annotation></semantics></math>. Such a minimum exists because every nonempty set of positive integers has a least member. Also, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">y=0</annotation></semantics></math> would force <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x=0</annotation></semantics></math>.</p>
+<p>Now halve both coordinates. The equation still holds, and the new <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">|</mo><mi>y</mi><mo stretchy="true" form="postfix">|</mo></mrow><annotation encoding="application/x-tex">|y|</annotation></semantics></math> is positive and smaller. That contradiction rules out every nonzero solution. The chain uses parity to produce a legal move, an extremal choice to make the move decisive, and <strong>descent</strong> to name the smaller-solution argument.</p>
+<h2 id="try-it">Try it</h2>
 <ul>
-<li><strong>Impossibility:</strong> invariant → contradiction → (sometimes) case analysis to show the invariant is complete.</li>
-<li><strong>Extremal existence:</strong> extremal choice → perturb → contradiction → (sometimes) pigeonhole to produce the configuration.</li>
-<li><strong>Classification:</strong> invariant → case split → canonical form in each case → compare.</li>
-<li><strong>Counting:</strong> bijection → recurrence → generating function → asymptotics.</li>
-<li><strong>Construction:</strong> backward chain → auxiliary object → induction → verification.</li>
-<li><strong>Inequality:</strong> expand/transform → standard inequality → equality case → attainment.</li>
+<li><strong>Practice.</strong> Name one method that could help when legal moves seem to preserve something. Name a different method when you need to show a candidate is best.</li>
+<li><strong>Stretch.</strong> Prove that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mn>3</mn><msup><mi>z</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">x^2+y^2=3z^2</annotation></semantics></math> has no nonzero integer solution. Start by listing possible square remainders upon division by 3.</li>
 </ul>
-<p><strong>Search control is the scarce resource.</strong> You have a bounded amount of time and working memory. The optimal strategy is not "try everything" but "try the highest-prior approach, with an explicit abandonment criterion". The criterion is what most learners lack.</p>
-<p><strong>Failure is information.</strong> A failed approach tells you which structures are <em>not</em> the key. Hamming's observation applies: false starts sharpen the next attempt because they eliminate the approaches that do not work (→ Ch. <a href="chapter-35.html">35</a>).</p>
-<h2 id="3-reasoning-process">3. Reasoning Process</h2>
-<ol type="1">
-<li><strong>Anatomy (5 minutes).</strong> Goal type, degrees of freedom, special constraints (→ Ch. <a href="chapter-07.html">7</a>).</li>
-<li><strong>Difficulty classification (2 minutes).</strong> Search, construction, impossibility, or estimation?</li>
-<li><strong>Principle selection.</strong> Use the signature table (below) to pick the top two candidates.</li>
-<li><strong>Commit with a time box.</strong> 20 minutes on the first approach, with a written note of what "success in 20 minutes" would look like.</li>
-<li><strong>At the checkpoint, decide:</strong> progress, plateau, or dead end. Progress → continue. Plateau → change the sub-step, not the principle. Dead end → switch to the second candidate, and record <em>why</em> the first failed.</li>
-<li><strong>After solving, extract the macro.</strong> Which sequence of principles did you use? Would you recognize it next time? This is how the repertoire grows.</li>
-<li><strong>After failing, extract the diagnostic.</strong> What did the failure rule out? What would you try first next time?</li>
-</ol>
-<h3 id="signature-table">Signature table</h3>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
-<thead>
-<tr class="header">
-<th>If the problem...</th>
-<th>First principle</th>
-<th>Backup</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>asks whether a configuration is reachable</td>
-<td>Invariant (Ch. <a href="chapter-08.html">8</a>)</td>
-<td>Counting obstruction (Ch. <a href="chapter-12.html">12</a>)</td>
-</tr>
-<tr class="even">
-<td>asks to prove existence</td>
-<td>Extremal (Ch. <a href="chapter-11.html">11</a>)</td>
-<td>Constructive (Ch. <a href="chapter-16.html">16</a>)</td>
-</tr>
-<tr class="odd">
-<td>involves a process that must stop</td>
-<td>Monovariant (Ch. <a href="chapter-08.html">8</a>)</td>
-<td>Descent (Ch. <a href="chapter-10.html">10</a>)</td>
-</tr>
-<tr class="even">
-<td>involves a discrete parameter <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math></td>
-<td>Induction (Ch. <a href="chapter-10.html">10</a>)</td>
-<td>Bijection/recurrence (Ch. <a href="chapter-12.html">12</a>, <a href="chapter-15.html">15</a>)</td>
-</tr>
-<tr class="odd">
-<td>has symmetric data</td>
-<td>Symmetry/WLOG (Ch. <a href="chapter-09.html">9</a>)</td>
-<td>Extremal + averaging (Ch. <a href="chapter-11.html">11</a>)</td>
-</tr>
-<tr class="even">
-<td>asks for a count</td>
-<td>Bijection/double count (Ch. <a href="chapter-12.html">12</a>)</td>
-<td>Generating function (Ch. <a href="chapter-15.html">15</a>)</td>
-</tr>
-<tr class="odd">
-<td>has "more objects than slots"</td>
-<td>Pigeonhole (Ch. <a href="chapter-13.html">13</a>)</td>
-<td>Probabilistic method (Ch. <a href="chapter-21.html">21</a>)</td>
-</tr>
-<tr class="even">
-<td>needs a classification</td>
-<td>Canonical form (Ch. <a href="chapter-14.html">14</a>)</td>
-<td>Invariant (Ch. <a href="chapter-08.html">8</a>)</td>
-</tr>
-<tr class="odd">
-<td>is a mess in its current form</td>
-<td>Transformation (Ch. <a href="chapter-15.html">15</a>)</td>
-<td>Multiple lenses (Ch. <a href="chapter-23.html">23</a>)</td>
-</tr>
-<tr class="even">
-<td>asks for a bound or optimum</td>
-<td>Bound + attainment (Ch. <a href="chapter-20.html">20</a>)</td>
-<td>Relaxation (Ch. <a href="chapter-20.html">20</a>)</td>
-</tr>
-<tr class="odd">
-<td>asks for existence of a constrained object</td>
-<td>Probabilistic method (Ch. <a href="chapter-21.html">21</a>)</td>
-<td>Backward construction (Ch. <a href="chapter-17.html">17</a>)</td>
-</tr>
-<tr class="even">
-<td>involves a large or small parameter</td>
-<td>Asymptotics (Ch. <a href="chapter-22.html">22</a>)</td>
-<td>Scaling (Ch. <a href="chapter-27.html">27</a>)</td>
-</tr>
-<tr class="odd">
-<td>is stated abstractly and seems empty</td>
-<td>Find a model (Ch. <a href="chapter-01.html">1</a>, <a href="chapter-05.html">5</a>)</td>
-<td>Specialize (Ch. <a href="chapter-18.html">18</a>)</td>
-</tr>
-</tbody>
-</table></div>
-<h2 id="4-demonstrations">4. Demonstrations</h2>
-<h3 id="demonstration-241--a-full-chain-modular-arithmetic--descent">Demonstration 24.1 — A full chain: modular arithmetic + descent</h3>
-<p><em>Claim.</em> There are no positive integers <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x,y,z</annotation></semantics></math> with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mn>3</mn><msup><mi>z</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">x^2 + y^2 = 3z^2</annotation></semantics></math>.</p>
-<p><em>Step 1 (transformation, Ch. <a href="chapter-15.html">15</a>).</em> The equation involves squares, so work modulo a small number where squares are constrained. Mod <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math>, the squares are <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>.</p>
-<p><em>Step 2 (decomposition, Ch. <a href="chapter-14.html">14</a>).</em> Analyze the possibilities for <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mrow><mspace width="0.222em"></mspace><mo>mod</mo><mspace width="0.222em"></mspace><mn>3</mn></mrow></mrow><annotation encoding="application/x-tex">x^2 + y^2 \bmod 3</annotation></semantics></math>:</p>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Table with horizontal scrolling"><table>
-<thead>
-<tr class="header">
-<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mrow><mspace width="0.222em"></mspace><mo>mod</mo><mspace width="0.222em"></mspace><mn>3</mn></mrow></mrow><annotation encoding="application/x-tex">x^2 \bmod 3</annotation></semantics></math></th>
-<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>y</mi><mn>2</mn></msup><mrow><mspace width="0.222em"></mspace><mo>mod</mo><mspace width="0.222em"></mspace><mn>3</mn></mrow></mrow><annotation encoding="application/x-tex">y^2 \bmod 3</annotation></semantics></math></th>
-<th>sum</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>0</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>1</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>1</td>
-<td>1</td>
-<td>2</td>
-</tr>
-</tbody>
-</table></div>
-<p>The right side is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><msup><mi>z</mi><mn>2</mn></msup><mo>≡</mo><mn>0</mn><mrow><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mo>mod</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">3z^2 \equiv 0 \pmod 3</annotation></semantics></math>. So the sum must be <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>, which forces <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>≡</mo><msup><mi>y</mi><mn>2</mn></msup><mo>≡</mo><mn>0</mn><mrow><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mo>mod</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">x^2 \equiv y^2 \equiv 0 \pmod 3</annotation></semantics></math>, i.e. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>∣</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">3 \mid x</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>∣</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">3 \mid y</annotation></semantics></math>.</p>
-<p><em>Step 3 (descent, Ch. <a href="chapter-10.html">10</a>).</em> Write <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>3</mn><msub><mi>x</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">x = 3x_1</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mn>3</mn><msub><mi>y</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">y = 3y_1</annotation></semantics></math>. Then <span class="display-math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><mn>9</mn><msubsup><mi>y</mi><mn>1</mn><mn>2</mn></msubsup><mo>=</mo><mn>3</mn><msup><mi>z</mi><mn>2</mn></msup><mo>⟹</mo><mn>3</mn><mrow><mo stretchy="true" form="prefix">(</mo><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>y</mi><mn>1</mn><mn>2</mn></msubsup><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mi>z</mi><mn>2</mn></msup><mo>,</mo></mrow><annotation encoding="application/x-tex">9x_1^2 + 9y_1^2 = 3z^2 \implies 3(x_1^2 + y_1^2) = z^2,</annotation></semantics></math></span> so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>∣</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">3 \mid z^2</annotation></semantics></math>, hence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>∣</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">3 \mid z</annotation></semantics></math>; write <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mn>3</mn><msub><mi>z</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">z = 3z_1</annotation></semantics></math>. Substituting: <span class="display-math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><mn>9</mn><msubsup><mi>y</mi><mn>1</mn><mn>2</mn></msubsup><mo>=</mo><mn>27</mn><msubsup><mi>z</mi><mn>1</mn><mn>2</mn></msubsup><mo>⟹</mo><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>y</mi><mn>1</mn><mn>2</mn></msubsup><mo>=</mo><mn>3</mn><msubsup><mi>z</mi><mn>1</mn><mn>2</mn></msubsup><mi>.</mi></mrow><annotation encoding="application/x-tex">9x_1^2 + 9y_1^2 = 27z_1^2 \implies x_1^2 + y_1^2 = 3z_1^2.</annotation></semantics></math></span> So <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>z</mi><mn>1</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x_1,y_1,z_1)</annotation></semantics></math> is another positive integer solution, with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mi>x</mi><mi>/</mi><mn>3</mn><mo>&lt;</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">x_1 = x/3 &lt; x</annotation></semantics></math>.</p>
-<p><em>Step 4 (well-ordering, Ch. <a href="chapter-11.html">11</a>).</em> Repeating, we obtain an infinite strictly decreasing sequence of positive integers <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>&gt;</mo><msub><mi>x</mi><mn>1</mn></msub><mo>&gt;</mo><msub><mi>x</mi><mn>2</mn></msub><mo>&gt;</mo><mi>⋯</mi></mrow><annotation encoding="application/x-tex">x &gt; x_1 &gt; x_2 &gt; \cdots</annotation></semantics></math>, which is impossible. Hence no solution exists. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>◼</mi><annotation encoding="application/x-tex">\blacksquare</annotation></semantics></math></p>
-<p><strong>What to notice.</strong> Four principles, each doing one job: the transformation chose the modulus; the decomposition exhausted the residue cases; the descent produced a smaller solution; the well-ordering closed the argument. <strong>No single principle solves the problem, and the order matters</strong> — the modulus had to be chosen before the case analysis, and the case analysis had to identify "both divisible by 3" before descent could start.</p>
-<p>This is the characteristic shape of a number-theory impossibility proof, and it is worth internalizing as a macro: <em>pick a modulus where the equation is rigid → enumerate residues → show all variables divisible → descend</em>.</p>
-<h3 id="demonstration-242--diagnosing-which-principle-applies">Demonstration 24.2 — Diagnosing which principle applies</h3>
-<p>Four problems, diagnosed but not solved. The value is in the diagnosis, not the answer.</p>
-<p><strong>(a)</strong> "Prove that among any <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n+1</annotation></semantics></math> integers chosen from <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mn>1</mn><mo>,</mo><mi>…</mi><mo>,</mo><mn>2</mn><mi>n</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{1,\dots,2n\}</annotation></semantics></math>, two are coprime." <em>Difficulty type:</em> impossibility/existence with a counting flavor. <em>Signature:</em> more objects than slots. <em>First principle:</em> pigeonhole with pairs as boxes (Ch. <a href="chapter-13.html">13</a>). <em>Why not extremal:</em> there is no quantity to optimize.</p>
-<p><strong>(b)</strong> "Prove that a <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mo>×</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">10\times10</annotation></semantics></math> board cannot be tiled by <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>×</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">1\times4</annotation></semantics></math> rectangles." <em>Difficulty type:</em> impossibility. <em>Signature:</em> tiling, local pieces, global region. <em>First principle:</em> weighted invariant (Ch. <a href="chapter-08.html">8</a>), with weights chosen so each tile sums to zero. <em>Why not counting:</em> area is compatible (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mo>=</mo><mn>25</mn><mo>⋅</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">100 = 25\cdot4</annotation></semantics></math>), so a pure count fails.</p>
-<p><strong>(c)</strong> "Find the largest <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> such that every graph on <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> vertices contains a triangle or an independent set of size <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math>." <em>Difficulty type:</em> estimation/existence. <em>Signature:</em> "largest <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> such that every", a Ramsey-type threshold. <em>First principle:</em> bound + construction (Ch. <a href="chapter-20.html">20</a>), with the construction from an explicit coloring and the bound from a pigeonhole or counting argument (Ch. <a href="chapter-13.html">13</a>). <em>Why not induction:</em> there is no recursive structure.</p>
-<p><strong>(d)</strong> "Prove that for every positive integer <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>, there is a multiple of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> whose decimal representation uses only the digits <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>." <em>Difficulty type:</em> construction/existence. <em>Signature:</em> "for every <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>, there is", with a strong arithmetic constraint. <em>First principle:</em> pigeonhole on the numbers <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mn>11</mn><mo>,</mo><mn>111</mn><mo>,</mo><mi>…</mi></mrow><annotation encoding="application/x-tex">1, 11, 111, \dots</annotation></semantics></math> modulo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> (Ch. <a href="chapter-13.html">13</a>) — two have the same residue, and their difference is a string of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>s followed by <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>s. <em>Why not induction:</em> the construction is not recursive in <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>.</p>
-<p><strong>What to notice.</strong> In each case, the <em>difficulty type</em> eliminated most of the principle space before any attempt. This is the practical value of the taxonomy: it converts "which of eleven techniques should I try?" into "which of four difficulty types is this?", and then "which technique matches this type?".</p>
-<h3 id="demonstration-243--when-to-abandon-an-approach">Demonstration 24.3 — When to abandon an approach</h3>
-<p><em>Scenario.</em> You are trying to prove an inequality by induction. You have spent twenty minutes and the inductive step requires bounding <span class="display-math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></munderover><mfrac><mn>1</mn><msqrt><mi>k</mi></msqrt></mfrac><mspace width="1.0em"></mspace><mtext mathvariant="normal">by</mtext><mspace width="1.0em"></mspace><mn>2</mn><msqrt><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msqrt><mo>,</mo></mrow><annotation encoding="application/x-tex">\sum_{k=1}^{n+1}\frac{1}{\sqrt k} \quad\text{by}\quad 2\sqrt{n+1},</annotation></semantics></math></span> and the natural estimate gives <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msqrt><mi>n</mi></msqrt><mo>+</mo><mfrac><mn>1</mn><msqrt><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">2\sqrt n + \frac{1}{\sqrt{n+1}}</annotation></semantics></math>, which is <em>larger</em> than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msqrt><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mrow><annotation encoding="application/x-tex">2\sqrt{n+1}</annotation></semantics></math>.</p>
-<p><em>Diagnosis.</em> This is the same failure as Demonstration 10.2: the induction hypothesis is too weak. But is it fixable? Check: the strengthened claim would be <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mrow><mi>k</mi><mo>≤</mo><mi>n</mi></mrow></msub><mn>1</mn><mi>/</mi><msqrt><mi>k</mi></msqrt><mo>≤</mo><mn>2</mn><msqrt><mi>n</mi></msqrt><mo>−</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">\sum_{k\le n} 1/\sqrt k \le 2\sqrt n - c</annotation></semantics></math> for some <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>; testing <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n=1</annotation></semantics></math> gives <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>≤</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">c \le 1</annotation></semantics></math>, and the step requires <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><msqrt><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mfrac><mo>≤</mo><mn>2</mn><mrow><mo stretchy="true" form="prefix">(</mo><msqrt><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msqrt><mo>−</mo><msqrt><mi>n</mi></msqrt><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\frac{1}{\sqrt{n+1}} \le 2(\sqrt{n+1}-\sqrt n)</annotation></semantics></math>, which is false for large <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> (the left side is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∼</mo><msup><mi>n</mi><mrow><mi>−</mi><mn>1</mn><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\sim n^{-1/2}</annotation></semantics></math>, the right is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∼</mo><msup><mi>n</mi><mrow><mi>−</mi><mn>1</mn><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\sim n^{-1/2}</annotation></semantics></math> but with a smaller constant). So the strengthening does not close.</p>
-<p><em>Decision.</em> Abandon induction. The obstruction is structural: the sum is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∼</mo><mn>2</mn><msqrt><mi>n</mi></msqrt></mrow><annotation encoding="application/x-tex">\sim 2\sqrt n</annotation></semantics></math>, and the error term is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math>, so no linear-in-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> induction will capture it. Switch to <strong>integral comparison</strong> (Ch. <a href="chapter-22.html">22</a>), which gives <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mn>1</mn><mi>/</mi><msqrt><mi>k</mi></msqrt><mo>≤</mo><mn>1</mn><mo>+</mo><msubsup><mo>∫</mo><mn>1</mn><mi>n</mi></msubsup><msup><mi>x</mi><mrow><mi>−</mi><mn>1</mn><mi>/</mi><mn>2</mn></mrow></msup><mi>d</mi><mi>x</mi><mo>=</mo><mn>2</mn><msqrt><mi>n</mi></msqrt><mo>−</mo><mn>1</mn><mo>≤</mo><mn>2</mn><msqrt><mi>n</mi></msqrt></mrow><annotation encoding="application/x-tex">\sum_{k=1}^n 1/\sqrt k \le 1 + \int_1^n x^{-1/2}dx = 2\sqrt n - 1 \le 2\sqrt n</annotation></semantics></math> directly.</p>
-<p><strong>What to notice.</strong> The decision to abandon was based on a <em>diagnosis</em>, not on frustration: the failure of the strengthened claim was a two-line calculation that showed the approach could not work. <strong>The worst reason to continue is sunk cost; the best reason to stop is a proof that the method cannot succeed.</strong> In practice, "cannot succeed" is rare; "has not succeeded in 20 minutes and the obstruction looks structural" is the realistic trigger.</p>
-<h3 id="demonstration-244--building-a-macro-from-two-solutions">Demonstration 24.4 — Building a macro from two solutions</h3>
-<p><em>Problem 1.</em> Prove that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mn>2</mn></msqrt><annotation encoding="application/x-tex">\sqrt2</annotation></semantics></math> is irrational. <em>Solution macro:</em> suppose <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mi>/</mi><mi>q</mi></mrow><annotation encoding="application/x-tex">p/q</annotation></semantics></math> in lowest terms → derive <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>∣</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">2 \mid p</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>∣</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">2 \mid q</annotation></semantics></math> → contradict lowest terms.</p>
-<p><em>Problem 2.</em> Prove that there are no positive integers <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x,y,z</annotation></semantics></math> with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mn>3</mn><msup><mi>z</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">x^2+y^2=3z^2</annotation></semantics></math>. <em>Solution macro:</em> mod <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math> → all variables divisible by <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math> → divide → descend.</p>
-<p><em>The shared macro.</em> Both are instances of: <strong>a putative solution forces a common divisor, and the canonical-form condition (lowest terms, or minimality) forbids it.</strong> The macro is "common-divisor contradiction", and it applies to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mi>n</mi></msqrt><annotation encoding="application/x-tex">\sqrt n</annotation></semantics></math> for any non-square <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>, to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>=</mo><mn>2</mn><msup><mi>y</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">x^2 = 2y^2</annotation></semantics></math>, to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>=</mo><mn>2</mn><msup><mi>y</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">x^3 = 2y^3</annotation></semantics></math>, and to many Diophantine equations.</p>
-<p><strong>What to notice.</strong> The macro was not visible from either solution alone; it emerged from comparing them. This is why <strong>solving the same problem two ways, and solving two problems the same way, are both essential</strong> (→ Ch. <a href="chapter-23.html">23</a>). The repertoire grows by abstraction over solutions, not by accumulation of solutions.</p>
-<h2 id="5-connections">5. Connections</h2>
-<ul>
-<li><strong>← Ch. <a href="chapter-07.html">7</a>.</strong> Anatomy is the first step of the strategy layer.</li>
-<li><strong>← Ch. <a href="chapter-08.html">8</a>–<a href="chapter-17.html">17</a>.</strong> The repertoire; this chapter is the selection and sequencing of it.</li>
-<li><strong>← Ch. <a href="chapter-18.html">18</a>–<a href="chapter-23.html">23</a>.</strong> The meta-techniques that change the problem rather than solve it.</li>
-<li><strong>→ Ch. <a href="chapter-31.html">31</a>–<a href="chapter-34.html">34</a>.</strong> Research strategy is the same selection problem with a much larger principle space and no known answer.</li>
-<li><strong>→ Ch. <a href="chapter-35.html">35</a>.</strong> Judgment is what remains when the signature table fails: choosing which problem to work on at all.</li>
-</ul>
-<h2 id="6-limitations">6. Limitations</h2>
-<p><strong>The taxonomy is not exhaustive.</strong> Some problems are hard for reasons outside the four types (a missing definition, an unproved lemma from another field, a computational barrier). When the taxonomy fails, return to anatomy.</p>
-<p><strong>Macros can become ruts.</strong> Recognizing "this is a descent problem" can blind you to the fact that a direct construction is available. Always ask, at the checkpoint, whether a <em>different difficulty type</em> is possible.</p>
-<p><strong>Time-boxing is personal.</strong> Twenty minutes is a heuristic. The right box depends on the stakes: an olympiad problem gets 15–30 minutes; a research problem gets weeks. Calibrate.</p>
-<p><strong>Abandonment is costly if premature.</strong> Many solutions come just after the point where a weaker solver quits. The discipline is: abandon on a <em>diagnosis</em>, not on a feeling — and write down the diagnosis so you can return.</p>
-<p><strong>Combining principles can produce complexity without progress.</strong> Chaining five techniques is not better than one if the chain does not close. Prefer the shortest chain that works, and be suspicious of solutions with many cases.</p>
-<h2 id="7-applications">7. Applications</h2>
-<ul>
-<li><strong>Research.</strong> Choosing a problem and a method is the same strategy layer, with a much longer time horizon and a much higher failure rate (→ Ch. <a href="chapter-35.html">35</a>).</li>
-<li><strong>Engineering.</strong> Design is a chain of decompositions, transformations, and bounds; the strategy layer is systems engineering (→ Ch. <a href="chapter-30.html">30</a>).</li>
-<li><strong>Consulting and analysis.</strong> Framing a business problem as "search / construction / impossibility / estimation" is exactly the difficulty taxonomy, and it determines the analysis method.</li>
-<li><strong>Medicine.</strong> Diagnosis is a search problem with an impossibility component (rule out) and an estimation component (probability of disease); the strategy is the same.</li>
-<li><strong>Software debugging.</strong> Search (where is the bug?), construction (what input triggers it?), impossibility (prove this code path is unreachable), estimation (how often does it happen?).</li>
-</ul>
-<h2 id="8-mastery-criteria">8. Mastery Criteria</h2>
-<p>You have this chapter when you can:</p>
-<ol type="1">
-<li>Classify a problem's difficulty type within two minutes, and justify the classification.</li>
-<li>Select two candidate principles from the signature table, with reasons.</li>
-<li>Commit to an approach with an explicit time box and an explicit success criterion.</li>
-<li>Diagnose a failure structurally, and decide whether to change the sub-step or the principle.</li>
-<li>Extract a macro from a solution, and apply it to a new problem.</li>
-<li>Solve a problem requiring at least three chained principles, and articulate the chain.</li>
-</ol>
-<p><strong>Diagnostic question.</strong> "You have been stuck for twenty minutes. What is your diagnosis, and what is your next move?" A learner who says "I'll try harder" fails. A learner who says "the induction cannot close because the error is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math>, so I'm switching to integral comparison" has the strategy layer.</p>
-<h3 id="ai-tutor-brief">AI Tutor Brief</h3>
-<ul>
-<li><strong>Generate:</strong> (i) problems requiring at least three chained principles; (ii) mixed sets where the learner must <em>classify</em> before solving, with the classification graded separately; (iii) problems with a tempting but structurally doomed approach, to test abandonment; (iv) "extract the macro" tasks after a solution.</li>
-<li><strong>Probe misconceptions:</strong> applying the most recently learned technique to everything; continuing past a structural obstruction; chaining techniques without a closing argument; mistaking a plateau for a dead end.</li>
-<li><strong>Transfer distance:</strong> maximal. This chapter is <em>about</em> transfer; every problem should be from an unfamiliar domain.</li>
-<li><strong>Do not</strong> reveal the principle. Ask for the classification first, and grade the reasoning about <em>why</em> that principle, not just the answer.</li>
-</ul>
+<h2 id="check-your-work">Check your work</h2>
+<p><strong>Practice.</strong> Look for an invariant for the first problem. For the second, look for a bound and an example that attains it.</p>
+<p><strong>Stretch.</strong> Squares have remainders 0 and 1 modulo 3. A sum of two such remainders is 0 modulo 3 only when both are 0, so 3 divides <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>. Their squared sum is divisible by 9, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>∣</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">3\mid z^2</annotation></semantics></math> and hence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>∣</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">3\mid z</annotation></semantics></math>. Divide all three coordinates by 3. A solution with smallest positive <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">|</mo><mi>z</mi><mo stretchy="true" form="postfix">|</mo></mrow><annotation encoding="application/x-tex">|z|</annotation></semantics></math> would give a smaller one. If <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">z=0</annotation></semantics></math>, then <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>y</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x=y=0</annotation></semantics></math>.</p>
+<h3 id="stretch-further">Stretch further</h3>
+<p>Write a positive integer <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> as the sum of an ordered list of 1s and 2s. Count these lists in two ways. First sort by the last entry and find a rule relating consecutive counts. Then sort by the number <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> of 2s. In the second approach there are <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">n-k</annotation></semantics></math> entries in total, so ask how many ways you can choose the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> positions for the 2s. Compare what the two descriptions help you compute.</p>
 </article>
-<nav class="pagination" aria-label="Reading order"><a href="chapter-23.html"><span class="eyebrow">← Chapter 23</span><span>Multiple Representations and the Unity of Mathematics</span></a><a href="part-iii.html#checkpoint"><span class="eyebrow">Part III checkpoint →</span><span>Check your mastery</span></a></nav>
+<nav class="pagination" aria-label="Reading order"><a href="chapter-23.html"><span class="eyebrow">← Chapter 23</span><span>See the Same Fact in Two Ways</span></a><a href="part-iii.html#checkpoint"><span class="eyebrow">Part III checkpoint →</span><span>Check your mastery</span></a></nav>
       </div>
     </div>
   </main>
   <footer class="site-footer">
     <div class="shell bar">
       <span>The Structure of Mathematical Thought</span>
-      <a href="https://github.com/anipiso9989-ops/Tensor">View source <span aria-hidden="true">↗</span></a>
+      <a href="https://github.com/anipiso9989-ops/TSMT">View source <span aria-hidden="true">↗</span></a>
     </div>
   </footer>
 </body>
